@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title id="iae6r7">MCQs For University Entry Tests - Maths - English - Physics And More</title>
+    <meta charset="utf-8" id="iie2q4" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" id="iuza9a" />
+    <meta name="robots" content="index,follow" id="ioqtft" />
+	
+ 
+	<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+	<script src="./../data.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Poppins:wght@500;600;700&amp;display=swap" rel="stylesheet" id="i9uwwf" />
+
+	<script src="./../question-script.js"></script>
+    <link rel="stylesheet" href="./../style.css">
+	  <link rel="icon" type="image/x-icon" href="https://notesprep.com/logo.svg">		
+  	<script src="https://notesprep.com/script.js" id="ihiexn"></script>
+</head>
+  <body id="i5f1" class="gjs-t-body body-root">
+    <header id="i90df" class="header">
+
+    </header>
+    <section id="secondary" class="secondary-notes-section">
+      <div class="section-container">
+	  <h1 class="entry-test-heading">Solved Free MCQs For Practice</h1>
+	  <div id ="q123" class="question-container"><b>If you are seeing this, it means javascript in your browser is disabled. Click <a href="https://www.enable-javascript.com/">here</a> to learn how to enable it.</b>
+	  </div>
+	  </div>
+    </section>
+	    <section id="about" class="about-section">
+
+    </section>
+  <footer id="i6lnig" class="footer">
+
+    </footer>
+
+    <script data-scope="mobile-nav" id="ifz1ty">
+      (function() {
+        const toggleBtn = document.querySelector('[data-js="hamburger"]');
+        const nav = document.getElementById('i32qq');
+        if (!toggleBtn || !nav) return;
+
+        function toggleMenu() {
+          const isOpen = nav.classList.toggle('open');
+          toggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        }
+        toggleBtn.addEventListener('click', toggleMenu);
+        // Close menu when clicking outside on mobile
+        document.addEventListener('click', (e) => {
+          const withinHeader = e.target.closest('#is0gk');
+          if (!withinHeader && nav.classList.contains('open')) {
+            nav.classList.remove('open');
+            toggleBtn.setAttribute('aria-expanded', 'false');
+          }
+        });
+        // Close on Esc
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && nav.classList.contains('open')) {
+            nav.classList.remove('open');
+            toggleBtn.setAttribute('aria-expanded', 'false');
+            toggleBtn.focus();
+          }
+        });
+      })();
+    </script>
+    <script data-scope="mobile-images" id="itb5y5">
+      (function() {
+        const imgs = document.querySelectorAll('img[data-mobile-src]');
+        if (!imgs.length) return;
+
+        function swapForViewport() {
+          const isMobile = window.matchMedia('(max-width: 480px)').matches;
+          imgs.forEach(img => {
+            const desktop = img.getAttribute('data-desktop-src');
+            const mobile = img.getAttribute('data-mobile-src');
+            if (!desktop || !mobile) return;
+            // Keep desktop unchanged; swap only on mobile
+            const current = img.getAttribute('src') || '';
+            if (isMobile) {
+              if (current !== mobile) img.setAttribute('src', mobile);
+              // Ensure below-the-fold images stay lazy on mobile
+              if (!img.hasAttribute('loading')) img.setAttribute('loading', 'lazy');
+            } else {
+              if (current !== desktop) img.setAttribute('src', desktop);
+              // Restore fetchpriority for hero if present
+              if (img.id === 'izhe1') {
+                img.setAttribute('fetchpriority', 'high');
+                img.removeAttribute('loading');
+              }
+            }
+          });
+        }
+        // Initialize and update on resize
+        swapForViewport();
+        let rAF;
+        window.addEventListener('resize', () => {
+          cancelAnimationFrame(rAF);
+          rAF = requestAnimationFrame(swapForViewport);
+        });
+      })();
+    </script>
+
+  </body>
+</html>
