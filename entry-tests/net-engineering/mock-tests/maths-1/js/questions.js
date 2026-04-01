@@ -601,11 +601,11 @@ let jsq_questions = [
         "question": "Find the magnitude of the vector expression \\(\\mathbf{w - v - u}\\) if \\(\\mathbf{w} = \\mathbf{i} + 2\\mathbf{j} + \\mathbf{k}\\), \\(\\mathbf{v} = -3\\mathbf{i} - 6\\mathbf{j} - 9\\mathbf{k}\\), and \\(\\mathbf{u} = 2\\mathbf{i} + 4\\mathbf{j} + 6\\mathbf{k}\\).",
         "options": {
             "a": "\\(6\\)",
-            "b": "\\(\\sqrt{36}\\)",
+            "b": "\\(\\sqrt{20}\\)",
             "c": "\\(0\\)",
             "d": "Both A and B"
         },
-        "answer": "d"
+        "answer": "a"
     },
     {
         "id": 54,
@@ -798,17 +798,17 @@ let jsq_questions = [
         },
         "answer": "a"
     },
-    {
-        "id": 71,
-        "question": "Using the Plug-in method, find the value of the upper limit \\(a\\) such that \\(\\sum_{k=1}^{a} k(k-5) = 24\\).",
-        "options": {
-            "a": "\\(8\\)",
-            "b": "\\(-4\\)",
-            "c": "\\(4\\)",
-            "d": "\\(-2\\)"
-        },
-        "answer": "a"
-    },
+	{
+		"id": 71,
+		"question": "Find the derivative of \\(f(x) = \\ln(\\sin x)\\).",
+		"options": {
+			"a": "\\(\\cot x\\)",
+			"b": "\\(\\tan x\\)",
+			"c": "\\(\\csc x\\)",
+			"d": "\\(\\sec x\\)"
+		},
+		"answer": "a"
+	},
 	{
 		"id": 72,
 		"question": "The value of \\(1 + i^2 + i^4 + i^6 + ... + i^{2n}\\) is",
@@ -1009,64 +1009,64 @@ let jsq_questions = [
         },
         "answer": "a"
     },
-    {
-        "id": 90,
-        "question": "Which quadrants yield positive values for both \\(\\cos\\) and \\(\\sec\\)?",
-        "options": {
-            "a": "1st and 2nd",
-            "b": "1st and 3rd",
-            "c": "1st and 4th",
-            "d": "2nd and 4th"
-        },
-        "answer": "c"
-    },
+	{
+		"id": 90,
+		"question": "What is the value of \\(\\cos\\left(\\frac{5\\pi}{6}\\right)\\)?",
+		"options": {
+			"a": "\\(\\frac{\\sqrt{3}}{2}\\)",
+			"b": "\\(-\\frac{\\sqrt{3}}{2}\\)",
+			"c": "\\(\\frac{1}{2}\\)",
+			"d": "\\(-\\frac{1}{2}\\)"
+		},
+		"answer": "b"
+	},
 
     // ==================== COORDINATE GEOMETRY & CONIC SECTIONS ====================
-    {
-        "id": 91,
-        "question": "A plane cutting a right circular cone perpendicular to its axis results in a:",
-        "options": {
-            "a": "Parabola",
-            "b": "Ellipse",
-            "c": "Circle",
-            "d": "Hyperbola"
-        },
-        "answer": "c"
-    },
-    {
-        "id": 92,
-        "question": "For an ellipse (\\(a > b\\)), the length of the latus rectum is:",
-        "options": {
-            "a": "\\(2a^2/b\\)",
-            "b": "\\(2b^2/a\\)",
-            "c": "\\(b^2/2a\\)",
-            "d": "\\(a^2/2b\\)"
-        },
-        "answer": "b"
-    },
-    {
-        "id": 93,
-        "question": "Find the equation of a circle with center \\((5, -5)\\) and radius \\(5\\).",
-        "options": {
-            "a": "\\((x-5)^2 + (y+5)^2 = 25\\)",
-            "b": "\\((x+5)^2 + (y-5)^2 = 25\\)",
-            "c": "\\(x^2 + y^2 = 25\\)",
-            "d": "\\((x-5)^2 + (y-5)^2 = 5\\)"
-        },
-        "answer": "a"
-    },
+	{
+		"id": 91,
+		"question": "A line with slope \\(2\\) is tangent to the circle \\(x^2 + y^2 = 9\\). Which of the following could be the equation of the tangent line?",
+		"options": {
+			"a": "\\(y = 2x + 3\\)",
+			"b": "\\(y = 2x + 3\\sqrt{5}\\)",
+			"c": "\\(y = 2x \\pm 3\\sqrt{5}\\)",
+			"d": "\\(y = 2x \\pm 9\\)"
+		},
+		"answer": "c"
+	},
+	{
+		"id": 92,
+		"question": "For the ellipse \\(\\frac{x^2}{25} + \\frac{y^2}{9} = 1\\), what is the length of the major axis?",
+		"options": {
+			"a": "\\(5\\)",
+			"b": "\\(10\\)",
+			"c": "\\(6\\)",
+			"d": "\\(3\\)"
+		},
+		"answer": "b"
+	},
+	{
+		"id": 93,
+		"question": "What is the modulus of the complex number \\(z = 3 - 4i\\)?",
+		"options": {
+			"a": "\\(7\\)",
+			"b": "\\(1\\)",
+			"c": "\\(25\\)",
+			"d": "\\(5\\)"
+		},
+		"answer": "d"
+	},
 
-    {
-        "id": 94,
-        "question": "The equation \\(\\frac{y^2}{16} - \\frac{(x-4)^2}{25} = 1\\) represents which conic?",
-        "options": {
-            "a": "Circle",
-            "b": "Ellipse",
-            "c": "Parabola",
-            "d": "Hyperbola"
-        },
-        "answer": "d"
-    },
+	{
+		"id": 94,
+		"question": "The equation \\(4x^2 + 9y^2 - 8x - 36y + 4 = 0\\) represents:",
+		"options": {
+			"a": "Circle",
+			"b": "Ellipse",
+			"c": "Parabola",
+			"d": "Hyperbola"
+		},
+		"answer": "b"
+	},
     {
         "id": 95,
         "question": "Which condition ensures a circle is tangent to both the x and y axes?",
@@ -1080,17 +1080,17 @@ let jsq_questions = [
     },
 
     // ==================== CALCULUS: DERIVATIVES & INTEGRALS ====================
-    {
-        "id": 96,
-        "question": "Evaluate the limit: \\(\\lim_{x \\to \\infty} \\frac{\\sin x}{x}\\).",
-        "options": {
-            "a": "1",
-            "b": "\\(\\infty\\)",
-            "c": "0",
-            "d": "Undefined"
-        },
-        "answer": "c"
-    },
+	{
+		"id": 96,
+		"question": "Evaluate the definite integral \\(\\int_{0}^{\\pi} \\sin x \\, dx\\).",
+		"options": {
+			"a": "\\(0\\)",
+			"b": "\\(2\\)",
+			"c": "\\(1\\)",
+			"d": "\\(-2\\)"
+		},
+		"answer": "b"
+	},
     {
         "id": 97,
         "question": "Integrate \\(\\csc^2 x\\) from 0 to 1.",
@@ -1102,37 +1102,37 @@ let jsq_questions = [
         },
         "answer": "c"
     },
-    {
-        "id": 98,
-        "question": "Find the derivative of \\(y = \\ln x\\) with respect to x.",
-        "options": {
-            "a": "\\(e^x\\)",
-            "b": "1/x",
-            "c": "x",
-            "d": "1/\\ln x"
-        },
-        "answer": "b"
-    },
-    {
-        "id": 99,
-        "question": "Calculate the area under \\(y = \\sin x\\) from \\(x=0\\) to \\(x=\\pi\\).",
-        "options": {
-            "a": "1 unit²",
-            "b": "2 units²",
-            "c": "0 units²",
-            "d": "4 units²"
-        },
-        "answer": "b"
-    },
-    {
-        "id": 100,
-        "question": "Find \\(f'(x)\\) for \\(f(x) = \\sin^2(1/x)\\) at \\(x = 4/7\\pi\\).",
-        "options": {
-            "a": "49\\pi^2/16",
-            "b": "-3\\pi",
-            "c": "0",
-            "d": "1"
-        },
-        "answer": "a"
-    }
+	{
+		"id": 98,
+		"question": "A fair coin is tossed 5 times. What is the probability of getting exactly 3 heads?",
+		"options": {
+			"a": "\\(\\frac{5}{16}\\)",
+			"b": "\\(\\frac{1}{2}\\)",
+			"c": "\\(\\frac{3}{8}\\)",
+			"d": "\\(\\frac{5}{32}\\)"
+		},
+		"answer": "a"
+	},
+	{
+		"id": 99,
+		"question": "What is the sum of the first 20 terms of the arithmetic series \\(3 + 7 + 11 + 15 + \\dots\\)?",
+		"options": {
+			"a": "\\(820\\)",
+			"b": "\\(800\\)",
+			"c": "\\(840\\)",
+			"d": "\\(780\\)"
+		},
+		"answer": "a"
+	},
+	{
+		"id": 100,
+		"question": "If \\(\\alpha\\) and \\(\\beta\\) are the roots of \\(x^2 - 5x + 6 = 0\\), find the value of \\(\\alpha^2 + \\beta^2\\).",
+		"options": {
+			"a": "\\(25\\)",
+			"b": "\\(13\\)",
+			"c": "\\(37\\)",
+			"d": "\\(19\\)"
+		},
+		"answer": "b"
+	}
 ];
