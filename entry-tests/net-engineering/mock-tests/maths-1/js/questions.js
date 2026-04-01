@@ -168,14 +168,14 @@ let jsq_questions = [
     },
     {
         "id": 15,
-        "question": "Identify the principal value range for the function \\(\\csc^{-1} x\\).",
+        "question": "\\((\\sin x - \\cos x)^2 = \\)",
         "options": {
-            "a": "\\([-\\pi/2, \\pi/2]\\)",
-            "b": "\\([-\\pi/2, \\pi/2] \\setminus \\{0\\}\\)",
-            "c": "\\([0, \\pi]\\)",
-            "d": "\\((-\\pi/2, \\pi/2)\\)"
+            "a": "\\(1 + \\sin 2x\\)",
+            "b": "\\(1 - \\cos 2x\\)",
+            "c": "\\(1 - \\sin 2x\\)",
+            "d": "\\(1 + \\cos 2x\\)"
         },
-        "answer": "b"
+        "answer": "c"
     },
 
     // ==================== BINOMIAL THEOREM ====================
@@ -328,14 +328,14 @@ let jsq_questions = [
     },
     {
         "id": 29,
-        "question": "Identify the two arithmetic means between 5 and 11.",
+        "question": "1. What is the Harmonic Mean (HM) of the numbers 4, 5, and 10?",
         "options": {
-            "a": "\\(6, 10\\)",
-            "b": "\\(7, 9\\)",
-            "c": "\\(8, 9\\)",
-            "d": "\\(7, 8\\)"
+            "a": "\\(5.45\\)",
+            "b": "\\(6.0\\)",
+            "c": "\\(5.0\\)",
+            "d": "\\(4.5\\)"
         },
-        "answer": "b"
+        "answer": "a"
     },
     {
         "id": 30,
@@ -809,50 +809,50 @@ let jsq_questions = [
         },
         "answer": "a"
     },
-    {
-        "id": 72,
-        "question": "For any two complex numbers \\(Z_1\\) and \\(Z_2\\), which inequality regarding their moduli is a fundamental property in complex systems?",
-        "options": {
-            "a": "\\(|Z_1 + Z_2| > |Z_1| + |Z_2|\\)",
-            "b": "\\(|Z_1 + Z_2| \\leq |Z_1| + |Z_2|\\)",
-            "c": "\\(|Z_1 + Z_2| = |Z_1| - |Z_2|\\)",
-            "d": "\\(|Z_1 + Z_2| \\geq |Z_1| + |Z_2|\\)"
-        },
-        "answer": "b"
-    },
+	{
+		"id": 72,
+		"question": "The value of \\(1 + i^2 + i^4 + i^6 + ... + i^{2n}\\) is",
+		"options": {
+			"a": "positive",
+			"b": "negative",
+			"c": "\\(0\\)",
+			"d": "cannot be evaluated"
+		},
+		"answer": "d"
+	},
     {
         "id": 73,
-        "question": "In how many ways can a committee of 4 persons be formed from a total of 9 people if one particular person is always included?",
+        "question": "A student estimates that the probability of passing a test is \\(\\frac{8}{9}\\). What is the probability of failing the test?",
         "options": {
-            "a": "\\(56\\)",
-            "b": "\\(126\\)",
-            "c": "\\(84\\)",
-            "d": "\\(70\\)"
+            "a": "\\(\\frac{7}{9}\\)",
+            "b": "\\(\\frac{2}{9}\\)",
+            "c": "\\(\\frac{1}{9}\\)",
+            "d": "\\(\\frac{3}{9}\\)"
         },
-        "answer": "a"
+        "answer": "c"
     },
     {
         "id": 74,
-        "question": "Find the additive inverse of the complex number \\(Z = \\frac{9}{1-i}\\).",
+        "question": "Find the sum of the sequence 7, 77, 777, 7777, ... to n terms.",
         "options": {
-            "a": "\\(\\frac{9}{2}(1+i)\\)",
-            "b": "-\\(\\frac{9}{2}(1+i)\\)",
-            "c": "\\(\\frac{9}{2}(1-i)\\)",
-            "d": "-\\(\\frac{9}{2}(1-i)\\)"
+            "a": "\\(\\frac{7}{81}(10^{n+1} - 10 - 9n)\\)",
+            "b": "\\(\\frac{7}{9}\\left[\\frac{10(10^n - 1)}{9} - n\\right]\\)",
+            "c": "\\(\\frac{7}{9}(10^n - 1)\\)",
+            "d": "\\(\\frac{7}{81}(10^n - 1 - 9n)\\)"
         },
         "answer": "b"
     },
-    {
-        "id": 75,
-        "question": "Evaluate the sum of the geometric series \\(\\sum_{k=1}^{5} (-1/2)^k\\).",
-        "options": {
-            "a": "\\(-11/32\\)",
-            "b": "\\(11/32\\)",
-            "c": "\\(-31/32\\)",
-            "d": "\\(31/32\\)"
-        },
-        "answer": "a"
-    },
+	{
+		"id": 75,
+		"question": "Evaluate the sum: \\(\\sum_{i=1}^{5} 3 \\cdot 2^{i-1}\\)",
+		"options": {
+			"a": "\\(31\\)",
+			"b": "\\(62\\)",
+			"c": "\\(93\\)",
+			"d": "\\(186\\)"
+		},
+		"answer": "c"
+	},
     {
         "id": 76,
         "question": "What are the two arithmetic means between 5 and 11?",
@@ -877,50 +877,50 @@ let jsq_questions = [
     },
     {
         "id": 78,
-        "question": "Find the value of \\((\\cos \\pi/6 + i \\sin \\pi/6)^3\\) using De Moivre’s Theorem.",
+        "question": "\\(i \\cos x + \\sin x\\) simplified by multiplying and dividing by \\(i\\) gives:.",
         "options": {
-            "a": "\\(i\\)",
-            "b": "\\(-i\\)",
-            "c": "\\(1\\)",
-            "d": "\\(0\\)"
+            "a": "\\(i e^{-ix}\\)",
+            "b": "\\(e^{i(\\frac{\\pi}{2} - x)}\\)",
+            "c": "\\(i e^{ix}\\)",
+            "d": "\\(e^{i(x - \\frac{\\pi}{2})}\\)"
         },
         "answer": "a"
     },
     {
         "id": 79,
-        "question": "Calculate the modulus of the complex number \\(\\frac{3+6i}{1+i}\\).",
+        "question": "Which option is true for the imaginary part of \\(\\frac{x - iy}{x^2 + y^2}\\)?",
         "options": {
-            "a": "\\(\\frac{3}{2} \\sqrt{10}\\)",
-            "b": "\\(3\\sqrt{5}\\)",
-            "c": "\\(\\sqrt{45}\\)",
-            "d": "\\(\\frac{\\sqrt{45}}{2}\\)"
+            "a": "\\(-\\frac{y}{x^2 + y^2}\\)",
+            "b": "\\(\\frac{y}{x^2 + y^2}\\)",
+            "c": "\\(\\frac{iy}{x^2 + y^2}\\)",
+            "d": "\\(-\\frac{iy}{x^2 + y^2}\\)m"
         },
         "answer": "a"
     },
     {
         "id": 80,
-        "question": "If \\(\\alpha\\) and \\(\\beta\\) are roots of \\(x^2 - 3x + 4 = 0\\), find the value of \\(\\alpha/\\beta + \\beta/\\alpha\\).",
+        "question": "If the roots of the equation \\(ax^2 + bx + c = 0\\) are \\(\\alpha\\) and \\(\\beta\\), then the equation whose roots are \\(\\alpha^2\\) and \\(\\beta^2\\) is:",
         "options": {
-            "a": "\\(1/4\\)",
-            "b": "\\(3/4\\)",
-            "c": "\\(-1/4\\)",
-            "d": "\\(1\\)"
+            "a": "\\(a^2x^2 + (b^2 - 2ac)x + c^2 = 0\\)",
+            "b": "\\(a^2x^2 - (b^2 - 2ac)x + c^2 = 0\\)",
+            "c": "\\(a^2x^2 - (b^2 + 2ac)x + c^2 = 0\\)",
+            "d": "\\(a^2x^2 + (b^2 + 2ac)x + c^2 = 0\\)"
         },
-        "answer": "a"
+        "answer": "b"
     },
 
     // ==================== TRIGONOMETRY & FUNCTIONAL RANGES ====================
-    {
-        "id": 81,
-        "question": "What is the period of the function \\(f(x) = \\tan(4\\pi x / 7)\\)?",
-        "options": {
-            "a": "\\(7/4\\)",
-            "b": "\\(4/7\\)",
-            "c": "\\(\\pi\\)",
-            "d": "\\(7\\pi/4\\)"
-        },
-        "answer": "a"
-    },
+	{
+		"id": 81,
+		"question": "The value of the double integral \\(\\int_{0}^{a} \\int_{0}^{b} dx dy\\) is:",
+		"options": {
+			"a": "\\(0\\)",
+			"b": "\\(ab\\)",
+			"c": "\\(2ab\\)",
+			"d": "\\(a/b\\)"
+		},
+		"answer": "b"
+	},
     {
         "id": 82,
         "question": "The principal value range of \\(\\csc^{-1}x\\) follows which classification?",
@@ -932,19 +932,30 @@ let jsq_questions = [
         },
         "answer": "b"
     },
+	{
+		"id": 83,
+		"question": "If all sides of a triangle are equal to '\\(a\\)' (equilateral triangle), what is the area using Heron's formula?",
+		"options": {
+			"a": "\\(\\frac{\\sqrt{3}}{2} a^2\\)",
+			"b": "\\(\\frac{\\sqrt{3}}{4} a^2\\)",
+			"c": "\\(\\frac{\\sqrt{3}}{4} a\\)",
+			"d": "\\(\\frac{1}{2} a^2\\)"
+		},
+		"answer": "b"
+	},
+	{
+		"id": 84,
+		"question": "The number of signals that can be given by six flags of different colors, using three flags at a time are:",
+		"options": {
+			"a": "\\(60\\)",
+			"b": "\\(3\\)",
+			"c": "\\(120\\)",
+			"d": "\\(18\\)"
+		},
+		"answer": "c"
+	},
     {
-        "id": 83,
-        "question": "In a triangle with semi-perimeter \\(s\\), the s-form formula for \\(\\tan(\\beta/2)\\) is:",
-        "options": {
-            "a": "\\(\\sqrt{\\frac{(s-a)(s-c)}{s(s-b)}}\\)",
-            "b": "\\(\\sqrt{\\frac{(s-b)(s-c)}{s(s-a)}}\\)",
-            "c": "\\(\\sqrt{\\frac{s(s-b)}{(s-a)(s-c)}}\\)",
-            "d": "\\(\\sqrt{\\frac{(s-a)(s-b)}{s(s-c)}}\\)"
-        },
-        "answer": "a"
-    },
-    {
-        "id": 84,
+        "id": 85,
         "question": "Identify the range of \\(\\cot^{-1}x\\) using the Bracket Rule.",
         "options": {
             "a": "\\((0, \\pi)\\)",
@@ -955,37 +966,26 @@ let jsq_questions = [
         "answer": "a"
     },
     {
-        "id": 85,
-        "question": "If a fair coin is tossed 4 times, what is the probability of getting exactly 2 heads?",
-        "options": {
-            "a": "\\(1/4\\)",
-            "b": "\\(3/8\\)",
-            "c": "\\(1/2\\)",
-            "d": "\\(5/8\\)"
-        },
-        "answer": "b"
-    },
-    {
         "id": 86,
-        "question": "Simplify \\((\\sec\\theta + \\tan\\theta)(\\sec\\theta - \\tan\\theta)\\).",
+        "question": "\\(\\tan\\left(\\frac{\\pi}{2} + \\theta\\right) = \\)",
         "options": {
-            "a": "\\(0\\)",
-            "b": "\\(1\\)",
-            "c": "\\(\\sec^2\\theta\\)",
-            "d": "\\(\\tan^2\\theta\\)"
+            "a": "\\(\\cot \\theta\\)",
+            "b": "\\(-\\cot \\theta\\)",
+            "c": "\\(\\tan \\theta\\)",
+            "d": "\\(-\\tan \\theta\\)"
         },
         "answer": "b"
     },
     {
         "id": 87,
-        "question": "If \\(\\tan\\theta = \\sqrt{5}/2\\), find \\(\\sin\\theta\\).",
+        "question": "If \\(\\theta\\) lies in the 4th quadrant, then the reference angle of \\(\\theta\\) is:",
         "options": {
-            "a": "\\(\\sqrt{5}/3\\)",
-            "b": "\\(2/3\\)",
-            "c": "\\(3/\\sqrt{5}\\)",
-            "d": "\\(\\sqrt{5}/2\\)"
+            "a": "\\(2\\pi + \\theta\\)",
+            "b": "\\(2\\pi - \\theta\\)",
+            "c": "\\(\\theta - \\pi\\)",
+            "d": "\\(\\frac{\\pi}{2} - \\theta\\)"
         },
-        "answer": "a"
+        "answer": "b"
     },
     {
         "id": 88,
