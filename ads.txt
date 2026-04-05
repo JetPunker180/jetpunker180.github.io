@@ -1,3 +1,1 @@
-# ads.txt for notesprep.com
-# Google AdSense - Direct seller
-google.com, pub-YOURIDHERE, DIRECT, f08c47fec0942fa0
+google.com, pub-3890247754933707, DIRECT, f08c47fec0942fa0
