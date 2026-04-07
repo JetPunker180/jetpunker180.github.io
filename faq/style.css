@@ -1,0 +1,161 @@
+/* --- NotesPrep Refined Base Styles --- */
+:root {
+  --primary-dark: #111111; /* Strong contrast for headings */
+  --text-main: #444444; /* Clean readability for body text */
+  --bg-soft: #f9f9f9; /* Subtle background accent */
+  --border-light: #eeeeee; /* Minimal separation */
+  --notes-accent-blue: #2563eb; /* Interaction color */
+  --shadow-soft: 0 2px 10px rgba(0,0,0,0.03); /* Subtle depth */
+}
+
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  line-height: 1.7; /* Crucial for readability and avoiding clustering */
+  color: var(--text-main);
+  margin: 0;
+  background-color: #ffffff;
+}
+
+/* --- Hero Section & Global Container --- */
+.hero-section {
+  padding: 120px 0 80px; /* Generous vertical spacing */
+  text-align: center;
+	padding-bottom:20px;
+}
+
+.hero-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 25px;
+}
+
+.hero-content h1 {
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: var(--primary-dark);
+  margin-bottom: 12px;
+  letter-spacing: -1.5px; /* Modern minimal letter spacing */
+  line-height:1.5;
+}
+
+.last-updated {
+  font-size: 0.95rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  font-weight: 600;
+}
+
+/* --- Content Layout --- */
+.policy-body {
+  padding: 80px 0;
+}
+
+.container {
+  max-width: 850px; /* Comfortable reading width */
+  margin: 0 auto;
+  padding: 0 25px;
+}
+
+/* --- Styling FAQ Groups --- */
+.faq-group {
+  margin-bottom: 70px; /* Clean separation between group topics */
+}
+
+.group-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin-bottom: 35px;
+  border-left: 5px solid var(--primary-dark); /* Distinct visual marker */
+  padding-left: 20px;
+}
+
+/* Individual FAQ Item Cards */
+.faq-item {
+  margin-bottom: 25px; /* Adds space to prevent vertical clustering */
+  padding: 25px;
+  background-color: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: 12px; /* Soft, modern corners */
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  box-shadow: var(--shadow-soft);
+}
+
+/* Subtle effect on hover to guide the user */
+.faq-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+  border-color: #dddddd;
+}
+
+.faq-item h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--primary-dark);
+  margin-bottom: 15px; /* Space between question and answer */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.faq-item p {
+  font-size: 1.15rem;
+  color: var(--text-main);
+  margin: 0;
+}
+
+/* --- Contact Highlight Section --- */
+.contact-highlight {
+  background-color: var(--primary-dark);
+  color: #ffffff;
+  padding: 60px;
+  border-radius: 20px;
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom:60px;
+}
+
+.contact-highlight h2 {
+  font-size: 2.2rem;
+  color: #ffffff;
+  margin-bottom: 18px;
+}
+
+.contact-highlight p {
+  font-size: 1.2rem;
+  color: #ffffff;
+  opacity: 0.9;
+  margin-bottom: 35px;
+}
+
+/* Refined Email Support Button */
+.btn-primary {
+  display: inline-block;
+  background-color: #ffffff;
+  color: var(--primary-dark);
+  padding: 16px 35px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 0.2s, background-color 0.2s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px) scale(1.02);
+  background-color: #f1f1f1;
+}
+
+/* --- Responsive Layout Adjustments --- */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  .contact-highlight {
+    padding: 40px;
+  }
+  .faq-item {
+    padding: 20px;
+  }
+}
