@@ -75,6 +75,30 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         console.log('Instagram link with ID "iq68k5" not found');
     }
+	
+	// Update Navigation
+    const navigation = document.getElementById('i32qq');
+    console.log('Found Navigation:', navigation);
+    if (navigation) {
+        navigation.innerHTML = ` <a id="ib7dg" href="https://notesprep.com#secondary" class="gjs-t-link nav-link">SSC</a>
+          <a id="iftme" href="https://notesprep.com/entry-tests" class="gjs-t-link nav-link">Entry Tests</a>
+		  <a id="iz0tt" href="https://notesprep.com/blogs" class="gjs-t-link nav-link">Blogs</a>
+          <a id="ik0c6" href="https://notesprep.com#resources" class="gjs-t-link nav-link">Resources</a>
+          <a id="iuxnk" href="https://notesprep.com#about" class="gjs-t-link nav-link">About</a>
+          <a id="ixd44" href="https://notesprep.com/contact-us" class="gjs-t-link nav-link">Contact</a>`;
+        console.log('Navigation updated to:', Navigation);
+    } else {
+        console.log('Navigation Not Found');
+    }
     
+	const footerContact = document.getElementById('i6kovw');
+    console.log('Found Instagram link:', footerContact);
+    if (instagramLink) {
+        instagramLink.href = 'https://notesprep.com/contact-us';
+        console.log('Instagram link updated to:', footerContact.href);
+    } else {
+        console.log('Instagram link with ID "iq68k5" not found');
+    }
+	
     console.log('All navigation updates completed');
 });
