@@ -271,10 +271,10 @@ window.questions = [
         explanation: "Since \\(w\\) is a cube root of unity, \\(w^3 = 1\\). Then \\(w^7 = w^{6} \\cdot w = (w^3)^2 \\cdot w = 1^2 \\cdot w = w\\). Also, \\(w^{12} = (w^3)^4 = 1^4 = 1\\). So \\(w^7 + w^{12} = w + 1\\). Using the property \\(1 + w + w^2 = 0 \\Rightarrow w + 1 = -w^2 = -\\frac{1}{w}\\)."
     },
     {
-        q: "Using De Moivre's Theorem, the value of \\(\\left(\\frac{1 + i}{1 - i}\\right)^{20}\\) is:",
+        q: "The value of \\(\\left(\\frac{1 + i}{1 - i}\\right)^{20}\\) is:",
         options: ["1", "-1", "i", "-i"],
         correct: 0,
-        explanation: "First simplify: \\(\\frac{1+i}{1-i} = i\\) (as shown in a previous question). Then \\(i^{20} = (i^4)^5 = 1^5 = 1\\)."
+        explanation: "First simplify: \\(\\frac{1+i}{1-i} = i\\) . Then \\(i^{20} = (i^4)^5 = 1^5 = 1\\)."
     },
     {
         q: "If \\(z\\) is a complex number such that \\(|z| = 1\\) and \\(|z + z^{-1}| = 1\\), then \\(\\text{Im}(z)\\) equals:",

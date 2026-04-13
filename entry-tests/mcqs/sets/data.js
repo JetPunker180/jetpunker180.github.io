@@ -99,17 +99,17 @@ window.questions = [
         correct: 1,
         explanation: "If every element of set A is also an element of set B, then A is called a subset of B, and conversely, B is called a superset of A. This is denoted as \\(A \\subseteq B\\) and \\(B \\supseteq A\\)."
     },
-    {
-        q: "Which of the following is an application of De Morgan's law?",
-        options: [
-            "\\(A \\cup (B \\cap C) = (A \\cup B) \\cap (A \\cup C)\\)",
-            "\\((A \\cup B)' = A' \\cap B'\\)",
-            "\\(A \\cap (B \\cup C) = (A \\cap B) \\cup (A \\cap C)\\)",
-            "\\(A \\cup B = B \\cup A\\)"
-        ],
-        correct: 1,
-        explanation: "De Morgan's laws state that the complement of a union is the intersection of complements, and the complement of an intersection is the union of complements. Mathematically: \\((A \\cup B)' = A' \\cap B'\\) and \\((A \\cap B)' = A' \\cup B'\\)."
-    },
+	{
+		"id": 8,
+		"question": "Which of the following is an application of De Morgan's law?",
+		"options": {
+			"a": "\\(A \\cup (B \\cap C) = (A \\cup B) \\cap (A \\cup C)\\)",
+			"b": "\\((A \\cup B)' = A' \\cap B'\\)",
+			"c": "\\(A \\cap (B \\cup C) = (A \\cap B) \\cup (A \\cap C)\\)",
+			"d": "\\(A \\cup B = B \\cup A\\)"
+		},
+		"answer": "b"
+	},
     {
         q: "A function \\(f: X \\to Y\\) is said to be injective (one-to-one) if:",
         options: [
