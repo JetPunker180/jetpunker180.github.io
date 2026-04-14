@@ -1840,3 +1840,35 @@ video {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 }
+
+/* Mobile Fix: For screens smaller than 480px */
+/* This ONLY triggers on small screens, leaving desktop untouched */
+@media (max-width: 900px) {
+  .card-actions {
+    display: flex;
+    flex-wrap: wrap;       /* Allows items to move to a new line */
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  /* Force the labels (Textbook/Notes) to take up some space */
+  .card-actions p {
+    width: 45%;           /* Keeps the two labels side-by-side */
+    margin: 0;
+    text-align: center;
+    font-size: 14px;
+    order: 1;             /* Keeps labels at the top */
+  }
+
+  /* Force the buttons to drop below and stay under their labels */
+.card-button {
+    width: 45%;           /* Matches the width of the label above it */
+    order: 2;             /* Pulls buttons below all labels */
+    display: flex;
+    justify-content: center;
+    padding: 8px 5px;
+    font-size: 13px;
+	margin:2px;
+  }
+
+}
