@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NUST NET Aggregate Calculator 2026 | Custom Total Marks - NotesPrep</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link href="../../style.css" rel="stylesheet">
+    
+    <style>
+        .calc-wrapper { padding: 40px 20px; background-color: #f8fafc; min-height: 80vh; }
+        .calc-container { max-width: 650px; margin: 0 auto; padding: 35px; background: #fff; border: 1px solid #e2e8f0; border-radius: 20px; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.05); }
+        .calc-header { text-align: center; margin-bottom: 30px; }
+        .calc-header h1 { font-family: 'Poppins', sans-serif; color: #0f172a; margin-bottom: 10px; font-size: 1.75rem; }
+        
+        .calc-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 20px; }
+        .input-group { display: flex; flex-direction: column; gap: 8px; }
+        .input-group label { font-size: 0.85rem; font-weight: 600; color: #475569; }
+        .input-group input { padding: 12px; border: 1px solid #cbd5e1; border-radius: 10px; font-size: 1rem; transition: 0.2s; }
+        .input-group input:focus { border-color: #8B5CF6; outline: none; box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1); }
+        
+        .full-width { grid-column: span 2; }
+        
+        .calc-btn { width: 100%; padding: 16px; background: #8B5CF6; color: #fff; border: none; border-radius: 12px; font-weight: 700; cursor: pointer; font-size: 1.1rem; transition: 0.3s; margin-top: 10px; }
+        .calc-btn:hover { background: #7c3aed; transform: translateY(-1px); }
+
+        .result-box { margin-top: 30px; padding: 25px; background: #f5f3ff; border: 2px solid #ddd6fe; border-radius: 15px; text-align: center; display: none; animation: fadeIn 0.5s ease; }
+        .result-value { font-size: 3rem; font-weight: 800; color: #6d28d9; margin: 10px 0; }
+        .feedback-pill { display: inline-block; padding: 6px 16px; background: #ede9fe; color: #5b21b6; border-radius: 30px; font-size: 0.9rem; font-weight: 600; }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        @media (max-width: 480px) { .calc-row { grid-template-columns: 1fr; } .full-width { grid-column: span 1; } }
+    </style>
+</head>
+<body class="body-root">
+
+    <main class="calc-wrapper">
+        <div class="calc-container">
+            <div class="calc-header">
+                <h1>NUST Aggregate Calculator</h1>
+                <p>Weightage: 75% NET | 15% HSSC | 10% Matric</p>
+            </div>
+
+            <div class="calc-row">
+                <div class="input-group">
+                    <label>Matric Obtained</label>
+                    <input type="number" id="mObtained" placeholder="e.g. 1045">
+                </div>
+                <div class="input-group">
+                    <label>Matric Total</label>
+                    <input type="number" id="mTotal" value="1100">
+                </div>
+            </div>
+
+            <div class="calc-row">
+                <div class="input-group">
+                    <label>HSSC-I Obtained</label>
+                    <input type="number" id="hObtained" placeholder="e.g. 480">
+                </div>
+                <div class="input-group">
+                    <label>HSSC-I Total</label>
+                    <input type="number" id="hTotal" value="520">
+                </div>
+            </div>
+
+            <div class="input-group full-width">
+                <label>NET Score (Out of 200)</label>
+                <input type="number" id="netScore" placeholder="Enter your score">
+            </div>
+
+            <button class="calc-btn" onclick="runNustCalc()">Calculate Aggregate</button>
+
+            <div id="resultBox" class="result-box">
+                <span class="feedback-pill" id="pillText">Result</span>
+                <div class="result-value" id="finalResult">0%</div>
+                <p id="adviceText" style="color: #4b5563; font-size: 0.95rem;"></p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function runNustCalc() {
+            // Get values
+            const mObt = parseFloat(document.getElementById('mObtained').value);
+            const mTot = parseFloat(document.getElementById('mTotal').value);
+            const hObt = parseFloat(document.getElementById('hObtained').value);
+            const hTot = parseFloat(document.getElementById('hTotal').value);
+            const net = parseFloat(document.getElementById('netScore').value);
+
+            // Validation
+            if ([mObt, mTot, hObt, hTot, net].some(isNaN)) {
+                alert("Please enter valid numbers in all fields.");
+                return;
+            }
+
+            // Calculations
+            const matricWeight = (mObt / mTot) * 10;
+            const hsscWeight = (hObt / hTot) * 15;
+            const netWeight = (net / 200) * 75;
+
+            const totalAggregate = (matricWeight + hsscWeight + netWeight).toFixed(3);
+
+            // UI Display
+            const resultBox = document.getElementById('resultBox');
+            const resultVal = document.getElementById('finalResult');
+            const advice = document.getElementById('adviceText');
+            const pill = document.getElementById('pillText');
+
+            resultVal.innerText = totalAggregate + "%";
+            resultBox.style.display = 'block';
+
+            // Advice Logic
+            if (totalAggregate >= 80) {
+                pill.innerText = "Safe Zone";
+                advice.innerText = "Excellent score! You have a high chance for CS, SE, or Mechanical at SEECS/EME.";
+            } else if (totalAggregate >= 72) {
+                pill.innerText = "Good Chance";
+                advice.innerText = "Good aggregate. You are competitive for most Engineering and Social Science programs.";
+            } else {
+                pill.innerText = "Improvement Needed";
+                advice.innerText = "Consider improving your NET score in the next series to secure admission in top programs.";
+            }
+        }
+    </script>
+</body>
+</html>

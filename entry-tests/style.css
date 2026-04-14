@@ -339,6 +339,71 @@ img, video {
   align-items: center;
   gap: 1rem;
 }
+/* FAQ Section Styling */
+.faq-section {
+  padding: 80px 20px;
+  background-color: #f8fafc; /* Light gray background to separate from hero */
+}
+
+.faq-container {
+  max-width: 800px; /* Narrower width for better readability */
+  margin: 0 auto;
+}
+
+.faq-grid {
+  margin-top: 30px;
+}
+
+.faq-item {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.faq-item[open] {
+  border-color: #8B5CF6; /* Matches your purple button color */
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.1);
+}
+
+.faq-question {
+  padding: 18px 24px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #1e293b;
+  cursor: pointer;
+  list-style: none; /* Removes default arrow */
+  position: relative;
+}
+
+/* Custom Arrow */
+.faq-question::after {
+  content: '+';
+  float: right;
+  font-size: 1.5rem;
+  color: #8B5CF6;
+  transition: transform 0.3s ease;
+}
+
+.faq-item[open] .faq-question::after {
+  content: '−';
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  padding: 0 24px 20px 24px;
+  color: #475569;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Remove default marker for Safari */
+.faq-question::-webkit-details-marker {
+  display: none;
+}
 .primary-action {
   display: inline-flex;
   align-items: center;
@@ -834,7 +899,7 @@ img, video {
 }
 .about-section {
   width: 100%;
-  background-color: rgb(239 246 255 / 0.4);
+  background-color: rgb(255 255 255 / 1);
   border-bottom-width: 1px;
   border-color: rgb(226 232 240 / 1);
 }

@@ -1,0 +1,167 @@
+/* --- Root Variables & Base Styles --- */
+:root {
+  --notes-black: #111111;
+  --notes-gray-dark: #333333;
+  --notes-gray-light: #666666;
+  --notes-bg-accent: #f9f9f9;
+  --notes-border: #eeeeee;
+}
+
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  line-height: 1.7; /* Crucial for solving clustered text */
+  color: var(--notes-gray-dark);
+  margin: 0;
+  background-color: #ffffff;
+}
+
+/* --- Hero Section Styling --- */
+.hero-section {
+  padding: 100px 0 80px 0; /* Creates vertical space */
+  border-bottom: 1px solid var(--notes-border);
+  text-align: center;
+}
+
+.hero-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: var(--notes-black);
+  margin: 0 0 15px 0;
+  letter-spacing: -1.5px;
+  line-height:1.5;
+}
+
+.last-updated {
+  font-size: 0.9rem;
+  color: var(--notes-gray-light);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+/* --- Main Content Layout --- */
+.policy-body {
+  padding: 80px 0;
+}
+
+.container {
+  max-width: 850px; /* Comfortable width for long text */
+  margin: 0 auto;
+  padding: 0 25px;
+}
+
+.policy-section {
+  margin-bottom: 60px; /* Space between sections */
+}
+
+/* Headings within sections */
+.policy-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  color: var(--notes-black);
+  letter-spacing: -0.5px;
+}
+
+.policy-section h3 {
+  font-size: 1.35rem;
+  margin: 40px 0 20px 0;
+  color: #222222;
+}
+
+/* Body text & lists */
+.policy-section p, .policy-section li {
+  font-size: 1.15rem;
+  color: #444444;
+  margin-bottom: 18px;
+}
+
+/* --- Table Styling --- */
+.table-responsive {
+  overflow-x: auto; /* Required for mobile compatibility */
+  margin: 30px 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03); /* Modern, soft shadow */
+}
+
+.cookie-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 550px;
+}
+
+.cookie-table th {
+  background-color: var(--notes-bg-accent);
+  padding: 18px 20px;
+  text-align: left;
+  font-weight: 600;
+  color: var(--notes-black);
+  border-bottom: 2px solid var(--notes-border);
+}
+
+.cookie-table td {
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--notes-border);
+  vertical-align: top;
+}
+
+/* --- Callout Sections & Links --- */
+.dnt-alert {
+  background-color: var(--notes-bg-accent);
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid var(--notes-border);
+}
+
+.contact-highlight {
+  text-align: center;
+  background-color: #111111;
+  color: #ffffff;
+  padding: 50px;
+  border-radius: 20px;
+}
+
+.contact-highlight h2, .contact-highlight p {
+  color: #ffffff;
+}
+
+.contact-links {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  background-color: #ffffff;
+  color: var(--notes-black);
+  padding: 14px 30px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  background-color: #f1f1f1;
+}
+
+.link-inline {
+  color: #ffffff;
+  text-decoration: underline;
+  padding: 14px 0;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.4rem;
+  }
+}
