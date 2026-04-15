@@ -1,0 +1,210 @@
+# NotesPrep
+
+> Download Class 9 & 10 PDF notes and prepare for entry tests.
+
+NotesPrep is an educational resource website dedicated to providing high-quality PDF notes and study materials for students in Class 9 and Class 10, primarily focusing on the FBISE curriculum. The platform aims to help students achieve high scores by offering comprehensive notes, practice MCQs, solved exercises, and resources for entry test preparation. It serves as a one-stop shop for academic success, covering subjects like Mathematics, Biology, Physics, Chemistry, and English.
+
+The core value proposition of NotesPrep lies in its accessibility and relevance to students preparing for both board exams and competitive entry tests. Users can easily download subject-specific notes, often chapter-wise, to aid their studies. The inclusion of entry test preparation materials, such as mock tests and MCQs for various exams like NET Engineering, further enhances its utility. This makes NotesPrep a valuable tool for students aiming for academic excellence and admission into higher education institutions.
+
+## Core Resources
+
+- [NotesPrep: Class 9, 10 PDF Notes & Entry Test Resources 2026](https://notesprep.com/): Access Class 9 & 10 PDF notes, entry test prep, and MCQs.
+- [Class 9 PDF Notes](https://notesprep.com/class9/): Download comprehensive PDF notes for all Class 9 subjects.
+- [Class 10 PDF Notes](https://notesprep.com/class10/): Download comprehensive PDF notes for all Class 10 subjects.
+
+## Subject Notes
+
+- [Class 9 Mathematics Notes](https://notesprep.com/class9/mathematics/): Get chapter-wise PDF notes for Class 9 Mathematics.
+- [Class 10 Mathematics Notes](https://notesprep.com/class10/mathematics/): Get chapter-wise PDF notes for Class 10 Mathematics.
+- [Class 9 Biology Notes](https://notesprep.com/class9/biology/): Download chapter-wise PDF notes for Class 9 Biology.
+- [Class 10 Biology Notes](https://notesprep.com/class10/biology/): Download chapter-wise PDF notes for Class 10 Biology.
+- [Class 9 English Notes](https://notesprep.com/class9/english/): Access chapter-wise PDF notes for Class 9 English.
+- [Class 10 English Notes](https://notesprep.com/class10/english/): Access chapter-wise PDF notes for Class 10 English.
+- [Class 9 Physics Notes](https://notesprep.com/class9/physics/): Get chapter-wise PDF notes and numericals for Class 9 Physics.
+- [Class 10 Physics Notes](https://notesprep.com/class10/physics/): Get chapter-wise PDF notes and numericals for Class 10 Physics.
+- [Class 9 Computer Science Notes](https://notesprep.com/class9/computer/): Download chapter-wise PDF notes for Class 9 Computer Science.
+- [Class 10 Computer Science Notes](https://notesprep.com/class10/computer/): Download chapter-wise PDF notes for Class 10 Computer Science.
+- [Class 9 Chemistry Notes](https://notesprep.com/class9/chemistry/): Get chapter-wise PDF notes for Class 9 Chemistry.
+- [Class 10 Chemistry Notes](https://notesprep.com/class10/chemistry/): Get chapter-wise PDF notes for Class 10 Chemistry.
+
+## Chapter-Specific Notes
+
+- [Class 9 Maths Chapter 1 Notes](https://notesprep.com/class9/mathematics/chapter-1/): Detailed notes for Class 9 Mathematics Chapter 1.
+- [Class 9 Maths Chapter 2 Notes](https://notesprep.com/class9/mathematics/chapter-2/): Detailed notes for Class 9 Mathematics Chapter 2.
+- [Class 9 Maths Chapter 3 Notes](https://notesprep.com/class9/mathematics/chapter-3/): Detailed notes for Class 9 Mathematics Chapter 3.
+- [Class 9 Maths Chapter 4 Notes](https://notesprep.com/class9/mathematics/chapter-4/): Detailed notes for Class 9 Mathematics Chapter 4.
+- [Class 9 Maths Chapter 5 Notes](https://notesprep.com/class9/mathematics/chapter-5/): Detailed notes for Class 9 Mathematics Chapter 5.
+- [Class 9 Maths Chapter 6 Notes](https://notesprep.com/class9/mathematics/chapter-6/): Detailed notes for Class 9 Mathematics Chapter 6.
+- [Class 9 Maths Chapter 7 Notes](https://notesprep.com/class9/mathematics/chapter-7/): Detailed notes for Class 9 Mathematics Chapter 7.
+- [Class 9 Maths Chapter 8 Notes](https://notesprep.com/class9/mathematics/chapter-8/): Detailed notes for Class 9 Mathematics Chapter 8.
+- [Class 9 Maths Chapter 9 Notes](https://notesprep.com/class9/mathematics/chapter-9/): Detailed notes for Class 9 Mathematics Chapter 9.
+- [Class 9 Maths Chapter 10 Notes](https://notesprep.com/class9/mathematics/chapter-10/): Detailed notes for Class 9 Mathematics Chapter 10.
+- [Class 9 Maths Chapter 11 Notes](https://notesprep.com/class9/mathematics/chapter-11/): Detailed notes for Class 9 Mathematics Chapter 11.
+- [Class 10 Maths Chapter 1 Notes](https://notesprep.com/class10/mathematics/chapter-1/): Detailed notes for Class 10 Mathematics Chapter 1.
+- [Class 10 Maths Chapter 2 Notes](https://notesprep.com/class10/mathematics/chapter-2/): Detailed notes for Class 10 Mathematics Chapter 2.
+- [Class 10 Maths Chapter 3 Notes](https://notesprep.com/class10/mathematics/chapter-3/): Detailed notes for Class 10 Mathematics Chapter 3.
+- [Class 10 Maths Chapter 4 Notes](https://notesprep.com/class10/mathematics/chapter-4/): Detailed notes for Class 10 Mathematics Chapter 4.
+- [Class 10 Maths Chapter 5 Notes](https://notesprep.com/class10/mathematics/chapter-5/): Detailed notes for Class 10 Mathematics Chapter 5.
+- [Class 10 Maths Chapter 6 Notes](https://notesprep.com/class10/mathematics/chapter-6/): Detailed notes for Class 10 Mathematics Chapter 6.
+- [Class 10 Maths Chapter 7 Notes](https://notesprep.com/class10/mathematics/chapter-7/): Detailed notes for Class 10 Mathematics Chapter 7.
+- [Class 10 Maths Chapter 8 Notes](https://notesprep.com/class10/mathematics/chapter-8/): Detailed notes for Class 10 Mathematics Chapter 8.
+- [Class 10 Maths Chapter 9 Notes](https://notesprep.com/class10/mathematics/chapter-9/): Detailed notes for Class 10 Mathematics Chapter 9.
+- [Class 10 Maths Chapter 10 Notes](https://notesprep.com/class10/mathematics/chapter-10/): Detailed notes for Class 10 Mathematics Chapter 10.
+- [Class 10 Maths Chapter 11 Notes](https://notesprep.com/class10/mathematics/chapter-11/): Detailed notes for Class 10 Mathematics Chapter 11.
+- [Class 10 Maths Chapter 12 Notes](https://notesprep.com/class10/mathematics/chapter-12/): Detailed notes for Class 10 Mathematics Chapter 12.
+- [Class 9 Biology Chapter 1 Notes](https://notesprep.com/class9/biology/chapter-1/): Detailed notes for Class 9 Biology Chapter 1.
+- [Class 9 Biology Chapter 2 Notes](https://notesprep.com/class9/biology/chapter-2/): Detailed notes for Class 9 Biology Chapter 2.
+- [Class 9 Biology Chapter 3 Notes](https://notesprep.com/class9/biology/chapter-3/): Detailed notes for Class 9 Biology Chapter 3.
+- [Class 9 Biology Chapter 4 Notes](https://notesprep.com/class9/biology/chapter-4/): Detailed notes for Class 9 Biology Chapter 4.
+- [Class 9 Biology Chapter 5 Notes](https://notesprep.com/class9/biology/chapter-5/): Detailed notes for Class 9 Biology Chapter 5.
+- [Class 9 Biology Chapter 6 Notes](https://notesprep.com/class9/biology/chapter-6/): Detailed notes for Class 9 Biology Chapter 6.
+- [Class 9 Biology Chapter 7 Notes](https://notesprep.com/class9/biology/chapter-7/): Detailed notes for Class 9 Biology Chapter 7.
+- [Class 9 Biology Chapter 8 Notes](https://notesprep.com/class9/biology/chapter-8/): Detailed notes for Class 9 Biology Chapter 8.
+- [Class 9 Biology Chapter 9 Notes](https://notesprep.com/class9/biology/chapter-9/): Detailed notes for Class 9 Biology Chapter 9.
+- [Class 9 Biology Chapter 10 Notes](https://notesprep.com/class9/biology/chapter-10/): Detailed notes for Class 9 Biology Chapter 10.
+- [Class 10 Biology Chapter 1 Notes](https://notesprep.com/class10/biology/chapter-1/): Detailed notes for Class 10 Biology Chapter 1.
+- [Class 10 Biology Chapter 2 Notes](https://notesprep.com/class10/biology/chapter-2/): Detailed notes for Class 10 Biology Chapter 2.
+- [Class 10 Biology Chapter 3 Notes](https://notesprep.com/class10/biology/chapter-3/): Detailed notes for Class 10 Biology Chapter 3.
+- [Class 10 Biology Chapter 4 Notes](https://notesprep.com/class10/biology/chapter-4/): Detailed notes for Class 10 Biology Chapter 4.
+- [Class 10 Biology Chapter 5 Notes](https://notesprep.com/class10/biology/chapter-5/): Detailed notes for Class 10 Biology Chapter 5.
+- [Class 10 Biology Chapter 6 Notes](https://notesprep.com/class10/biology/chapter-6/): Detailed notes for Class 10 Biology Chapter 6.
+- [Class 10 Biology Chapter 7 Notes](https://notesprep.com/class10/biology/chapter-7/): Detailed notes for Class 10 Biology Chapter 7.
+- [Class 10 Biology Chapter 8 Notes](https://notesprep.com/class10/biology/chapter-8/): Detailed notes for Class 10 Biology Chapter 8.
+- [Class 10 Biology Chapter 9 Notes](https://notesprep.com/class10/biology/chapter-9/): Detailed notes for Class 10 Biology Chapter 9.
+- [Class 10 Biology Chapter 10 Notes](https://notesprep.com/class10/biology/chapter-10/): Detailed notes for Class 10 Biology Chapter 10.
+- [Class 10 Biology Chapter 11 Notes](https://notesprep.com/class10/biology/chapter-11/): Detailed notes for Class 10 Biology Chapter 11.
+- [Class 9 Physics Chapter 1 Notes](https://notesprep.com/class9/physics/chapter-1-notes/): Notes for Class 9 Physics Chapter 1.
+- [Class 9 Physics Chapter 1 Numericals](https://notesprep.com/class9/physics/chapter-1-numericals/): Numericals for Class 9 Physics Chapter 1.
+- [Class 9 Physics Chapter 2 Notes](https://notesprep.com/class9/physics/chapter-2-notes/): Notes for Class 9 Physics Chapter 2.
+- [Class 9 Physics Chapter 2 Numericals](https://notesprep.com/class9/physics/chapter-2-numericals/): Numericals for Class 9 Physics Chapter 2.
+- [Class 9 Physics Chapter 3 Notes](https://notesprep.com/class9/physics/chapter-3-notes/): Notes for Class 9 Physics Chapter 3.
+- [Class 9 Physics Chapter 3 Numericals](https://notesprep.com/class9/physics/chapter-3-numericals/): Numericals for Class 9 Physics Chapter 3.
+- [Class 9 Physics Chapter 4 Notes](https://notesprep.com/class9/physics/chapter-4-notes/): Notes for Class 9 Physics Chapter 4.
+- [Class 9 Physics Chapter 4 Numericals](https://notesprep.com/class9/physics/chapter-4-numericals/): Numericals for Class 9 Physics Chapter 4.
+- [Class 9 Physics Chapter 5 Notes](https://notesprep.com/class9/physics/chapter-5-notes/): Notes for Class 9 Physics Chapter 5.
+- [Class 9 Physics Chapter 5 Numericals](https://notesprep.com/class9/physics/chapter-5-numericals/): Numericals for Class 9 Physics Chapter 5.
+- [Class 9 Physics Chapter 6 Notes](https://notesprep.com/class9/physics/chapter-6-notes/): Notes for Class 9 Physics Chapter 6.
+- [Class 9 Physics Chapter 6 Numericals](https://notesprep.com/class9/physics/chapter-6-numericals/): Numericals for Class 9 Physics Chapter 6.
+- [Class 9 Physics Chapter 7 Notes](https://notesprep.com/class9/physics/chapter-7-notes/): Notes for Class 9 Physics Chapter 7.
+- [Class 9 Physics Chapter 7 Numericals](https://notesprep.com/class9/physics/chapter-7-numericals/): Numericals for Class 9 Physics Chapter 7.
+- [Class 9 Physics Chapter 8 Notes](https://notesprep.com/class9/physics/chapter-8-notes/): Notes for Class 9 Physics Chapter 8.
+- [Class 9 Physics Chapter 8 Numericals](https://notesprep.com/class9/physics/chapter-8-numericals/): Numericals for Class 9 Physics Chapter 8.
+- [Class 9 Physics Chapter 9 Notes](https://notesprep.com/class9/physics/chapter-9-notes/): Notes for Class 9 Physics Chapter 9.
+- [Class 9 Physics Chapter 9 Numericals](https://notesprep.com/class9/physics/chapter-9-numericals/): Numericals for Class 9 Physics Chapter 9.
+- [Class 10 Physics Chapter 10 Notes](https://notesprep.com/class10/physics/chapter-10-notes/): Notes for Class 10 Physics Chapter 10.
+- [Class 10 Physics Chapter 10 Numericals](https://notesprep.com/class10/physics/chapter-10-numericals/): Numericals for Class 10 Physics Chapter 10.
+- [Class 10 Physics Chapter 11 Notes](https://notesprep.com/class10/physics/chapter-11-notes/): Notes for Class 10 Physics Chapter 11.
+- [Class 10 Physics Chapter 11 Numericals](https://notesprep.com/class10/physics/chapter-11-numericals/): Numericals for Class 10 Physics Chapter 11.
+- [Class 10 Physics Chapter 12 Notes](https://notesprep.com/class10/physics/chapter-12-notes/): Notes for Class 10 Physics Chapter 12.
+- [Class 10 Physics Chapter 12 Numericals](https://notesprep.com/class10/physics/chapter-12-numericals/): Numericals for Class 10 Physics Chapter 12.
+- [Class 10 Physics Chapter 13 Notes](https://notesprep.com/class10/physics/chapter-13-notes/): Notes for Class 10 Physics Chapter 13.
+- [Class 10 Physics Chapter 13 Numericals](https://notesprep.com/class10/physics/chapter-13-numericals/): Numericals for Class 10 Physics Chapter 13.
+- [Class 10 Physics Chapter 14 Notes](https://notesprep.com/class10/physics/chapter-14-notes/): Notes for Class 10 Physics Chapter 14.
+- [Class 10 Physics Chapter 14 Numericals](https://notesprep.com/class10/physics/chapter-14-numericals/): Numericals for Class 10 Physics Chapter 14.
+- [Class 10 Physics Chapter 15 Notes](https://notesprep.com/class10/physics/chapter-15-notes/): Notes for Class 10 Physics Chapter 15.
+- [Class 10 Physics Chapter 15 Numericals](https://notesprep.com/class10/physics/chapter-15-numericals/): Numericals for Class 10 Physics Chapter 15.
+- [Class 10 Physics Chapter 16 Notes](https://notesprep.com/class10/physics/chapter-16-notes/): Notes for Class 10 Physics Chapter 16.
+- [Class 10 Physics Chapter 16 Numericals](https://notesprep.com/class10/physics/chapter-16-numericals/): Numericals for Class 10 Physics Chapter 16.
+- [Class 10 Physics Chapter 17 Notes](https://notesprep.com/class10/physics/chapter-17-notes/): Notes for Class 10 Physics Chapter 17.
+- [Class 10 Physics Chapter 17 Numericals](https://notesprep.com/class10/physics/chapter-17-numericals/): Numericals for Class 10 Physics Chapter 17.
+- [Class 10 Physics Chapter 18 Notes](https://notesprep.com/class10/physics/chapter-18-notes/): Notes for Class 10 Physics Chapter 18.
+- [Class 10 Physics Chapter 18 Numericals](https://notesprep.com/class10/physics/chapter-18-numericals/): Numericals for Class 10 Physics Chapter 18.
+- [Class 10 Physics Chapter 19 Notes](https://notesprep.com/class10/physics/chapter-19-notes/): Notes for Class 10 Physics Chapter 19.
+- [Class 10 Physics Chapter 19 Numericals](https://notesprep.com/class10/physics/chapter-19-numericals/): Numericals for Class 10 Physics Chapter 19.
+- [Class 10 Physics Chapter 20 Notes](https://notesprep.com/class10/physics/chapter-20-notes/): Notes for Class 10 Physics Chapter 20.
+- [Class 10 Physics Chapter 20 Numericals](https://notesprep.com/class10/physics/chapter-20-numericals/): Numericals for Class 10 Physics Chapter 20.
+- [Class 10 Physics Chapter 21 Notes](https://notesprep.com/class10/physics/chapter-21-notes/): Notes for Class 10 Physics Chapter 21.
+- [Class 10 Physics Chapter 21 Numericals](https://notesprep.com/class10/physics/chapter-21-numericals/): Numericals for Class 10 Physics Chapter 21.
+- [Class 9 Chemistry Chapter 1 Notes](https://notesprep.com/class9/chemistry/chapter-1/): Detailed notes for Class 9 Chemistry Chapter 1.
+- [Class 9 Chemistry Chapter 2 Notes](https://notesprep.com/class9/chemistry/chapter-2/): Detailed notes for Class 9 Chemistry Chapter 2.
+- [Class 9 Chemistry Chapter 3 Notes](https://notesprep.com/class9/chemistry/chapter-3/): Detailed notes for Class 9 Chemistry Chapter 3.
+- [Class 9 Chemistry Chapter 4 Notes](https://notesprep.com/class9/chemistry/chapter-4/): Detailed notes for Class 9 Chemistry Chapter 4.
+- [Class 9 Chemistry Chapter 5 Notes](https://notesprep.com/class9/chemistry/chapter-5/): Detailed notes for Class 9 Chemistry Chapter 5.
+- [Class 9 Chemistry Chapter 6 Notes](https://notesprep.com/class9/chemistry/chapter-6/): Detailed notes for Class 9 Chemistry Chapter 6.
+- [Class 9 Chemistry Chapter 7 Notes](https://notesprep.com/class9/chemistry/chapter-7/): Detailed notes for Class 9 Chemistry Chapter 7.
+- [Class 9 Chemistry Chapter 8 Notes](https://notesprep.com/class9/chemistry/chapter-8/): Detailed notes for Class 9 Chemistry Chapter 8.
+- [Class 9 Chemistry Chapter 9 Notes](https://notesprep.com/class9/chemistry/chapter-9/): Detailed notes for Class 9 Chemistry Chapter 9.
+- [Class 9 Chemistry Chapter 10 Notes](https://notesprep.com/class9/chemistry/chapter-10/): Detailed notes for Class 9 Chemistry Chapter 10.
+- [Class 9 Chemistry Chapter 11 Notes](https://notesprep.com/class9/chemistry/chapter-11/): Detailed notes for Class 9 Chemistry Chapter 11.
+- [Class 9 Chemistry Chapter 12 Notes](https://notesprep.com/class9/chemistry/chapter-12/): Detailed notes for Class 9 Chemistry Chapter 12.
+- [Class 9 Chemistry Chapter 13 Notes](https://notesprep.com/class9/chemistry/chapter-13/): Detailed notes for Class 9 Chemistry Chapter 13.
+- [Class 9 Chemistry Chapter 14 Notes](https://notesprep.com/class9/chemistry/chapter-14/): Detailed notes for Class 9 Chemistry Chapter 14.
+- [Class 9 Chemistry Chapter 15 Notes](https://notesprep.com/class9/chemistry/chapter-15/): Detailed notes for Class 9 Chemistry Chapter 15.
+- [Class 9 Chemistry Chapter 16 Notes](https://notesprep.com/class9/chemistry/chapter-16/): Detailed notes for Class 9 Chemistry Chapter 16.
+- [Class 9 Chemistry Chapter 17 Notes](https://notesprep.com/class9/chemistry/chapter-17/): Detailed notes for Class 9 Chemistry Chapter 17.
+- [Class 9 Chemistry Chapter 18 Notes](https://notesprep.com/class9/chemistry/chapter-18/): Detailed notes for Class 9 Chemistry Chapter 18.
+- [Class 9 Chemistry Chapter 19 Notes](https://notesprep.com/class9/chemistry/chapter-19/): Detailed notes for Class 9 Chemistry Chapter 19.
+- [Class 10 Chemistry Chapter 1 Notes](https://notesprep.com/class10/chemistry/chapter-1/): Detailed notes for Class 10 Chemistry Chapter 1.
+- [Class 10 Chemistry Chapter 2 Notes](https://notesprep.com/class10/chemistry/chapter-2/): Detailed notes for Class 10 Chemistry Chapter 2.
+- [Class 10 Chemistry Chapter 3 Notes](https://notesprep.com/class10/chemistry/chapter-3/): Detailed notes for Class 10 Chemistry Chapter 3.
+- [Class 10 Chemistry Chapter 4 Notes](https://notesprep.com/class10/chemistry/chapter-4/): Detailed notes for Class 10 Chemistry Chapter 4.
+- [Class 10 Chemistry Chapter 5 Notes](https://notesprep.com/class10/chemistry/chapter-5/): Detailed notes for Class 10 Chemistry Chapter 5.
+- [Class 10 Chemistry Chapter 6 Notes](https://notesprep.com/class10/chemistry/chapter-6/): Detailed notes for Class 10 Chemistry Chapter 6.
+- [Class 10 Chemistry Chapter 7 Notes](https://notesprep.com/class10/chemistry/chapter-7/): Detailed notes for Class 10 Chemistry Chapter 7.
+- [Class 10 Chemistry Chapter 8 Notes](https://notesprep.com/class10/chemistry/chapter-8/): Detailed notes for Class 10 Chemistry Chapter 8.
+- [Class 10 Chemistry Chapter 9 Notes](https://notesprep.com/class10/chemistry/chapter-9/): Detailed notes for Class 10 Chemistry Chapter 9.
+- [Class 10 Chemistry Chapter 10 Notes](https://notesprep.com/class10/chemistry/chapter-10/): Detailed notes for Class 10 Chemistry Chapter 10.
+- [Class 10 Chemistry Chapter 11 Notes](https://notesprep.com/class10/chemistry/chapter-11/): Detailed notes for Class 10 Chemistry Chapter 11.
+- [Class 10 Chemistry Chapter 12 Notes](https://notesprep.com/class10/chemistry/chapter-12/): Detailed notes for Class 10 Chemistry Chapter 12.
+- [Class 10 Chemistry Chapter 13 Notes](https://notesprep.com/class10/chemistry/chapter-13/): Detailed notes for Class 10 Chemistry Chapter 13.
+
+## Entry Test Preparation
+
+- [Entry Test Preparation Resources](https://notesprep.com/entry-tests/): Explore resources for various entry tests, including MCQs and mock tests.
+- [NET Engineering Entry Test](https://notesprep.com/entry-tests/net-engineering/): Prepare for the NET Engineering entry test with study materials and mock tests.
+- [NET Engineering Mock Tests](https://notesprep.com/entry-tests/net-engineering/mock-tests/): Take mock tests to practice for the NET Engineering entrance exam.
+- [NET Engineering Maths Mock Test 1](https://notesprep.com/entry-tests/net-engineering/mock-tests/maths-1/): Practice Mathematics for NET Engineering with Mock Test 1.
+- [NET Engineering Physics Mock Test 1](https://notesprep.com/entry-tests/net-engineering/mock-tests/physics-1/): Practice Physics for NET Engineering with Mock Test 1.
+- [NET Engineering Physics Mock Test 2](https://notesprep.com/entry-tests/net-engineering/mock-tests/physics-2/): Practice Physics for NET Engineering with Mock Test 2.
+- [Entry Test MCQs](https://notesprep.com/entry-tests/mcqs/): Access a wide range of MCQs for various entry test subjects.
+- [MCQs on Quadratic Equations](https://notesprep.com/entry-tests/mcqs/quadratic-equation/mcq1/): Test your knowledge of quadratic equations with these MCQs.
+- [MCQs on Complex Numbers](https://notesprep.com/entry-tests/mcqs/complex-numbers/mcq1/): Practice MCQs covering complex numbers for entry tests.
+- [MCQs on Matrices and Determinants](https://notesprep.com/entry-tests/mcqs/matrix-and-determinants/mcq1/): Solve MCQs on matrices and determinants for entry test preparation.
+- [MCQs on Vectors](https://notesprep.com/entry-tests/mcqs/vectors/mcq1/): Practice MCQs related to vectors for entry tests.
+- [MCQs on Partial Fractions](https://notesprep.com/entry-tests/mcqs/partial-fractions/mcq1/): Test your understanding of partial fractions with these MCQs.
+- [MCQs on Sets](https://notesprep.com/entry-tests/mcqs/sets/mcq1/): Practice MCQs on set theory for entry tests.
+- [MCQs on Sequences and Series](https://notesprep.com/entry-tests/mcqs/sequence-and-series/mcq1/): Solve MCQs on sequences and series for entry tests.
+- [MCQs on Permutations, Combinations, and Probability](https://notesprep.com/entry-tests/mcqs/permutation-combination-and-probability/mcq1/): Practice MCQs covering permutations, combinations, and probability.
+- [MCQs on Analytic Geometry](https://notesprep.com/entry-tests/mcqs/analytic-geometry/mcq1/): Test your knowledge of analytic geometry with these MCQs.
+- [MCQs on Trigonometric Functions](https://notesprep.com/entry-tests/mcqs/trignometric-functions/mcq1/): Solve MCQs on trigonometric functions for entry tests.
+- [MCQs on Derivatives and Integration](https://notesprep.com/entry-tests/mcqs/derivatives-and-integration/mcq1/): Practice MCQs on calculus fundamentals: derivatives and integration.
+- [MCQs on Differential Equations](https://notesprep.com/entry-tests/mcqs/differential-equations/mcq1/): Test your understanding of differential equations with these MCQs.
+- [MCQs on Conics](https://notesprep.com/entry-tests/mcqs/conics/mcq1/): Solve MCQs on conic sections for entry tests.
+- [MCQs on Measurements](https://notesprep.com/entry-tests/mcqs/measurements/mcq1/): Practice MCQs related to measurements in physics.
+- [MCQs on Gravitation](https://notesprep.com/entry-tests/mcqs/gravitation/mcq1/): Test your knowledge of gravitation with these MCQs.
+- [MCQs on Vectors and Equilibrium](https://notesprep.com/entry-tests/mcqs/vectors-and-equilibrium/mcq1/): Solve MCQs on vectors and equilibrium for physics entry tests.
+- [MCQs on Circular Motion](https://notesprep.com/entry-tests/mcqs/circular-motion/mcq1/): Practice MCQs on circular motion for physics entry tests.
+- [MCQs on Waves](https://notesprep.com/entry-tests/mcqs/waves/mcq1/): Test your understanding of waves with these physics MCQs.
+- [MCQs on Optics](https://notesprep.com/entry-tests/mcqs/optics/mcq1/): Solve MCQs on optics for physics entry tests.
+- [MCQs on Heat and Thermodynamics](https://notesprep.com/entry-tests/mcqs/heat-and-thermodynamics/mcq1/): Practice MCQs on heat and thermodynamics for physics entry tests.
+- [MCQs on Electrostatics](https://notesprep.com/entry-tests/mcqs/electrostatics/mcq1/): Test your knowledge of electrostatics with these physics MCQs.
+- [MCQs on Electromagnetism](https://notesprep.com/entry-tests/mcqs/electromagnetism/mcq1/): Solve MCQs on electromagnetism for physics entry tests.
+- [MCQs on Quantum Physics](https://notesprep.com/entry-tests/mcqs/quantum-physics/mcq1/): Practice MCQs on quantum physics for entry tests.
+- [MCQs on Nuclear Physics](https://notesprep.com/entry-tests/mcqs/nuclear-physics/mcq1/): Test your understanding of nuclear physics with these MCQs.
+- [MCQs on Particle Physics](https://notesprep.com/entry-tests/mcqs/particle-physics/mcq1/): Solve MCQs on particle physics for advanced entry tests.
+- [MCQs on Electronics](https://notesprep.com/entry-tests/mcqs/electronics/mcq1/): Practice MCQs on basic electronics for entry tests.
+- [MCQs on Special Relativity](https://notesprep.com/entry-tests/mcqs/special-relativity/mcq1/): Test your knowledge of special relativity with these MCQs.
+- [MCQs on Synonyms and Antonyms](https://notesprep.com/entry-tests/mcqs/synonyms-and-antonyms/mcq1/): Improve vocabulary with MCQs on synonyms and antonyms.
+- [MCQs on Spelling Corrections](https://notesprep.com/entry-tests/mcqs/spelling-corrections/mcq1/): Practice spelling correction MCQs for English tests.
+- [MCQs on Understanding Context](https://notesprep.com/entry-tests/mcqs/understanding-context/mcq1/): Test reading comprehension skills with context-based MCQs.
+- [MCQs on Analogies](https://notesprep.com/entry-tests/mcqs/analogies/mcq1/): Practice analogy-based MCQs for verbal reasoning sections.
+- [MCQs on Grammar](https://notesprep.com/entry-tests/mcqs/grammar/mcq1/): Reinforce English grammar rules with practice MCQs.
+
+## Study Tools & Resources
+
+- [Study Resources](https://notesprep.com/resources/): Explore additional study resources and tools for students.
+- [NET Aggregate Calculator](https://notesprep.com/resources/net-aggregate-calculator/): Calculate your NET aggregate score using this online tool.
+
+## Blog Articles
+
+- [Blog](https://notesprep.com/blogs/): Read articles on study tips, exam strategies, and educational topics.
+
+## Legal & Information
+
+- [Contact Us](https://notesprep.com/contact-us/): Find contact information and ways to reach NotesPrep.
+- [Frequently Asked Questions](https://notesprep.com/faq/): Get answers to common questions about NotesPrep services.
+- [Privacy Policy](https://notesprep.com/privacy-policy/): Understand how NotesPrep handles your personal data.
+- [Terms and Conditions](https://notesprep.com/terms/): Review the terms of service for using NotesPrep.
+- [Cookie Policy](https://notesprep.com/cookies/): Learn about NotesPrep's use of cookies and tracking technologies.
+
+---
