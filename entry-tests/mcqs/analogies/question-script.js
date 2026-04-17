@@ -90,8 +90,14 @@ function extractSubjectFromUrl(url) {
     };
 }
 document.addEventListener('DOMContentLoaded', function() {
-	const heading = document.getElementsByClassName('entry-test-heading');
-	heading.innerText = `Solved Free ${result.formatted} MCQs For Practice`;
+    const subjectInfo = extractSubjectFromUrl(window.location.href);
+    
+    // getElementsByClassName returns an array, so use [0] for the first element
+    const heading = document.getElementsByClassName('entry-test-heading')[0];
+    
+    if (heading && subjectInfo.formatted) {
+        heading.innerText = `Solved Free ${subjectInfo.formatted} MCQs For Practice`;
+    }
 });
 
 window.getCurrentDir = () => window.location.pathname.split('/').pop();
