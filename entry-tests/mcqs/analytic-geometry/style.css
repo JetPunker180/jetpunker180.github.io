@@ -121,6 +121,81 @@
 }
 
 
+/* Fix for mobile margin issues */
+@media (max-width: 768px) {
+    .question-container, 
+    .entry-test-heading {
+        margin-left: 3% !important; /* Reduces huge 18% gap to a small breathable margin */
+        margin-right: 3% !important;
+        width: auto; /* Ensures container fills available space */
+    }
+
+    .next-button {
+        margin-left: 0 !important; /* Removes the 80% left margin that pushes it off-screen */
+    }
+
+    .button-row {
+        justify-content: space-between; /* Positions Prev/Next buttons on opposite ends */
+        padding: 0 5px;
+    }
+}
+/* Container for the bottom buttons */
+.button-row {
+    display: flex;
+    justify-content: space-between; /* Spreads buttons out */
+    align-items: center;
+    margin-top: 20px;
+    flex-wrap: wrap; /* Allows wrapping on small phones */
+}
+
+/* Style for the Report Button */
+.report-btn {
+    background: none;
+    border: 1px solid #ff4d4d;
+    color: #ff4d4d;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    transition: 0.3s;
+    order: 2; /* Positions it between Prev and Next on desktop */
+	max-width:200px;
+}
+
+.report-btn:hover {
+    background-color: #ff4d4d;
+    color: white;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .button-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two columns */
+        gap: 10px;
+    }
+
+    .report-btn {
+        grid-column: 2; /* Moves to the right column */
+        grid-row: 1;    /* Sits in the first row */
+        justify-self: end; /* Aligns to the right */
+        margin-bottom: 5px;
+    }
+
+    .prev-button {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .next-button {
+        grid-column: 2;
+        grid-row: 2;
+        margin-left: 0 !important; /* Fixes your existing 80% margin issue */
+    }
+}
+
+
 
 
 

@@ -1,3 +1,51 @@
+function extractSubjectFromUrl(url) {
+    // Parse the URL to get the pathname
+    let pathname;
+    try {
+        const parsedUrl = new URL(url);
+        pathname = parsedUrl.pathname;
+    } catch (e) {
+        // If it's not a valid URL, treat it as a path
+        pathname = url;
+    }
+    
+    // Split the path by '/' and filter out empty strings
+    const pathParts = pathname.split('/').filter(part => part !== '');
+    
+    // Find the part after 'mcqs' and before 'mcq1' or any other pattern
+    let subjectSlug = null;
+    const mcqsIndex = pathParts.indexOf('mcqs');
+    
+    if (mcqsIndex !== -1 && pathParts.length > mcqsIndex + 1) {
+        // The subject is the part right after 'mcqs'
+        subjectSlug = pathParts[mcqsIndex + 1];
+    }
+    
+    if (!subjectSlug) {
+        return {
+            slug: null,
+            formatted: null,
+            original: null
+        };
+    }
+    
+    // Format the subject: capitalize first letter of every word separated by hyphen
+    const formattedSubject = subjectSlug
+        .split('-')
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(' ');
+    
+    return {
+        slug: subjectSlug,
+        formatted: formattedSubject,
+        original: subjectSlug
+    };
+}
+document.addEventListener('DOMContentLoaded', function() {
+	const heading = document.getElementsByClassName('entry-test-heading');
+	heading.innerText = `Solved Free ${result.formatted} MCQs For Practice`;
+});
+
 window.getCurrentDir = () => window.location.pathname.split('/').pop();
 
 let mcqNumber = Number(window.location.pathname.match(/mcq(\d+)/)?.[1]);
@@ -64,6 +112,8 @@ window.goToNextPage = function() {
 	
 elem.innerHTML = `<div class="question-heading"><b>Question ${mcqNumber}</b> : ${questionContent}</div>
 	<div class="option-container">
+
+
     <fieldset id="i0uj86" class="options-group">
 	<div class="option-div">
 	  <div class="ind-option-div" id="option-0">
@@ -94,6 +144,7 @@ elem.innerHTML = `<div class="question-heading"><b>Question ${mcqNumber}</b> : $
 
 	<button class="submit-option-button" onclick="revealElement()">View Answer</button><br>
 	<div class="button-row"><button class="prev-button" onclick="goToPrevPage()">Previous Question</button>
+	<button class="report-btn" onclick="window.open('https://notesprep.com/contact-us')">Report</button>
 	<button class="next-button" onclick="goToNextPage()">Next Question</button>
 	</div>
 	<div class="revealed-answer" style="display:none">${explanation}</div></div>`;
