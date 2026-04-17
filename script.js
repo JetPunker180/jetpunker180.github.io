@@ -34,43 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Navigation link updates - all in one place
     console.log('Starting navigation updates...');
-    
-    // Update HSSC to Blogs link
-    const blogsNavLink = document.getElementById('iz0tt');
-    console.log('Found Blogs Link:', blogsNavLink);
-    if (blogsNavLink) {
-        blogsNavLink.href = 'https://notesprep.com/blogs/';
-        blogsNavLink.textContent = blogsNavLink.textContent.replace('HSSC', 'Blogs');
-        console.log('Blogs navigation updated successfully!');
-    } else {
-        console.log('Element with ID "iz0tt" not found');
-    }
-    
-    // Update Entry Tests link
-    const entryTestsNavLink = document.getElementById('iftme');
-    console.log('Found Entry Tests Link:', entryTestsNavLink);
-    if (entryTestsNavLink) {
-        entryTestsNavLink.href = 'https://notesprep.com/entry-tests';
-        console.log('Entry Tests navigation updated successfully!');
-    } else {
-        console.log('Element with ID "iftme" not found');
-    }
-	
-	// Update Navigation
-    const navigation = document.getElementById('i32qq');
-    console.log('Found Navigation:', navigation);
-    if (navigation) {
-        navigation.innerHTML = ` <a id="ib7dg" href="https://notesprep.com#secondary" class="gjs-t-link nav-link">SSC</a>
-          <a id="iftme" href="https://notesprep.com/entry-tests" class="gjs-t-link nav-link">Entry Tests</a>
-		  <a id="iz0tt" href="https://notesprep.com/blogs" class="gjs-t-link nav-link">Blogs</a>
-          <a id="ik0c6" href="https://notesprep.com/resources" class="gjs-t-link nav-link">Resources</a>
-          <a id="iuxnk" href="https://notesprep.com#about" class="gjs-t-link nav-link">About</a>
-          <a id="ixd44" href="https://notesprep.com/contact-us" class="gjs-t-link nav-link">Contact</a>`;
-        console.log('Navigation updated to:', Navigation);
-    } else {
-        console.log('Navigation Not Found');
-    }
-    
+	    
 	const footerNav = document.getElementById('i6lnig');
     console.log('Found Footer Nav:', footerNav);
     if (footerNav) {

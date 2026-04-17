@@ -1,0 +1,13 @@
+title: "NotesPrep - Entry Test MCQs"  # Short and sweet
+title_separator: "|"
+description: "Download Class 9 and Class 10 PDF notes for FBISE students. Explore entry test prep, practice MCQs, and solved exercises. Access the best study resources at NotesPrep today."
+url: "https://notesprep.com" 
+baseurl: ""  # Keep empty for custom domain
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-minifier
+
+# Important for your existing files
+keep_files:
+  - assets  # This preserves your existing files

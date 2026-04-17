@@ -1,0 +1,31 @@
+# Jekyll generated files
+_site/
+.jekyll-cache/
+.jekyll-metadata
+
+# Bundler files
+.bundle/
+vendor/
+Gemfile.lock
+
+# Sass cache
+.sass-cache/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.swp
+*.swo
+
+# Editor files
+.idea/
+.vscode/
+*.sublime-*
+
+# Logs
+*.log

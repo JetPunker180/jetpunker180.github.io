@@ -109,14 +109,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
           <span id="irlbe" class="brand-name">NotesPrep</span>
         </a>
-        <nav id="i32qq" aria-label="Primary" class="primary-navigation">
-          <a id="ib7dg" href="https://notesprep.com#secondary" class="gjs-t-link nav-link">SSC</a>
-          <a id="iz0tt" href="https://notesprep.com#higher-secondary" class="gjs-t-link nav-link">HSSC</a>
-          <a id="iftme" href="https://notesprep.com#entry-test-section" class="gjs-t-link nav-link">Entry Tests</a>
-          <a id="ik0c6" href="https://notesprep.com#resources" class="gjs-t-link nav-link">Resources</a>
-          <a id="iuxnk" href="https://notesprep.com#about" class="gjs-t-link nav-link">About</a>
-          <a id="ixd44" href="https://notesprep.com#contact" class="gjs-t-link nav-link">Contact</a>
-        </nav>
+<nav aria-label="Primary" class="primary-navigation" id="i32qq">
+<a class="gjs-t-link nav-link" href="https://notesprep.com/class9" id="iz0tt">Class 9</a>
+<a class="gjs-t-link nav-link" href="https://notesprep.com/class10" id="iftme">Class 10</a>
+<a class="gjs-t-link nav-link" href="https://notesprep.com/blogs" id="ib7dg">Blogs</a>
+<a class="gjs-t-link nav-link" href="https://notesprep.com/entry-tests" id="ik0c6">Entry Tests</a>
+<a class="gjs-t-link nav-link" href="https://notesprep.com/resources" id="iuxnk">Resources</a>
+<a class="gjs-t-link nav-link" href="https://notesprep.com/contact-us" id="ixd44">Contact</a>
+</nav>
         <button type="button" aria-label="Open menu" aria-controls="i32qq" aria-expanded="false" data-js="hamburger" id="iora6" class="hamburger-btn">
           <img src="https://api.iconify.design/lucide-menu.svg?color=%230f172a" alt="" id="iqvio" class="hamburger-icon" />
         </button>
