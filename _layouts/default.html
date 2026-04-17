@@ -9,48 +9,51 @@
     {% comment %}
       ============================================
       SEO TAGS FROM TITLES.YML
-      Supports both relative paths AND full URLs
+      Convert relative URL to match full URLs in _titles.yml
       ============================================
     {% endcomment %}
     
+    {% comment %}
+      Get current URL and convert to full URL format (matching _titles.yml)
+    {% endcomment %}
     {% assign current_url = page.url %}
     
     {% comment %}
-      Try to find data using current URL first
+      Convert relative path to full URL (remove trailing slash if needed)
+      Example: /class10/biology/ -> https://notesprep.com/class10/biology/
     {% endcomment %}
-    {% assign page_data = site.data.titles[current_url] %}
+    {% assign full_url = current_url | prepend: 'https://notesprep.com' %}
     
     {% comment %}
-      If not found, try full URL (for live site compatibility)
+      Try to find data using full URL first (since your _titles.yml uses full URLs)
+    {% endcomment %}
+    {% assign page_data = site.data.titles[full_url] %}
+    
+    {% comment %}
+      If not found, try without trailing slash
     {% endcomment %}
     {% if page_data == nil %}
-        {% assign full_url = current_url | prepend: 'https://notesprep.com' %}
-        {% assign page_data = site.data.titles[full_url] %}
+        {% assign full_url_no_slash = full_url | remove: '/' %}
+        {% assign page_data = site.data.titles[full_url_no_slash] %}
     {% endif %}
     
     {% comment %}
-      If still not found, try removing trailing slash
+      If still not found, try relative path
     {% endcomment %}
-    {% if page_data == nil and current_url != '/' %}
-        {% assign url_without_slash = current_url | remove: '/' %}
-        {% assign page_data = site.data.titles[url_without_slash] %}
+    {% if page_data == nil %}
+        {% assign page_data = site.data.titles[current_url] %}
     {% endif %}
     
     {% comment %}
-      If still not found, try adding trailing slash
-    {% endcomment %}
-    {% if page_data == nil and current_url != '/' %}
-        {% assign url_with_slash = current_url | append: '/' %}
-        {% assign page_data = site.data.titles[url_with_slash] %}
-    {% endif %}
-    
-    {% comment %}
-      FINAL FALLBACK - use default or hardcoded values
+      If still not found, try default
     {% endcomment %}
     {% if page_data == nil %}
         {% assign page_data = site.data.titles['default'] %}
     {% endif %}
     
+    {% comment %}
+      FINAL FALLBACK - hardcoded values
+    {% endcomment %}
     {% if page_data == nil %}
         <title>NotesPrep - Free Study Notes for FBISE & Entry Tests 2026</title>
         <meta name="description" content="Download free PDF notes, practice MCQs for Class 9, Class 10, and entry tests like NET, MDCAT. Best study resources for Pakistani students.">
@@ -110,8 +113,8 @@
     {% comment %}
       CSS AND ICON
     {% endcomment %}
-
-
-
+    <link href="{{ '/style.css' | relative_url }}" rel="stylesheet">
+    <link href="https://notesprep.com/logo.svg" rel="icon" type="image/x-icon">
+</head>
 
     {{ content }}
