@@ -1,6 +1,12 @@
-title: "NotesPrep - Entry Test MCQs"  # Short and sweet
-title_separator: "|"
-description: "Download Class 9 and Class 10 PDF notes for FBISE students. Explore entry test prep, practice MCQs, and solved exercises. Access the best study resources at NotesPrep today."
+title: NotesPrep
+description: Free Study Notes, MCQs & Entry Test Preparation for FBISE, NUST, and MDCAT.
+url: "https://notesprep.com"
+twitter:
+  username: notesprep  # Replace with your actual username
+logo: /assets/img/logo.png
+
+# This tells the plugin what image to use if a page doesn't have one
+image: https://notesprep.com/drawing.png
 url: "https://notesprep.com" 
 baseurl: ""  # Keep empty for custom domain
 plugins:
