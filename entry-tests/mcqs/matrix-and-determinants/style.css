@@ -194,6 +194,15 @@
         margin-left: 0 !important; /* Fixes your existing 80% margin issue */
     }
 }
+.mcq-link {
+    color: #b0b0b0; /* Light grey default */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.mcq-link:hover {
+    color: #0066cc; /* Medium blue that contrasts well with light blue background */
+}
 
 
 
