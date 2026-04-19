@@ -1,12 +1,12 @@
 import re
 import os
 
-def fix_mcq_colons_precise(file_path):
+def fix_mcq_links_final(file_path):
     # Pattern explanation:
-    # (/mcq\d+) -> Matches /mcq followed by any number of digits
-    # \b        -> Word boundary: ensures we don't stop in the middle of a number
-    # (?!:)     -> Negative lookahead: only matches if NO colon follows
-    pattern = r"(/mcq\d+)\b(?!:)"
+    # (/mcq\d+) -> Matches /mcq followed by digits
+    # \b        -> Word boundary (stops at end of number)
+    # (?!/?:)   -> Negative lookahead: only matches if NO slash or colon already exists
+    pattern = r"(/mcq\d+)\b(?!/?:)"
     
     if not os.path.exists(file_path):
         print(f"Error: {file_path} not found!")
@@ -15,22 +15,20 @@ def fix_mcq_colons_precise(file_path):
     with open(file_path, 'r', encoding='utf-8') as f:
         content = f.read()
 
-    # Find issues
     matches = re.findall(pattern, content)
     if not matches:
-        print("No missing colons found.")
+        print("No missing slash/colons found for MCQ links.")
         return
 
-    print(f"Found {len(matches)} issues (e.g., {matches[:3]}). Fixing...")
+    print(f"Found {len(matches)} MCQ links to fix. Applying '/:'...")
 
-    # The \1: adds the colon only after the full number boundary
-    fixed_content = re.sub(pattern, r"\1:", content)
+    # This turns /mcq67 into /mcq67/:
+    fixed_content = re.sub(pattern, r"\1/:", content)
 
     with open(file_path, 'w', encoding='utf-8') as f:
         f.write(fixed_content)
     
-    print("Success! Every /mcq{number} now has a trailing colon correctly.")
+    print("Success! titles.yml updated for better SEO and tab visibility.")
 
 if __name__ == "__main__":
-    # Ensure the script looks for the file in the correct directory
-    fix_mcq_colons_precise('titles.yml')
+    fix_mcq_links_final('titles.yml')
