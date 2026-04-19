@@ -2830,7 +2830,7 @@ https://notesprep.com/entry-tests/mcqs/gravitation/mcq39:
 https://notesprep.com/entry-tests/mcqs/gravitation/mcq40:
     title: "Gravitation | Acceleration due to gravity on planet with mass and radius twice Earth - Entry Test MCQs Explanation | NotesPrep"
     description: "Practice gravitation MCQ: gₑ and gₚ denote g on Earth and another planet with mass and radius twice Earth. Then? Options: gₚ=gₑ, gₚ=0.5gₑ, gₚ=2gₑ, gₚ=gₑ/√2. Correct: gₚ=0.5gₑ. Explanation: g = GM/R². If M→2M and R→2R, gₚ = G(2M)/(2R)² = 2GM/(4R²)=½·GM/R² = gₑ/2. More entry test MCQs at NotesPrep."
-    https://notesprep.com/entry-tests/mcqs/heat-and-thermodynamics/mcq1:
+https://notesprep.com/entry-tests/mcqs/heat-and-thermodynamics/mcq1:
     title: "Heat and Thermodynamics | Temperature determines direction of heat flow - Entry Test MCQs Explanation | NotesPrep"
     description: "Practice heat and thermodynamics MCQ: Temperature is a property which determines? Options: How much heat body contains; Whether body will feel hot or cold; Direction of heat flow between two systems; How much total absolute energy body has. Correct: In which direction heat will flow between two systems. Explanation: Temperature determines heat flow direction. Heat always flows from higher to lower temperature until thermal equilibrium. More entry test MCQs at NotesPrep."
 
@@ -2941,7 +2941,7 @@ https://notesprep.com/entry-tests/mcqs/heat-and-thermodynamics/mcq27:
 https://notesprep.com/entry-tests/mcqs/heat-and-thermodynamics/mcq28:
     title: "Heat and Thermodynamics | Which quantity is a state function - Entry Test MCQs Explanation | NotesPrep"
     description: "Practice heat and thermodynamics MCQ: Which quantity is a state function? Options: internal energy, heat supply, pressure, volume. Correct: internal energy. Explanation: Internal energy depends only on current state of system. Heat supply and work are path functions. More entry test MCQs at NotesPrep."
-    https://notesprep.com/entry-tests/mcqs/matrix-and-determinants/mcq1:
+https://notesprep.com/entry-tests/mcqs/matrix-and-determinants/mcq1:
     title: "Matrices and Determinants | Which matrix is singular - determinant zero condition - Entry Test MCQs Explanation | NotesPrep"
     description: "Practice matrices and determinants MCQ: Which of following is singular matrix? Options: [4 3; 6 2], [4 2; 6 3], [4 2; 3 6], None. Correct: [4 2; 6 3]. Explanation: Matrix singular if determinant=0. For [4 2; 6 3], det=(4×3)-(2×6)=12-12=0. More entry test MCQs at NotesPrep."
 
@@ -3028,7 +3028,7 @@ https://notesprep.com/entry-tests/mcqs/matrix-and-determinants/mcq21:
 https://notesprep.com/entry-tests/mcqs/matrix-and-determinants/mcq22:
     title: "Matrices and Determinants | System consistency when |A|=0 and adj(A)B≠0 - Entry Test MCQs Explanation | NotesPrep"
     description: "Practice matrices and determinants MCQ: For system AX=B, if |A|=0 and (adj A)B≠0, then system is? Options: Consistent unique; Consistent infinite; Inconsistent; Cannot determine. Correct: Inconsistent (no solution). Explanation: |A|=0 means A singular. If (adj A)B≠0, condition for consistency fails, so system has no solution. More entry test MCQs at NotesPrep."
-    https://notesprep.com/entry-tests/mcqs/measurement/mcq1:
+https://notesprep.com/entry-tests/mcqs/measurement/mcq1:
     title: "Measurement | Number of base units in SI system - Entry Test MCQs Explanation | NotesPrep"
     description: "Practice measurement MCQ: Number of base units are? Options: Three, Five, Seven, Nine. Correct: Seven. Explanation: SI has seven base units: kilogram (mass), meter (length), second (time), ampere (current), kelvin (temperature), mole (amount), candela (luminous intensity). More entry test MCQs at NotesPrep."
 
@@ -3171,7 +3171,7 @@ https://notesprep.com/entry-tests/mcqs/measurement/mcq35:
 https://notesprep.com/entry-tests/mcqs/measurement/mcq36:
     title: "Measurement | Mechanical power base units - kg·m²·s⁻³ - Entry Test MCQs Explanation | NotesPrep"
     description: "Practice measurement MCQ: Mechanical power? Options: is vector; measured in J; base units kg·m²·s⁻³; calculated from force×distance. Correct: has base units of kg·m²·s⁻³. Explanation: Power in watts (W)=J/s=kg·m²·s⁻³. Power is scalar, measured in J/s (not J), force×distance gives work. More entry test MCQs at NotesPrep."
-    https://notesprep.com/entry-tests/mcqs/nuclear-physics/mcq1:
+https://notesprep.com/entry-tests/mcqs/nuclear-physics/mcq1:
     title: "Nuclear Physics | Which quantity is not conserved in nuclear reaction - mass, charge, momentum - Entry Test MCQs Explanation | NotesPrep"
     description: "Practice nuclear physics MCQ: Which quantity is not conserved in nuclear reaction? Options: Mass, Charge, Momentum, None. Correct: Mass. Explanation: Mass not conserved because some mass converts to energy per E=mc². Charge, momentum, energy are conserved. More entry test MCQs at NotesPrep."
 
@@ -3493,7 +3493,7 @@ https://notesprep.com/entry-tests/mcqs/optics/mcq36:
 https://notesprep.com/entry-tests/mcqs/optics/mcq37:
     title: "Optics | Wavelength of X-rays for first order diffraction at glancing angle 30° with atomic spacing 2×10⁻¹⁰m - Entry Test MCQs Explanation | NotesPrep"
     description: "Practice optics MCQ: Wavelength of X-rays at glancing angle 30° on crystal with atomic spacing 2×10⁻¹⁰m for first order diffraction is? Options: 4×10⁻¹⁰m, 2×10⁻¹⁰m, 0.02×10⁻¹⁰m, 20×10⁻¹⁰m. Correct: 2×10⁻¹⁰m. Explanation: Bragg's law: nλ = 2d sinθ. n=1, θ=30°, sin30°=1/2. λ = 2×(2×10⁻¹⁰)×1/2 = 2×10⁻¹⁰m. More entry test MCQs at NotesPrep."
-    https://notesprep.com/entry-tests/mcqs/oscillations/mcq1:
+https://notesprep.com/entry-tests/mcqs/oscillations/mcq1:
     title: "Oscillations | Restoring force in SHM is always directed towards mean position - Entry Test MCQs Explanation | NotesPrep"
     description: "Practice oscillations MCQ: Restoring force in SHM is always directed? Options: Away from mean position; Towards mean position; Perpendicular to displacement; Along path of motion. Correct: Towards mean position. Explanation: Restoring force always acts to bring object back to equilibrium (mean position). More entry test MCQs at NotesPrep."
 
@@ -3913,7 +3913,7 @@ https://notesprep.com/entry-tests/mcqs/permutation-combination-probability/mcq28
 https://notesprep.com/entry-tests/mcqs/permutation-combination-probability/mcq29:
     title: "Permutation Combination Probability | Selections of 11 players out of 15 excluding 3 particular players - Entry Test MCQs Explanation | NotesPrep"
     description: "Practice permutation combination probability MCQ: Number of selections of 11 cricket players out of 15, so that 3 particular players must not be in each selection, is? Options: ¹²C₁₁, ¹⁵C₁₁, ¹⁵C₁₁-¹²C₁₁, ¹⁵C₁₁-³C₁₁. Correct: ¹²C₁₁. Explanation: Remove 3 players, select 11 from remaining 12: ¹²C₁₁ = 12. More entry test MCQs at NotesPrep."
-    https://notesprep.com/entry-tests/mcqs/quadratic-equation/mcq1:
+https://notesprep.com/entry-tests/mcqs/quadratic-equation/mcq1:
     title: "Quadratic Equation | Sum of reciprocals of fourth roots of unity - Entry Test MCQs Explanation | NotesPrep"
     description: "Practice quadratic equation MCQ: Sum of reciprocals of fourth roots of unity is? Options: 0, 1, i, -i. Correct: 0. Explanation: Fourth roots of unity are 1, -1, i, -i. Their reciprocals: 1, -1, 1/i = -i, -1/i = i. Sum = 1 + (-1) + (-i) + i = 0. More entry test MCQs at NotesPrep."
 
@@ -4330,8 +4330,8 @@ https://notesprep.com/entry-tests/mcqs/sets/mcq20:
     title: "Sets | A∩B = A∩C will always be true if B=C - Entry Test MCQs Explanation | NotesPrep"
     description: "Practice sets MCQ: A∩B = A∩C will always be true if? Options: B=C; B⊂C; C⊂B; A=∅. Correct: B=C. Explanation: If B=C, then obviously A∩B=A∩C. This guarantees equality for all A. More entry test MCQs at NotesPrep."
 https://notesprep.com/entry-tests/mcqs/special-relativity/mcq1:
-title: "Special Relativity | Speed of light beam observed from spaceship B when both travel at 0.8c - Entry Test MCQs Explanation | NotesPrep"
-description: "Practice special relativity MCQ: Two spaceships A and B travel at 0.8c in same direction. A shines light beam forward toward B. Speed of light beam according to captain on B? Options: 0.2c, 0.8c, 1.8c, 1.6c. Correct: 0.8c. Explanation: Einstein's second postulate states speed of light in vacuum is constant c in all inertial frames, independent of source or observer motion. More entry test MCQs at NotesPrep."
+    title: "Special Relativity | Speed of light beam observed from spaceship B when both travel at 0.8c - Entry Test MCQs Explanation | NotesPrep"
+    description: "Practice special relativity MCQ: Two spaceships A and B travel at 0.8c in same direction. A shines light beam forward toward B. Speed of light beam according to captain on B? Options: 0.2c, 0.8c, 1.8c, 1.6c. Correct: 0.8c. Explanation: Einstein's second postulate states speed of light in vacuum is constant c in all inertial frames, independent of source or observer motion. More entry test MCQs at NotesPrep."
 
 https://notesprep.com/entry-tests/mcqs/special-relativity/mcq2:
     title: "Special Relativity | Final speed of alpha particle given work done 7.71×10⁻¹⁰ J - Entry Test MCQs Explanation | NotesPrep"
@@ -4368,7 +4368,7 @@ https://notesprep.com/entry-tests/mcqs/special-relativity/mcq9:
 https://notesprep.com/entry-tests/mcqs/special-relativity/mcq10:
     title: "Special Relativity | Time in Earth's frame for spacecraft to reach star 25 light years away at 0.995c - Entry Test MCQs Explanation | NotesPrep"
     description: "Practice special relativity MCQ: Spacecraft travels to star 25 light years away at 0.995c. How long in Earth's frame to reach star? Options: 25.1 yrs, 25.0 yrs, 24.5 yrs, 50 yrs. Correct: 25.1 yrs. Explanation: Time = distance/speed = 25 light years / 0.995c = 25/0.995 ≈ 25.13 years. More entry test MCQs at NotesPrep."
-    https://notesprep.com/entry-tests/mcqs/spelling-correction/mcq1:
+https://notesprep.com/entry-tests/mcqs/spelling-correction/mcq1:
     title: "Spelling Correction | Correct spelling of word meaning excessive flattery - Adulation - Entry Test MCQs Explanation | NotesPrep"
     description: "Practice spelling correction MCQ: Which is correct spelling? Options: Adulation, Adlation, Aduletion, Addulation. Correct: Adulation. Explanation: Adulation means excessive flattery or praise. The other options are common misspellings. More entry test MCQs at NotesPrep."
 
@@ -5014,7 +5014,7 @@ https://notesprep.com/entry-tests/mcqs/synonyms-and-antonyms/mcq112:
 https://notesprep.com/entry-tests/mcqs/synonyms-and-antonyms/mcq113:
     title: "Synonyms and Antonyms | Antonym of Cajole - Bully - Entry Test MCQs Explanation | NotesPrep"
     description: "Practice synonyms and antonyms MCQ: What is antonym of 'Cajole'? Options: Coax, Persuade, Wheedle, Bully. Correct: Bully. Explanation: Cajole means to persuade by coaxing or flattery. Antonym is 'bully' (use strength to intimidate). More entry test MCQs at NotesPrep."
-    https://notesprep.com/entry-tests/mcqs/trigonometric-functions/mcq1:
+https://notesprep.com/entry-tests/mcqs/trigonometric-functions/mcq1:
     title: "Trigonometric Functions | If sinθ and cosθ are roots of ax²-bx+c=0, relation between a,b,c - Entry Test MCQs Explanation | NotesPrep"
     description: "Practice trigonometric functions MCQ: If sinθ and cosθ are roots of ax²-bx+c=0, relation between a,b,c is? Options: a²+b²+2ac=0; a²-b²+2ac=0; a²+c²+2ab=0; a²-b²-2ac=0. Correct: a²-b²+2ac=0. Explanation: sinθ+cosθ=b/a, sinθcosθ=c/a. (sinθ+cosθ)²=1+2c/a ⇒ b²/a²=1+2c/a ⇒ b²=a²+2ac ⇒ a²-b²+2ac=0. More entry test MCQs at NotesPrep."
 
@@ -5105,7 +5105,7 @@ https://notesprep.com/entry-tests/mcqs/trigonometric-functions/mcq22:
 https://notesprep.com/entry-tests/mcqs/trigonometric-functions/mcq23:
     title: "Trigonometric Functions | √[(1-sinθ)/(1+sinθ)] equals secθ - tanθ - Entry Test MCQs Explanation | NotesPrep"
     description: "Practice trigonometric functions MCQ: Value of √[(1-sinθ)/(1+sinθ)] is? Options: secθ-tanθ, secθ+tanθ, cscθ-cotθ, cscθ+cotθ. Correct: secθ - tanθ. Explanation: √[(1-sinθ)²/(1-sin²θ)] = (1-sinθ)/cosθ = secθ - tanθ. More entry test MCQs at NotesPrep."
-    https://notesprep.com/entry-tests/mcqs/understanding-the-context/mcq1:
+https://notesprep.com/entry-tests/mcqs/understanding-the-context/mcq1:
     title: "Understanding the Context | Amazon rainforest oxygen production - net contribution near zero due to nighttime respiration - Entry Test MCQs Explanation | NotesPrep"
     description: "Practice understanding the context MCQ: Amazon rainforest produces 20% of world's oxygen. Which statement best summarizes? Options include correct nuance about net contribution near zero due to nighttime respiration. Correct: The Amazon produces 20% of world's oxygen, but recent studies show its net contribution may be near zero due to nighttime respiration. Explanation: Option 1 omits net contribution detail. Option 3 incorrectly places Amazon in Africa. Option 4 contradicts paragraph. More entry test MCQs at NotesPrep."
 
@@ -5164,7 +5164,7 @@ https://notesprep.com/entry-tests/mcqs/understanding-the-context/mcq14:
 https://notesprep.com/entry-tests/mcqs/understanding-the-context/mcq15:
     title: "Understanding the Context | Scientific method - involves observation, hypothesis, experimentation, conclusion; reproducibility and peer review important - Entry Test MCQs Explanation | NotesPrep"
     description: "Practice understanding the context MCQ: Scientific method is empirical process involving observation, hypothesis formation, experimentation, and conclusion. Reproducibility and peer review are important. Recent replication crisis has prompted reforms. Which statement best summarizes? Correct: Scientific method involves observation, hypothesis, experimentation, and conclusion; reproducibility and peer review are important, but replication failures have prompted reforms. Explanation: Option 1 says strictly linear never revisiting steps (contradicts non-linear nature). Option 2 says peer review guarantees reproducibility (contradicts replication crisis). Option 3 says requires no experimentation (contradicts). More entry test MCQs at NotesPrep."
-    https://notesprep.com/entry-tests/mcqs/vectors/mcq1:
+https://notesprep.com/entry-tests/mcqs/vectors/mcq1:
     title: "Vectors | If x²/|x|² + y²/|y|² + z²/|z|² = 1 then cos²α+cos²β+cos²γ = 1 and sin²α+sin²β+sin²γ = 2 - Entry Test MCQs Explanation | NotesPrep"
     description: "Practice vectors MCQ: If x²/|x|² + y²/|y|² + z²/|z|² = 1, which is true? Options include cos²α+cos²β+cos²γ=1 and sin²α+sin²β+sin²γ=2. Correct: Both (a) and (b). Explanation: x²/|x|² = cos²α etc., so cos²α+cos²β+cos²γ=1. Using identity gives sin²α+sin²β+sin²γ=2. More entry test MCQs at NotesPrep."
 
@@ -5267,7 +5267,7 @@ https://notesprep.com/entry-tests/mcqs/vectors/mcq25:
 https://notesprep.com/entry-tests/mcqs/vectors/mcq26:
     title: "Vectors | Find m such that angle between a=mi+j-k and b=i+mj-k is π/3 - Entry Test MCQs Explanation | NotesPrep"
     description: "Practice vectors MCQ: For what m is angle between a=mi+j-k and b=i+mj-k equal to π/3? Options: 1, 1/4, 0, 2. Correct: 0. Explanation: cosθ=1/2 = (a·b)/(|a||b|) = (2m+1)/(m²+2). Solve: 4m+2=m²+2 ⇒ m²-4m=0 ⇒ m=0 or 4. Since 0 is option, answer is 0. More entry test MCQs at NotesPrep."
-    https://notesprep.com/entry-tests/mcqs/vectors-and-equilibrium/mcq1:
+https://notesprep.com/entry-tests/mcqs/vectors-and-equilibrium/mcq1:
     title: "Vectors and Equilibrium | Maximum resultant of two forces 10N and 7N is 17N - Entry Test MCQs Explanation | NotesPrep"
     description: "Practice vectors and equilibrium MCQ: Two forces of 10N and 7N applied to object. Maximum value of their resultant is? Options: 17N, 10N, 70N, 7N. Correct: 17N. Explanation: Maximum resultant occurs when forces act in same direction: R_max = F₁+F₂ = 10+7=17N. More entry test MCQs at NotesPrep."
 
@@ -5434,7 +5434,7 @@ https://notesprep.com/entry-tests/mcqs/vectors-and-equilibrium/mcq41:
 https://notesprep.com/entry-tests/mcqs/vectors-and-equilibrium/mcq42:
     title: "Vectors and Equilibrium | Concurrent forces in equilibrium satisfy triangle inequality - 3,5,6N - Entry Test MCQs Explanation | NotesPrep"
     description: "Practice vectors and equilibrium MCQ: Which set of concurrent forces are in equilibrium? Options: 3,5,1N; 3,5,6N; 3,5,9N; 3,5,15N. Correct: 3,5,6N. Explanation: For equilibrium, largest force ≤ sum of other two. 6 < 3+5=8, so possible. Others fail triangle inequality. More entry test MCQs at NotesPrep."
-    https://notesprep.com/entry-tests/mcqs/waves/mcq1:
+https://notesprep.com/entry-tests/mcqs/waves/mcq1:
     title: "Waves | Waves transmit energy from one place to another - Entry Test MCQs Explanation | NotesPrep"
     description: "Practice waves MCQ: Waves transmit ______ from one place to another. Options: energy, mass, both, none. Correct: energy. Explanation: Waves transfer energy without transferring matter. Particles oscillate but do not travel with wave. More entry test MCQs at NotesPrep."
 
@@ -5601,7 +5601,7 @@ https://notesprep.com/entry-tests/mcqs/waves/mcq41:
 https://notesprep.com/entry-tests/mcqs/waves/mcq42:
     title: "Waves | Frequency recorded in air from source in water of 600Hz is 600Hz - Entry Test MCQs Explanation | NotesPrep"
     description: "Practice waves MCQ: Source of sound of frequency 600Hz in water. Speed in water 1500m/s, air 300m/s. Frequency recorded by observer in air? Options: 200Hz, 300Hz, 20Hz, 600Hz. Correct: 600Hz. Explanation: Frequency depends on source, not medium. Observer in air hears same frequency: 600Hz. More entry test MCQs at NotesPrep."
-    https://notesprep.com/entry-tests/mcqs/electrostatics/mcq1:
+https://notesprep.com/entry-tests/mcqs/electrostatics/mcq1:
     title: "Electrostatics | Charge is a fundamental property of a material body - Entry Test MCQs Explanation | NotesPrep"
     description: "Practice electrostatics MCQ: Charge is a ______ property of a material body. Options: fundamental, basic, advanced, necessary. Correct: fundamental. Explanation: Electric charge is a fundamental property of matter, along with mass. It gives rise to electromagnetic interactions. More entry test MCQs at NotesPrep."
 
