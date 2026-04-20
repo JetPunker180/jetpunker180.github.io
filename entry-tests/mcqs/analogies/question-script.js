@@ -217,7 +217,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <nav aria-label="Primary" class="primary-navigation" id="i32qq">
 <a class="gjs-t-link nav-link" href="https://notesprep.com/class9" id="iz0tt">Class 9</a>
 <a class="gjs-t-link nav-link" href="https://notesprep.com/class10" id="iftme">Class 10</a>
-<a class="gjs-t-link nav-link" href="https://notesprep.com/blogs" id="ib7dg">Blogs</a>
+<a class="gjs-t-link nav-link" href="https://notesprep.com/blogs/" id="ib7dg">Blogs</a>
 <a class="gjs-t-link nav-link" href="https://notesprep.com/entry-tests" id="ik0c6">Entry Tests</a>
 <a class="gjs-t-link nav-link" href="https://notesprep.com/resources" id="iuxnk">Resources</a>
 <a class="gjs-t-link nav-link" href="https://notesprep.com/contact-us" id="ixd44">Contact</a>
