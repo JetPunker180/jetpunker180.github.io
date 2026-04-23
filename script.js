@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
   </div> <div class="footer-divider" id="iy5fek" style="border-top: 1px solid #e5e7eb; margin-top: 40px; width: 100%;">
     <div class="footer-bottom" id="ikz5an" style="max-width: 1200px; margin: 0 auto; padding: 20px 0; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 15px;">
-      <span class="footer-copyright" id="issa1h" style="font-size: 14px; color: #6b7280;">© 2025 notesprep. All rights reserved.</span>
+      <span class="footer-copyright" id="issa1h" style="font-size: 14px; color: #6b7280;">© 2025 notesprep. For educational purposes only. All rights reserved.</span>
       <div class="footer-legal-links" id="i2y36x" style="display: flex; gap: 15px;">
         <a class="gjs-t-link legal-link" href="https://notesprep.com/terms/" style="text-decoration: none; font-size: 14px; color: #6b7280;">Terms</a>
         <a class="gjs-t-link legal-link" href="https://notesprep.com/privacy-policy/" style="text-decoration: none; font-size: 14px; color: #6b7280;">Privacy</a>

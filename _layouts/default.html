@@ -4,54 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    {% comment %}
-      ============================================
-      SEO TAGS FROM TITLES.YML
-      Convert relative URL to match full URLs in _titles.yml
-      ============================================
-    {% endcomment %}
-    
-    {% comment %}
-      Get current URL and convert to full URL format (matching _titles.yml)
-    {% endcomment %}
+    {% comment %} ... existing URL logic ... {% endcomment %}
     {% assign current_url = page.url %}
-    
-    {% comment %}
-      Convert relative path to full URL (remove trailing slash if needed)
-      Example: /class10/biology/ -> https://notesprep.com/class10/biology/
-    {% endcomment %}
     {% assign full_url = current_url | prepend: 'https://notesprep.com' %}
-    
-    {% comment %}
-      Try to find data using full URL first (since your _titles.yml uses full URLs)
-    {% endcomment %}
     {% assign page_data = site.data.titles[full_url] %}
-    
-    {% comment %}
-      If not found, try without trailing slash
+
+    {% comment %} 
+      SEARCH THUMBNAIL & PREVIEW TAGS 
+      Place these before the title so Google sees them early!
     {% endcomment %}
-    {% if page_data == nil %}
-        {% assign full_url_no_slash = full_url | remove: '/' %}
-        {% assign page_data = site.data.titles[full_url_no_slash] %}
-    {% endif %}
-    
-    {% comment %}
-      If still not found, try relative path
-    {% endcomment %}
-    {% if page_data == nil %}
-        {% assign page_data = site.data.titles[current_url] %}
-    {% endif %}
-    
-    {% comment %}
-      If still not found, try default
-    {% endcomment %}
-    {% if page_data == nil %}
-        {% assign page_data = site.data.titles['default'] %}
-    {% endif %}
-    
-    {% comment %}
-      FINAL FALLBACK - hardcoded values
-    {% endcomment %}
+    <meta property="og:image" content="[https://notesprep.com/name_logo.svg]">
+    <meta name="thumbnail" content="[https://notesprep.com/name_logo.svg]">
+    <meta name="robots" content="max-image-preview:large">
+
     {% if page_data == nil %}
         <title>NotesPrep - Free Study Notes for FBISE & Entry Tests 2026</title>
         <meta name="description" content="Download free PDF notes, practice MCQs for Class 9, Class 10, and entry tests like NET, MDCAT. Best study resources for Pakistani students.">
@@ -60,8 +25,7 @@
         <meta property="og:url" content="{{ page.url | absolute_url }}">
         <meta property="og:type" content="website">
         <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="NotesPrep - Free Study Notes for FBISE & Entry Tests 2026">
-        <meta name="twitter:description" content="Download free PDF notes, practice MCQs for Class 9, Class 10, and entry tests.">
+        <meta name="twitter:image" content="[https://notesprep.com/name_logo.svg]">
         <link rel="canonical" href="{{ page.url | absolute_url }}">
     {% else %}
         <title>{{ page_data.title }}</title>
@@ -71,14 +35,11 @@
         <meta property="og:url" content="{{ page.url | absolute_url }}">
         <meta property="og:type" content="website">
         <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="{{ page_data.title }}">
-        <meta name="twitter:description" content="{{ page_data.description }}">
+        <meta name="twitter:image" content="[https://notesprep.com/name_logo.svg]">
         <link rel="canonical" href="{{ page.url | absolute_url }}">
     {% endif %}
-    
-    {% comment %}
-      GOOGLE ANALYTICS
-    {% endcomment %}
+
+    {% comment %} GOOGLE ANALYTICS ... {% endcomment %}
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NBCJRZZRRD"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -87,33 +48,44 @@
         gtag('config', 'G-NBCJRZZRRD');
     </script>
     
-    {% comment %}
-      FONTS
-    {% endcomment %}
-    <style>
-        @font-face{font-display:swap;font-family:'Poppins';font-style:normal;font-weight:100;src:url('https://notesprep.com/fonts/poppins-v24-latin-100.woff2')format('woff2');}
-        @font-face{font-display:swap;font-family:'Poppins';font-style:normal;font-weight:200;src:url('https://notesprep.com/fonts/poppins-v24-latin-200.woff2')format('woff2');}
-        @font-face{font-display:swap;font-family:'Poppins';font-style:normal;font-weight:300;src:url('https://notesprep.com/fonts/poppins-v24-latin-300.woff2')format('woff2');}
-        @font-face{font-display:swap;font-family:'Poppins';font-style:normal;font-weight:400;src:url('https://notesprep.com/fonts/poppins-v24-latin-regular.woff2')format('woff2');}
-        @font-face{font-display:swap;font-family:'Poppins';font-style:normal;font-weight:500;src:url('https://notesprep.com/fonts/poppins-v24-latin-500.woff2')format('woff2');}
-        @font-face{font-display:swap;font-family:'Poppins';font-style:normal;font-weight:600;src:url('https://notesprep.com/fonts/poppins-v24-latin-600.woff2')format('woff2');}
-        @font-face{font-display:swap;font-family:'Poppins';font-style:normal;font-weight:700;src:url('https://notesprep.com/fonts/poppins-v24-latin-700.woff2')format('woff2');}
-        @font-face{font-display:swap;font-family:'Poppins';font-style:normal;font-weight:800;src:url('https://notesprep.com/fonts/poppins-v24-latin-800.woff2')format('woff2');}
-        @font-face{font-display:swap;font-family:'Poppins';font-style:normal;font-weight:900;src:url('https://notesprep.com/fonts/poppins-v24-latin-900.woff2')format('woff2');}
-        @font-face{font-display:swap;font-family:'Inter';font-style:normal;font-weight:400;src:url('https://notesprep.com/fonts/inter-v20-latin-regular.woff2')format('woff2');}
-    </style>
-    
-    {% comment %}
-      AHREFS ANALYTICS
-    {% endcomment %}
-    <script async data-key="tBCohoMrawLZdwKUOwFUcw" src="https://analytics.ahrefs.com/analytics.js"></script>
-    
-    {% comment %}
-      CSS AND ICON
-    {% endcomment %}
+    {% comment %} NAVIGATION & IMAGE SCHEMA {% endcomment %}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "{{ page.url | absolute_url }}#webpage",
+          "url": "{{ page.url | absolute_url }}",
+          "name": "{% if page_data %}{{ page_data.title }}{% else %}NotesPrep{% endif %}",
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "[INSERT_YOUR_RECTANGULAR_IMAGE_URL_HERE]"
+          }
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "@id": "https://notesprep.com/#main-nav",
+          "name": "Main Navigation",
+          "hasPart": [
+            { "@type": "WebPage", "name": "Class 9", "url": "https://notesprep.com/class9/" },
+            { "@type": "WebPage", "name": "Class 10", "url": "https://notesprep.com/class10/" },
+            { "@type": "WebPage", "name": "Blogs", "url": "https://notesprep.com/blogs/" },
+            { "@type": "WebPage", "name": "Entry Tests", "url": "https://notesprep.com/entry-tests/" },
+            { "@type": "WebPage", "name": "Resources", "url": "https://notesprep.com/resources/" },
+            { "@type": "WebPage", "name": "Contact", "url": "https://notesprep.com/contact-us/" }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    {% comment %} FONTS & CSS ... {% endcomment %}
+    <style> ... </style>
     <link href="{{ '/style.css' | relative_url }}" rel="stylesheet">
     <link href="https://notesprep.com/logo.svg" rel="icon" type="image/x-icon">
-	
-
-
+</head>
+<body>
     {{ content }}
+</body>
+</html>
