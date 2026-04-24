@@ -1,11 +1,6 @@
 * {
 	box-sizing: border-box;
 }
-
-body {
-	margin: 0;
-}
-
 :root {
 	--gjs-t-color-primary: rgba(0, 0, 0, 1);
 	--gjs-t-color-secondary: rgba(0, 0, 0, 1);
@@ -1175,7 +1170,7 @@ img, video {
 	color: rgb(15 23 42 / 1);
 }
 
-.email-input::placeholder::placeholder {
+.email-input::placeholder {
 	color: rgb(148 163 184 / 1);
 }
 
@@ -1197,7 +1192,7 @@ img, video {
 	color: rgb(15 23 42 / 1);
 }
 
-.textarea::placeholder::placeholder {
+.textarea::placeholder {
 	color: rgb(148 163 184 / 1);
 }
 
@@ -1512,7 +1507,7 @@ img, video {
 	color: rgb(15 23 42 / 1);
 }
 
-.newsletter-input::placeholder::placeholder {
+.newsletter-input::placeholder {
 	color: rgb(148 163 184 / 1);
 }
 
@@ -4221,10 +4216,10 @@ html {
 	}
 	
 }
-}
-  #breadcrumb {
+
+#breadcrumb {
     padding: 10px 15px !important; /* Added side padding for mobile safety */
-    margin: 10px auto 20px auto ; /* Centers the breadcrumb block */
+    margin: 10px auto 20px auto !important; /* Centers the breadcrumb block */
     max-width: 1200px; /* Matches standard website container widths */
     font-family: 'Inter', sans-serif !important;
     border-bottom: 1px solid #f1f5f9;
@@ -4282,5 +4277,3 @@ html {
     overflow: hidden;
     text-overflow: ellipsis; /* If title is too long on mobile, it adds '...' */
 }
-
-
