@@ -88,6 +88,8 @@ function extractSubjectFromUrl(url) {
         formatted: formattedSubject,
         original: subjectSlug
     };
+	
+	
 }
 document.addEventListener('DOMContentLoaded', function() {
     const subjectInfo = extractSubjectFromUrl(window.location.href);
@@ -164,7 +166,7 @@ window.goToNextPage = function() {
 
 
 	
-elem.innerHTML = `<div class="question-heading"><b>Question ${mcqNumber}</b> : ${questionContent}</div>
+elem.innerHTML = `<b>Question ${mcqNumber}</b> : ${questionContent}</div>
 	<div class="option-container">
 
 

@@ -8,7 +8,7 @@ layout: default
 
 <div class="header-container" id="is0gk">
 <a class="gjs-t-link brand-link" href="https://notesprep.com/#" id="ir3cl">
-	<img alt="NotesPrep Icon" class="brand-icon" id="ip2st" src="https://notesprep.com/logo.svg"/>
+<img alt="NotesPrep Icon" class="brand-icon" id="ip2st" src="https://notesprep.com/logo.svg"/>
 
 <span class="brand-name" id="irlbe">NotesPrep</span>
 </a>
@@ -42,7 +42,8 @@ layout: default
 <img alt="" class="hamburger-icon" id="iqvio" src="https://api.iconify.design/lucide-menu.svg?color=%230f172a"/>
 </button>
 </div>
-</header><section class="hero-section" id="hero"><div class="hero-container" id="ixa0t"><div class="gjs-image-box" id="iw0f2a"></div><div class="hero-content" id="i97eu"><h1 class="gjs-t-h1 hero-title" id="i1kmh">Chapter 8 - Mathematics Class 10 Notes 2026 - Federal Board</h1><p class="hero-subtitle" id="iqgpn">Specially crafted SLO based notes for Class 10 New FBISE Mathematics of up-to-date syllabus to help students scoring A+ grade in exams.</p><div class="hero-actions" id="i9pif"><a class="gjs-t-button primary-action" id="ivwle">Explore More Notes</a></div><ul class="hero-highlights" id="iz6zl"><li class="highlight-item" id="ikwtt"><img alt="Check" class="highlight-icon" id="i2xao" src="https://api.iconify.design/lucide-check-circle.svg?color=%2316a34a"/> Exam-oriented
+</header><section class="hero-section" id="hero">
+<div id="breadcrumb"></div><div class="hero-container" id="ixa0t"><div class="gjs-image-box" id="iw0f2a"></div><div class="hero-content" id="i97eu"><h1 class="gjs-t-h1 hero-title" id="i1kmh">Chapter 8 - Mathematics Class 10 Notes 2026 - Federal Board</h1><p class="hero-subtitle" id="iqgpn">Specially crafted SLO based notes for Class 10 New FBISE Mathematics of up-to-date syllabus to help students scoring A+ grade in exams.</p><div class="hero-actions" id="i9pif"><a class="gjs-t-button primary-action" id="ivwle">Explore More Notes</a></div><ul class="hero-highlights" id="iz6zl"><li class="highlight-item" id="ikwtt"><img alt="Check" class="highlight-icon" id="i2xao" src="https://api.iconify.design/lucide-check-circle.svg?color=%2316a34a"/> Exam-oriented
             </li><li class="highlight-item" id="i2zmn"><img alt="Notes" class="highlight-icon" id="i2dll" src="https://api.iconify.design/lucide-file-text.svg?color=%230f172a"/> Structured PDFs
             </li><li class="highlight-item" id="iy88o"><img alt="Quality" class="highlight-icon" id="iupgp" src="https://api.iconify.design/lucide-sparkles.svg?color=%230ea5e9"/> Quality reviewed
             </li></ul></div></div></section><section class="secondary-notes-section" id="secondary"><div class="secondary-container" id="i5wj6"><div class="secondary-header" id="idg5l"><div class="secondary-title-block" id="i3efu"><h2 class="gjs-t-h2 section-title" id="iktqw">Chapter 8 Exercises</h2><p class="section-description" id="ikdi8">Well-structured notes aligned to common secondary curricula with definitions, proofs, solved examples, and practice questions. </p></div></div><div class="secondary-grid" id="iykhu"><nav aria-label="Chapters" id="imabtl"></nav></div><div class="gjs-plg-flex-row" data-type-role="flex-row" id="iz92wq">
@@ -137,7 +138,7 @@ layout: default
 </div>
 <div class="footer-divider" id="iy5fek">
 <div class="footer-bottom" id="ikz5an">
-<span class="footer-copyright" id="issa1h" style="font-size: 14px; color: #6b7280;">© 2025 notesprep. For educational purposes only. All rights reserved.</span>
+      <span class="footer-copyright" id="issa1h" style="font-size: 14px; color: #6b7280;">© 2025 notesprep. For educational purposes only. All rights reserved.</span>
 <div class="footer-legal-links" id="i2y36x">
 <a class="gjs-t-link legal-link" href="https://notesprep.com/terms/" id="iw4fka">Terms</a>
 <a class="gjs-t-link legal-link" href="https://notesprep.com/privacy-policy/" id="in7fsw">Privacy</a>
@@ -147,6 +148,50 @@ layout: default
 </div>
 </footer>
 <script id="ihiexn" src="https://notesprep.com/script.js"></script>
+<script>function generateBreadcrumbs() {
+    const breadcrumbNav = document.getElementById('breadcrumb');
+    if (!breadcrumbNav) return;
+
+    let path = window.location.pathname.replace('index.html', '');
+    
+    const pathSegments = path.split('/').filter(segment => {
+        const s = segment.toLowerCase();
+        // This line filters out empty parts, drive letters (e:), and backup folders
+        return s !== "" && 
+               !s.includes(':') && 
+               s !== 'backup' && 
+               s !== 'notesprep'; // Skips the folder name if you're testing inside a folder
+    });
+    
+    let breadcrumbHTML = '<ol class="breadcrumb-list">';
+    breadcrumbHTML += `<li class="breadcrumb-item"><a href="/">Home</a></li>`;
+    
+    let currentPath = '';
+    pathSegments.forEach((segment, index) => {
+        currentPath += `/${segment}`;
+        const isLast = index === pathSegments.length - 1;
+        
+        // Clean up Review_exercise_10 -> Review Exercise 10
+        let displayName = segment.replace(/[_-]/g, ' ')
+                                 .split(' ')
+                                 .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+                                 .join(' ');
+
+        breadcrumbHTML += `<li class="separator">/</li>`;
+
+        if (isLast) {
+            breadcrumbHTML += `<li class="breadcrumb-item active" aria-current="page">${displayName}</li>`;
+        } else {
+            breadcrumbHTML += `<li class="breadcrumb-item"><a href="${currentPath}/">${displayName}</a></li>`;
+        }
+    });
+    
+    breadcrumbHTML += '</ol>';
+    breadcrumbNav.innerHTML = breadcrumbHTML;
+}
+
+document.addEventListener('DOMContentLoaded', generateBreadcrumbs);
+</script>   
 <script data-scope="mobile-nav" id="ifz1ty">
       (function() {
         const toggleBtn = document.querySelector('[data-js="hamburger"]');
@@ -176,6 +221,8 @@ layout: default
         });
       })();
     </script>
+
+
 <script data-scope="mobile-images" id="itb5y5">
       (function() {
         const imgs = document.querySelectorAll('img[data-mobile-src]');

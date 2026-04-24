@@ -2,13 +2,13 @@
 layout: default
 ---
 
-    <link href="https://notesprep.com/../../../../assets/matric-subjects-chapter.css" rel="stylesheet"/>
+    <link href="./../../../../assets/matric-subjects-chapter.css" rel="stylesheet"/>
 <link href="https://notesprep.com/logo.svg" rel="icon" type="image/x-icon"/>
 </head><body class="gjs-t-body body-root" id="i5f1">
 
 <div class="header-container" id="is0gk">
 <a class="gjs-t-link brand-link" href="https://notesprep.com/#" id="ir3cl">
-	<img alt="NotesPrep Icon" class="brand-icon" id="ip2st" src="https://notesprep.com/logo.svg"/>
+<img alt="NotesPrep Icon" class="brand-icon" id="ip2st" src="https://notesprep.com/logo.svg"/>
 
 <span class="brand-name" id="irlbe">NotesPrep</span>
 </a>
@@ -44,9 +44,10 @@ layout: default
 </div>
 </header>
 <section class="hero-section" id="hero">
-<div class="hero-container" id="ixa0t">
+<div id="breadcrumb"></div>
+<div class="hero-container"style="padding-top:0;" id="ixa0t">
 <div class="hero-content" id="i97eu">
-<h1 class="gjs-t-h1 hero-title" id="i1kmh">Miscellanous Exercise 10 - Chapter 10 : Practical Geometry - Class 9 - Mathematics Notes Federal Board (FBISE) 2026 - Read / Download</h1>
+<h1 class="gjs-t-h1 hero-title" id="i1kmh" >Miscellanous Exercise 10 - Chapter 10 : Practical Geometry - Class 9 - Mathematics Notes Federal Board (FBISE) 2026 - Read / Download</h1>
 <p class="hero-subtitle" id="iqgpn">Review / Miscellanous Exercise 10 Class 9 Mathematics Federal Board SLO-Based Notes and Solution can be read and downloaded from our website.</p>
 <div class="hero-actions" id="i9pif"></div>
 <ul class="hero-highlights" id="iz6zl">
@@ -65,6 +66,7 @@ layout: default
 </section>
 <section class="secondary-notes-section" id="secondary">
 <div class="secondary-container" id="i5wj6">
+
 <div class="secondary-header" id="idg5l">
 <div class="secondary-title-block" id="i3efu">
 <h2 class="gjs-t-h2 section-title" id="iktqw">Read Online and Download PDF</h2>
@@ -178,7 +180,7 @@ layout: default
 </div>
 <div class="footer-divider" id="iy5fek">
 <div class="footer-bottom" id="ikz5an">
-<span class="footer-copyright" id="issa1h" style="font-size: 14px; color: #6b7280;">© 2025 notesprep. For educational purposes only. All rights reserved.</span>
+      <span class="footer-copyright" id="issa1h" style="font-size: 14px; color: #6b7280;">© 2025 notesprep. For educational purposes only. All rights reserved.</span>
 <div class="footer-legal-links" id="i2y36x">
 <a class="gjs-t-link legal-link" href="https://notesprep.com/terms/" id="iw4fka">Terms</a>
 <a class="gjs-t-link legal-link" href="https://notesprep.com/privacy-policy/" id="in7fsw">Privacy</a>
@@ -217,6 +219,51 @@ layout: default
         });
       })();
     </script>
+<script>function generateBreadcrumbs() {
+    const breadcrumbNav = document.getElementById('breadcrumb');
+    if (!breadcrumbNav) return;
+
+    let path = window.location.pathname.replace('index.html', '');
+    
+    const pathSegments = path.split('/').filter(segment => {
+        const s = segment.toLowerCase();
+        // This line filters out empty parts, drive letters (e:), and backup folders
+        return s !== "" && 
+               !s.includes(':') && 
+               s !== 'backup' && 
+               s !== 'notesprep'; // Skips the folder name if you're testing inside a folder
+    });
+    
+    let breadcrumbHTML = '<ol class="breadcrumb-list">';
+    breadcrumbHTML += `<li class="breadcrumb-item"><a href="/">Home</a></li>`;
+    
+    let currentPath = '';
+    pathSegments.forEach((segment, index) => {
+        currentPath += `/${segment}`;
+        const isLast = index === pathSegments.length - 1;
+        
+        // Clean up Review_exercise_10 -> Review Exercise 10
+        let displayName = segment.replace(/[_-]/g, ' ')
+                                 .split(' ')
+                                 .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+                                 .join(' ');
+
+        breadcrumbHTML += `<li class="separator">/</li>`;
+
+        if (isLast) {
+            breadcrumbHTML += `<li class="breadcrumb-item active" aria-current="page">${displayName}</li>`;
+        } else {
+            breadcrumbHTML += `<li class="breadcrumb-item"><a href="${currentPath}/">${displayName}</a></li>`;
+        }
+    });
+    
+    breadcrumbHTML += '</ol>';
+    breadcrumbNav.innerHTML = breadcrumbHTML;
+}
+
+document.addEventListener('DOMContentLoaded', generateBreadcrumbs);
+</script>
+
 <script data-scope="mobile-images" id="itb5y5">
       (function() {
         const imgs = document.querySelectorAll('img[data-mobile-src]');

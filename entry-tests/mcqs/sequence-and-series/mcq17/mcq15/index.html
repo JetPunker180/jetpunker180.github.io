@@ -15,7 +15,7 @@ layout: default
         <header id="i90df" class="header">
 
     </header>
-    <section id="secondary" class="secondary-notes-section">
+    <section id="secondary" class="secondary-notes-section"><div id="breadcrumb"></div>
       <div class="section-container">
 	  <h1 class="entry-test-heading">NET Maths Mock Test 1</h1>
 	  <div id ="q123" class="question-container"><b>If you are seeing this, it means javascript in your browser is disabled. Click <a href="https://www.enable-javascript.com/">here</a> to learn how to enable it.</b>
@@ -27,7 +27,51 @@ layout: default
     </section>
   <footer id="i6lnig" class="footer">
 
-    </footer>
+      </footer>
+<script>function generateBreadcrumbs() {
+    const breadcrumbNav = document.getElementById('breadcrumb');
+    if (!breadcrumbNav) return;
+
+    let path = window.location.pathname.replace('index.html', '');
+    
+    const pathSegments = path.split('/').filter(segment => {
+        const s = segment.toLowerCase();
+        // This line filters out empty parts, drive letters (e:), and backup folders
+        return s !== "" && 
+               !s.includes(':') && 
+               s !== 'backup' && 
+               s !== 'notesprep'; // Skips the folder name if you're testing inside a folder
+    });
+    
+    let breadcrumbHTML = '<ol class="breadcrumb-list">';
+    breadcrumbHTML += `<li class="breadcrumb-item"><a href="/">Home</a></li>`;
+    
+    let currentPath = '';
+    pathSegments.forEach((segment, index) => {
+        currentPath += `/${segment}`;
+        const isLast = index === pathSegments.length - 1;
+        
+        // Clean up Review_exercise_10 -> Review Exercise 10
+        let displayName = segment.replace(/[_-]/g, ' ')
+                                 .split(' ')
+                                 .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+                                 .join(' ');
+
+        breadcrumbHTML += `<li class="separator">/</li>`;
+
+        if (isLast) {
+            breadcrumbHTML += `<li class="breadcrumb-item active" aria-current="page">${displayName}</li>`;
+        } else {
+            breadcrumbHTML += `<li class="breadcrumb-item"><a href="${currentPath}/">${displayName}</a></li>`;
+        }
+    });
+    
+    breadcrumbHTML += '</ol>';
+    breadcrumbNav.innerHTML = breadcrumbHTML;
+}
+
+document.addEventListener('DOMContentLoaded', generateBreadcrumbs);
+</script>    
 
     <script data-scope="mobile-nav" id="ifz1ty">
       (function() {
