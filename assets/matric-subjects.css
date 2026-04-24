@@ -4219,9 +4219,12 @@ html {
 		font-size: 1rem !important;
 		line-height: 1.4 !important;
 	}
+	
+}
+}
   #breadcrumb {
     padding: 10px 15px !important; /* Added side padding for mobile safety */
-    margin: 10px auto 20px auto !important; /* Centers the breadcrumb block */
+    margin: 10px auto 20px auto ; /* Centers the breadcrumb block */
     max-width: 1200px; /* Matches standard website container widths */
     font-family: 'Inter', sans-serif !important;
     border-bottom: 1px solid #f1f5f9;
