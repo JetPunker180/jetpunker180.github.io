@@ -3,65 +3,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1e3a8a">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
-    {% comment %} ... existing URL logic ... {% endcomment %}
+    {% comment %}
+      ============================================
+      COMPREHENSIVE SEO TAGS FROM _TITLES.YML
+      With multiple fallback strategies
+      ============================================
+    {% endcomment %}
+    
+    {% comment %}
+      STEP 1: Get current URL and normalize
+    {% endcomment %}
     {% assign current_url = page.url %}
     {% assign full_url = current_url | prepend: 'https://notesprep.com' %}
-    {% assign page_data = site.data.titles[full_url] %}
-
-    {% comment %} 
-      SEARCH THUMBNAIL & PREVIEW TAGS 
-      Place these before the title so Google sees them early!
-    {% endcomment %}
-    <meta property="og:image" content="[https://notesprep.com/name_logo.svg]">
-    <meta name="thumbnail" content="[https://notesprep.com/name_logo.svg]">
-    <meta name="robots" content="max-image-preview:large">
-
-    {% if page_data == nil %}
-        <title>NotesPrep - Free Study Notes for FBISE & Entry Tests 2026</title>
-        <meta name="description" content="Download free PDF notes, practice MCQs for Class 9, Class 10, and entry tests like NET, MDCAT. Best study resources for Pakistani students.">
-        <meta property="og:title" content="NotesPrep - Free Study Notes for FBISE & Entry Tests 2026">
-        <meta property="og:description" content="Download free PDF notes, practice MCQs for Class 9, Class 10, and entry tests like NET, MDCAT.">
-        <meta property="og:url" content="{{ page.url | absolute_url }}">
-        <meta property="og:type" content="website">
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:image" content="[https://notesprep.com/name_logo.svg]">
-        <link rel="canonical" href="{{ page.url | absolute_url }}">
-    {% else %}
-        <title>{{ page_data.title }}</title>
-        <meta name="description" content="{{ page_data.description }}">
-        <meta property="og:title" content="{{ page_data.title }}">
-        <meta property="og:description" content="{{ page_data.description }}">
-        <meta property="og:url" content="{{ page.url | absolute_url }}">
-        <meta property="og:type" content="website">
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:image" content="[https://notesprep.com/name_logo.svg]">
-        <link rel="canonical" href="{{ page.url | absolute_url }}">
-    {% endif %}
-
-    {% comment %} GOOGLE ANALYTICS ... {% endcomment %}
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NBCJRZZRRD"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-NBCJRZZRRD');
-    </script>
     
-    {% comment %} NAVIGATION & IMAGE SCHEMA {% endcomment %}
+    {% comment %}
+      STEP 2: Try multiple URL formats to match _titles.yml
+    {% endcomment %}
+    {% assign page_data = site.data.titles[full_url] %}
+    
+    {% if page_data == nil %}
+        {% assign full_url_no_slash = full_url | remove: '/' %}
+        {% assign page_data = site.data.titles[full_url_no_slash] %}
+    {% endif %}
+    
+    {% if page_data == nil %}
+        {% assign page_data = site.data.titles[current_url] %}
+    {% endif %}
+    
+    {% if page_data == nil %}
+        {% assign page_data = site.data.titles['default'] %}
+    {% endif %}
+    
+    {% comment %}
+      STEP 3: Set SEO variables with fallbacks
+    {% endcomment %}
+    {% if page_data == nil %}
+        {% assign seo_title = "NotesPrep - Free Study Notes for FBISE & Entry Tests 2026" %}
+        {% assign seo_description = "Download free PDF notes, practice MCQs for Class 9, Class 10, and entry tests like NET, MDCAT. Best study resources for Pakistani students." %}
+        {% assign seo_keywords = "FBISE notes, class 9 notes, class 10 notes, MDCAT preparation, NET preparation, Pakistani education" %}
+        {% assign seo_author = "NotesPrep Team" %}
+    {% else %}
+        {% assign seo_title = page_data.title %}
+        {% assign seo_description = page_data.description %}
+        {% assign seo_keywords = page_data.keywords | default: "FBISE notes, study resources, Pakistani education" %}
+        {% assign seo_author = page_data.author | default: "NotesPrep Team" %}
+    {% endif %}
+    
+    {% comment %}
+      STEP 4: Output SEO meta tags
+    {% endcomment %}
+    <title>{{ seo_title }}</title>
+    <meta name="description" content="{{ seo_description }}">
+    <meta name="keywords" content="{{ seo_keywords }}">
+    <meta name="author" content="{{ seo_author }}">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    
+    {% comment %}
+      STEP 5: Open Graph (Facebook, LinkedIn, etc.)
+    {% endcomment %}
+    <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta property="og:title" content="{{ seo_title }}">
+    <meta property="og:description" content="{{ seo_description }}">
+    <meta property="og:image" content="https://notesprep.com/name_logo.svg">
+    <meta property="og:image:alt" content="NotesPrep Logo - Free Study Resources for Pakistani Students">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="NotesPrep">
+    <meta property="og:locale" content="en_PK">
+    
+    {% if page.updated_date %}
+    <meta property="article:modified_time" content="{{ page.updated_date | date_to_xmlschema }}">
+    {% endif %}
+    {% if page.published_date %}
+    <meta property="article:published_time" content="{{ page.published_date | date_to_xmlschema }}">
+    {% endif %}
+    
+    {% comment %}
+      STEP 6: Twitter Card
+    {% endcomment %}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@notesprep">
+    <meta name="twitter:title" content="{{ seo_title }}">
+    <meta name="twitter:description" content="{{ seo_description | truncate: 200 }}">
+    <meta name="twitter:image" content="https://notesprep.com/name_logo.svg">
+    <meta name="twitter:image:alt" content="NotesPrep Logo">
+    
+    {% comment %}
+      STEP 7: Canonical URL
+    {% endcomment %}
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    
+    {% comment %}
+      STEP 8: Alternate language versions (if applicable)
+    {% endcomment %}
+    {% comment %} <link rel="alternate" hreflang="en" href="{{ page.url | absolute_url }}"> {% endcomment %}
+    {% comment %} <link rel="alternate" hreflang="ur" href="{{ page.url | absolute_url | replace: '/en/', '/ur/' }}"> {% endcomment %}
+    
+    {% comment %}
+      STEP 9: JSON-LD Structured Data (Enhanced Schema)
+    {% endcomment %}
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
         {
+          "@type": "WebSite",
+          "@id": "https://notesprep.com/#website",
+          "url": "https://notesprep.com/",
+          "name": "NotesPrep",
+          "description": "Free study notes and resources for FBISE and entry tests in Pakistan",
+          "publisher": {
+            "@type": "Organization",
+            "@id": "https://notesprep.com/#organization",
+            "name": "NotesPrep",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://notesprep.com/logo.svg"
+            }
+          },
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://notesprep.com/search?q={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
           "@type": "WebPage",
           "@id": "{{ page.url | absolute_url }}#webpage",
           "url": "{{ page.url | absolute_url }}",
-          "name": "{% if page_data %}{{ page_data.title }}{% else %}NotesPrep{% endif %}",
+          "name": "{{ seo_title }}",
+          "description": "{{ seo_description }}",
+          "isPartOf": {
+            "@id": "https://notesprep.com/#website"
+          },
           "primaryImageOfPage": {
             "@type": "ImageObject",
-            "url": "[INSERT_YOUR_RECTANGULAR_IMAGE_URL_HERE]"
+            "url": "https://notesprep.com/name_logo.svg"
+          },
+          "breadcrumb": {
+            "@id": "{{ page.url | absolute_url }}#breadcrumb"
           }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "{{ page.url | absolute_url }}#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://notesprep.com/"
+            }
+            {% assign url_parts = page.url | split: '/' %}
+            {% assign cumulative_path = "" %}
+            {% for part in url_parts %}
+              {% if part != "" and part != "index.html" and forloop.index <= 4 %}
+                {% assign cumulative_path = cumulative_path | append: '/' | append: part %}
+                {
+                  "@type": "ListItem",
+                  "position": {{ forloop.index | plus: 1 }},
+                  "name": "{{ part | capitalize | replace: '-', ' ' }}",
+                  "item": "https://notesprep.com{{ cumulative_path }}"
+                }{% unless forloop.last %},{% endunless %}
+              {% endif %}
+            {% endfor %}
+          ]
         },
         {
           "@type": "SiteNavigationElement",
@@ -79,13 +192,89 @@
       ]
     }
     </script>
-
-    {% comment %} FONTS & CSS ... {% endcomment %}
-    <style> ... </style>
+    
+    {% comment %}
+      STEP 10: Google Analytics 4
+    {% endcomment %}
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NBCJRZZRRD"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-NBCJRZZRRD', {
+            'page_title': '{{ seo_title }}',
+            'page_location': '{{ page.url | absolute_url }}'
+        });
+    </script>
+    
+    {% comment %}
+      STEP 11: Ahrefs Analytics
+    {% endcomment %}
+    <script async data-key="tBCohoMrawLZdwKUOwFUcw" src="https://analytics.ahrefs.com/analytics.js"></script>
+    
+    {% comment %}
+      STEP 12: Optimized Font Loading (Critical first, then async)
+    {% endcomment %}
+    <style>
+        /* Critical system font fallback */
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        
+        /* Poppins for headings (lazy load) */
+        @font-face{font-display:swap;font-family:'Poppins';font-style:normal;font-weight:400;src:url('https://notesprep.com/fonts/poppins-v24-latin-regular.woff2')format('woff2');}
+        @font-face{font-display:swap;font-family:'Poppins';font-style:normal;font-weight:500;src:url('https://notesprep.com/fonts/poppins-v24-latin-500.woff2')format('woff2');}
+        @font-face{font-display:swap;font-family:'Poppins';font-style:normal;font-weight:600;src:url('https://notesprep.com/fonts/poppins-v24-latin-600.woff2')format('woff2');}
+        @font-face{font-display:swap;font-family:'Poppins';font-style:normal;font-weight:700;src:url('https://notesprep.com/fonts/poppins-v24-latin-700.woff2')format('woff2');}
+        
+        /* Inter for body text */
+        @font-face{font-display:swap;font-family:'Inter';font-style:normal;font-weight:400;src:url('https://notesprep.com/fonts/inter-v20-latin-regular.woff2')format('woff2');}
+        @font-face{font-display:swap;font-family:'Inter';font-style:normal;font-weight:500;src:url('https://notesprep.com/fonts/inter-v20-latin-500.woff2')format('woff2');}
+        @font-face{font-display:swap;font-family:'Inter';font-style:normal;font-weight:600;src:url('https://notesprep.com/fonts/inter-v20-latin-600.woff2')format('woff2');}
+        
+        h1, h2, h3, h4, .heading { font-family: 'Poppins', sans-serif; }
+        body, p, li, .text { font-family: 'Inter', sans-serif; }
+    </style>
+    
+    {% comment %}
+      STEP 13: Preload critical assets
+    {% endcomment %}
+    <link rel="preload" href="{{ '/style.css' | relative_url }}" as="style">
+    <link rel="preload" href="https://notesprep.com/logo.svg" as="image">
+    
+    {% comment %}
+      STEP 14: Main CSS
+    {% endcomment %}
     <link href="{{ '/style.css' | relative_url }}" rel="stylesheet">
-    <link href="https://notesprep.com/logo.svg" rel="icon" type="image/x-icon">
+    
+    {% comment %}
+      STEP 15: Favicon & App Icons
+    {% endcomment %}
+    <link rel="icon" type="image/svg+xml" href="https://notesprep.com/logo.svg">
+    <link rel="alternate icon" href="https://notesprep.com/logo.svg">
+    <link rel="apple-touch-icon" href="https://notesprep.com/logo.svg">
+	<link rel="manifest" href="https://notesprep.com/site.webmanifest">
+	<link rel="icon" type="image/png" sizes="16x16" href="https://notesprep.com/medium_logo.svg">
+	<link rel="icon" type="image/png" sizes="32x32" href="https://notesprep.com/small_logo.png">
+    
+    {% comment %}
+      STEP 16: DNS Prefetch for external resources
+    {% endcomment %}
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+    {% comment %}
+      STEP 17: Preconnect for critical third parties
+    {% endcomment %}
+
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    
+    {% comment %}
+      STEP 18: Inline critical CSS (above fold)
+    {% endcomment %}
+
 </head>
 <body>
+    {% comment %}
+      ============================================
+      MAIN CONTENT
+      ============================================
+    {% endcomment %}
     {{ content }}
-</body>
-</html>
