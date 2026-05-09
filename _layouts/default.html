@@ -151,31 +151,33 @@
             "@id": "{{ page.url | absolute_url }}#breadcrumb"
           }
         },
-        {
-          "@type": "BreadcrumbList",
-          "@id": "{{ page.url | absolute_url }}#breadcrumb",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://notesprep.com/"
-            }
-            {% assign url_parts = page.url | split: '/' %}
-            {% assign cumulative_path = "" %}
-            {% for part in url_parts %}
-              {% if part != "" and part != "index.html" and forloop.index <= 4 %}
-                {% assign cumulative_path = cumulative_path | append: '/' | append: part %}
-                {
-                  "@type": "ListItem",
-                  "position": {{ forloop.index | plus: 1 }},
-                  "name": "{{ part | capitalize | replace: '-', ' ' }}",
-                  "item": "https://notesprep.com{{ cumulative_path }}"
-                }{% unless forloop.last %},{% endunless %}
-              {% endif %}
-            {% endfor %}
-          ]
-        },
+		{
+		  "@type": "BreadcrumbList",
+		  "@id": "{{ page.url | absolute_url }}#breadcrumb",
+		  "itemListElement": [
+			{
+			  "@type": "ListItem",
+			  "position": 1,
+			  "name": "Home",
+			  "item": "https://notesprep.com/"
+			}
+			{% assign url_parts = page.url | split: '/' %}
+			{% assign cumulative_path = "" %}
+			{% assign position = 1 %}
+			{% for part in url_parts %}
+			  {% if part != "" and part != "index.html" %}
+				{% assign position = position | plus: 1 %}
+				{% assign cumulative_path = cumulative_path | append: '/' | append: part %}
+				,{
+				  "@type": "ListItem",
+				  "position": {{ position }},
+				  "name": "{{ part | capitalize | replace: '-', ' ' }}",
+				  "item": "https://notesprep.com{{ cumulative_path }}/"
+				}
+			  {% endif %}
+			{% endfor %}
+		  ]
+		},
         {
           "@type": "SiteNavigationElement",
           "@id": "https://notesprep.com/#main-nav",
