@@ -161,21 +161,22 @@
 			  "name": "Home",
 			  "item": "https://notesprep.com/"
 			}
-			{% assign url_parts = page.url | split: '/' %}
-			{% assign cumulative_path = "" %}
-			{% assign position = 1 %}
-			{% for part in url_parts %}
-			  {% if part != "" and part != "index.html" %}
-				{% assign position = position | plus: 1 %}
-				{% assign cumulative_path = cumulative_path | append: '/' | append: part %}
-				,{
+			{%- assign url_parts = page.url | split: '/' -%}
+			{%- assign cumulative_path = "" -%}
+			{%- for part in url_parts -%}
+			  {%- if part != "" and part != "index.html" and forloop.index <= 4 -%}
+				{%- assign cumulative_path = cumulative_path | append: '/' | append: part -%}
+				{%- unless forloop.first -%}
+				  ,
+				{%- endunless -%}
+				{
 				  "@type": "ListItem",
-				  "position": {{ position }},
+				  "position": {{ forloop.index | plus: 1 }},
 				  "name": "{{ part | capitalize | replace: '-', ' ' }}",
-				  "item": "https://notesprep.com{{ cumulative_path }}/"
+				  "item": "https://notesprep.com{{ cumulative_path }}"
 				}
-			  {% endif %}
-			{% endfor %}
+			  {%- endif -%}
+			{%- endfor -%}
 		  ]
 		},
         {
