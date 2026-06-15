@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1e3a8a">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    {% comment %}
+      ============================================
+      COMPREHENSIVE SEO TAGS FROM _TITLES.YML
+      With multiple fallback strategies
+      ============================================
+    {% endcomment %}
+    
+    {% comment %}
+      STEP 1: Get current URL and normalize
+    {% endcomment %}
+    {% assign current_url = page.url %}
+    {% assign full_url = current_url | prepend: 'https://notesprep.com' %}
+    
+    {% comment %}
+      STEP 2: Try multiple URL formats to match _titles.yml
+    {% endcomment %}
+    {% assign page_data = site.data.titles[full_url] %}
+    
+    {% if page_data == nil %}
+        {% assign full_url_no_slash = full_url | remove: '/' %}
+        {% assign page_data = site.data.titles[full_url_no_slash] %}
+    {% endif %}
+    
+    {% if page_data == nil %}
+        {% assign page_data = site.data.titles[current_url] %}
+    {% endif %}
+    
+    {% if page_data == nil %}
+        {% assign page_data = site.data.titles['default'] %}
+    {% endif %}
+    
+    {% comment %}
+      STEP 3: Set SEO variables with fallbacks
+    {% endcomment %}
+    {% if page_data == nil %}
+        {% assign seo_title = "NotesPrep - Free Study Notes for FBISE & Entry Tests 2026" %}
+        {% assign seo_description = "Download free PDF notes, practice MCQs for Class 9, Class 10, and entry tests like NET, MDCAT. Best study resources for Pakistani students." %}
+        {% assign seo_keywords = "FBISE notes, class 9 notes, class 10 notes, MDCAT preparation, NET preparation, Pakistani education" %}
+        {% assign seo_author = "NotesPrep Team" %}
+    {% else %}
+        {% assign seo_title = page_data.title %}
+        {% assign seo_description = page_data.description %}
+        {% assign seo_keywords = page_data.keywords | default: "FBISE notes, study resources, Pakistani education" %}
+        {% assign seo_author = page_data.author | default: "NotesPrep Team" %}
+    {% endif %}
+    
+    {% comment %}
+      STEP 4: Output SEO meta tags
+    {% endcomment %}
+    <title>{{ seo_title }}</title>
+    <meta name="description" content="{{ seo_description }}">
+    <meta name="keywords" content="{{ seo_keywords }}">
+    <meta name="author" content="{{ seo_author }}">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    
+    {% comment %}
+      STEP 5: Open Graph (Facebook, LinkedIn, etc.)
+    {% endcomment %}
+    <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta property="og:title" content="{{ seo_title }}">
+    <meta property="og:description" content="{{ seo_description }}">
+    <meta property="og:image" content="https://notesprep.com/name_logo.svg">
+    <meta property="og:image:alt" content="NotesPrep Logo - Free Study Resources for Pakistani Students">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="NotesPrep">
+    <meta property="og:locale" content="en_PK">
+    
+    {% if page.updated_date %}
+    <meta property="article:modified_time" content="{{ page.updated_date | date_to_xmlschema }}">
+    {% endif %}
+    {% if page.published_date %}
+    <meta property="article:published_time" content="{{ page.published_date | date_to_xmlschema }}">
+    {% endif %}
+    
+    {% comment %}
+      STEP 6: Twitter Card
+    {% endcomment %}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@notesprep">
+    <meta name="twitter:title" content="{{ seo_title }}">
+    <meta name="twitter:description" content="{{ seo_description | truncate: 200 }}">
+    <meta name="twitter:image" content="https://notesprep.com/name_logo.svg">
+    <meta name="twitter:image:alt" content="NotesPrep Logo">
+    
+    {% comment %}
+      STEP 7: Canonical URL
+    {% endcomment %}
+		<link rel="canonical" href="{{ page.url | absolute_url }}">
+		<!-- MathJax for rendering mathematical expressions -->
+	<script>
+	  MathJax = {
+		tex: {
+		  inlineMath: [['$', '$'], ['\\(', '\\)']],
+		  displayMath: [['$$', '$$'], ['\\[', '\\]']]
+		},
+		options: {
+		  skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+		}
+	  };
+	</script>
+
+    
+    {% comment %}
+      STEP 8: Alternate language versions (if applicable)
+    {% endcomment %}
+    {% comment %} <link rel="alternate" hreflang="en" href="{{ page.url | absolute_url }}"> {% endcomment %}
+    {% comment %} <link rel="alternate" hreflang="ur" href="{{ page.url | absolute_url | replace: '/en/', '/ur/' }}"> {% endcomment %}
+    
+    {% comment %}
+      STEP 9: JSON-LD Structured Data (Enhanced Schema)
+    {% endcomment %}
+	<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://notesprep.com/#website",
+          "url": "https://notesprep.com/",
+          "name": "NotesPrep",
+          "description": "Free study notes and resources for FBISE and entry tests in Pakistan",
+          "publisher": {
+            "@type": "Organization",
+            "@id": "https://notesprep.com/#organization",
+            "name": "NotesPrep",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://notesprep.com/logo.svg"
+            }
+          },
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://notesprep.com/search?q={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "{{ page.url | absolute_url }}#webpage",
+          "url": "{{ page.url | absolute_url }}",
+          "name": "{{ seo_title }}",
+          "description": "{{ seo_description }}",
+          "isPartOf": {
+            "@id": "https://notesprep.com/#website"
+          },
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://notesprep.com/name_logo.svg"
+          },
+          "breadcrumb": {
+            "@id": "{{ page.url | absolute_url }}#breadcrumb"
+          }
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "@id": "https://notesprep.com/#main-nav",
+          "name": "Main Navigation",
+          "hasPart": [
+            { "@type": "WebPage", "name": "Class 9", "url": "https://notesprep.com/class9/" },
+            { "@type": "WebPage", "name": "Class 10", "url": "https://notesprep.com/class10/" },
+            { "@type": "WebPage", "name": "Blogs", "url": "https://notesprep.com/blogs/" },
+            { "@type": "WebPage", "name": "Entry Tests", "url": "https://notesprep.com/entry-tests/" },
+            { "@type": "WebPage", "name": "Resources", "url": "https://notesprep.com/resources/" },
+            { "@type": "WebPage", "name": "Contact", "url": "https://notesprep.com/contact-us/" }
+          ]
+        }
+      ]
+    }
+    </script>
+    
+    {% comment %}
+      STEP 10: Google Analytics 4
+    {% endcomment %}
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NBCJRZZRRD"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-NBCJRZZRRD', {
+            'page_title': '{{ seo_title }}',
+            'page_location': '{{ page.url | absolute_url }}'
+        });
+    </script>
+    
+    {% comment %}
+      STEP 11: Ahrefs Analytics
+    {% endcomment %}
+    <script async data-key="tBCohoMrawLZdwKUOwFUcw" src="https://analytics.ahrefs.com/analytics.js"></script>
+    
+    {% comment %}
+      STEP 12: Optimized Font Loading (Critical first, then async)
+    {% endcomment %}
+    <style>
+        /* Critical system font fallback */
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        
+        /* Poppins for headings (lazy load) */
+        @font-face{font-display:swap;font-family:'Poppins';font-style:normal;font-weight:400;src:url('https://notesprep.com/fonts/poppins-v24-latin-regular.woff2')format('woff2');}
+        @font-face{font-display:swap;font-family:'Poppins';font-style:normal;font-weight:500;src:url('https://notesprep.com/fonts/poppins-v24-latin-500.woff2')format('woff2');}
+        @font-face{font-display:swap;font-family:'Poppins';font-style:normal;font-weight:600;src:url('https://notesprep.com/fonts/poppins-v24-latin-600.woff2')format('woff2');}
+        @font-face{font-display:swap;font-family:'Poppins';font-style:normal;font-weight:700;src:url('https://notesprep.com/fonts/poppins-v24-latin-700.woff2')format('woff2');}
+        
+        /* Inter for body text */
+        @font-face{font-display:swap;font-family:'Inter';font-style:normal;font-weight:400;src:url('https://notesprep.com/fonts/inter-v20-latin-regular.woff2')format('woff2');}
+        @font-face{font-display:swap;font-family:'Inter';font-style:normal;font-weight:500;src:url('https://notesprep.com/fonts/inter-v20-latin-500.woff2')format('woff2');}
+        @font-face{font-display:swap;font-family:'Inter';font-style:normal;font-weight:600;src:url('https://notesprep.com/fonts/inter-v20-latin-600.woff2')format('woff2');}
+        
+        h1, h2, h3, h4, .heading { font-family: 'Poppins', sans-serif; }
+        body, p, li, .text { font-family: 'Inter', sans-serif; }
+    </style>
+    
+    {% comment %}
+      STEP 13: Preload critical assets
+    {% endcomment %}
+    <link rel="preload" href="{{ '/style.css' | relative_url }}" as="style">
+    <link rel="preload" href="https://notesprep.com/logo.svg" as="image">
+    
+    {% comment %}
+      STEP 14: Main CSS
+    {% endcomment %}
+    <link href="{{ '/style.css' | relative_url }}" rel="stylesheet">
+    
+    {% comment %}
+      STEP 15: Favicon & App Icons
+    {% endcomment %}
+    <link rel="icon" type="image/svg+xml" href="https://notesprep.com/logo.svg">
+    <link rel="alternate icon" href="https://notesprep.com/logo.svg">
+    <link rel="apple-touch-icon" href="https://notesprep.com/logo.svg">
+	<link rel="manifest" href="https://notesprep.com/site.webmanifest">
+	<link rel="icon" type="image/png" sizes="16x16" href="https://notesprep.com/medium_logo.svg">
+	<link rel="icon" type="image/png" sizes="32x32" href="https://notesprep.com/small_logo.png">
+    
+    {% comment %}
+      STEP 16: DNS Prefetch for external resources
+    {% endcomment %}
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+    {% comment %}
+      STEP 17: Preconnect for critical third parties
+    {% endcomment %}
+
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    
+    <link href="https://notesprep.com/Notes-Prep/assets/matric-subjects-chapter.css" rel="stylesheet"/>
+<link href="https://notesprep.com/logo.svg" rel="icon" type="image/x-icon"/>
+</head><body class="gjs-t-body body-root" id="i5f1">
+
+<div class="header-container" id="is0gk">
+<a class="gjs-t-link brand-link" href="https://notesprep.com/#" id="ir3cl">
+<img alt="NotesPrep Icon" class="brand-icon" id="ip2st" src="https://notesprep.com/logo.svg"/>
+
+<span class="brand-name" id="irlbe">NotesPrep</span>
+</a>
+<nav aria-label="Primary" class="primary-navigation" id="i32qq" itemscope itemtype="https://schema.org/SiteNavigationElement">
+
+  <a class="gjs-t-link nav-link" href="https://notesprep.com/class9/" id="iz0tt" itemprop="url">
+    <span itemprop="name">Class 9 Notes</span>
+  </a>
+
+  <a class="gjs-t-link nav-link" href="https://notesprep.com/class10/" id="iftme" itemprop="url">
+    <span itemprop="name">Class 10 Notes</span>
+  </a>
+  
+  <a class="gjs-t-link nav-link" href="https://notesprep.com/entry-tests/" id="ik0c6" itemprop="url">
+    <span itemprop="name">Entry Tests Prep</span>
+  </a>
+  
+  <a class="gjs-t-link nav-link" href="https://notesprep.com/blogs/" id="ib7dg" itemprop="url">
+    <span itemprop="name">Blogs</span>
+  </a>
+  <a class="gjs-t-link nav-link" href="https://notesprep.com/resources/" id="iuxnk" itemprop="url">
+    <span itemprop="name">Resources</span>
+  </a>
+
+  <a class="gjs-t-link nav-link" href="https://notesprep.com/contact-us/" id="ixd44" itemprop="url">
+    <span itemprop="name">Contact</span>
+  </a>
+</nav>
+<button aria-controls="i32qq" aria-expanded="false" aria-label="Open menu" class="hamburger-btn" data-js="hamburger" id="iora6" type="button">
+<img alt="" class="hamburger-icon" id="iqvio" src="https://api.iconify.design/lucide-menu.svg?color=%230f172a"/>
+</button>
+</div>
+</header>
+<section class="hero-premium">
+	<div id="breadcrumb" class="breadcrumb-mini"></div>
+    <h1 class="main-display-title">{{page.display-title}}</h1>
+    <p class="hero-subtitle">{{page.display-subtitle}}</p>
+</section>
+<div class="container">
+    <div class="grid-layout">
+        <main>
+
+
+            <div class="section-card">                
+			<h2>Interactive Study Notes Preview</h2>
+                <div class="viewer-box">
+                    <iframe src="{{page.pdf-preview-link}}" class="main-pdf-viewer"></iframe>
+                </div>
+                <div class="cta-wrap">
+                    <a href="{{page.pdf-download-link}}" class="btn-premium">
+                        <img src="https://api.iconify.design/lucide:download-cloud.svg?color=white" width="24">
+                        Download Full PDF {{page.chapter-number}} {{page.subject}} Notes
+                    </a>
+                </div>
+            </div>
+            <div class="section-card">
+                <h2>Chapter Overview & SLOs</h2>
+                <p>{{page.chapter-overview}}</p>
+                <ul class="slo-list">
+                    <li>{{page.chapter-first-slo}}</li>
+                    <li>{{page.chapter-second-slo}}</li>
+                    <li>{{page.chapter-third-slo}}</li>
+                    <li>{{page.chapter-fourth-slo}}</li>
+                </ul>
+            </div>
+            <div class="section-card">
+                <h2>Frequently Asked Questions (FAQ)</h2>
+                <div style="margin-top:20px;">
+                    <p><strong>1. Are these Class {{page.class}} {{page.subject}} notes based on the latest FBISE syllabus for 2026?</strong><br>Yes, these notes are strictly designed according to the Student Learning Outcomes (SLO) provided by the Federal Board (FBISE) for the 2026 academic year. We regularly update our content to match the latest curriculum changes and exam patterns.</p>
+                    <p style="margin-top:15px;"><strong>2. Do these {{page.subject}} {{page.chapter-number}} notes include solved exercise questions and diagrams?</strong><br>Absolutely. These notes contain comprehensive solutions to all textbook exercise questions, including Multiple Choice Questions (MCQs), Short Questions, and detailed Long Questions. We also include labeled diagrams and key definitions to help you secure maximum marks in your board exams.</p>
+                </div>
+            </div>
+<!-- Comment Section with Header Text -->
+<div class="comment-section">
+    <p style="font-size: 1rem; font-weight: 500; color: #1e3a8a; margin-bottom: 15px; padding-bottom: 10px; border-bottom: 2px solid #e2e8f0;">
+        💬 Any doubts or report errors? Comment below:
+    </p>
+    
+    <script>
+        var idcomments_acct = '932740248f042b4a9a71beaf85775996';
+        var idcomments_post_id = '{{page.display-title}}';
+        var idcomments_post_url = '{{page.url}}';
+        var idcomments_post_title = '{{page.display-title}}';
+    </script>
+    <span id="IDCommentsPostTitle" style="display:none"></span>
+    <script type="text/javascript" src="https://www.intensedebate.com/js/genericCommentWrapperV2.js"></script>
+</div>
+        </main>
+
+
+        <aside>
+            <div class="section-card" style="background:#f1f5f9;">
+                <h2 style="font-size:1.1rem; margin-bottom:15px; color:#1e40af;">More {{page.class}} Resources</h2>
+                <ul class="slo-list" style="padding:0;">
+                    <li><a href="{{page.suggested1-link}}" style="text-decoration:none; color:#475569;">{{page.suggested1}}</a></li>
+                    <li><a href="{{page.suggested2-link}}" style="text-decoration:none; color:#475569;">{{page.suggested2}}</a></li>
+                    <li><a href="{{page.suggested3-link}}" style="text-decoration:none; color:#475569;">{{page.suggested3}}</a></li>
+                    <li><a href="{{page.suggested4-link}}" style="text-decoration:none; color:#475569;">{{page.suggested4}}</a></li>
+                </ul>
+            </div>
+            
+            <div class="section-card">
+                <h2 style="font-size:1.1rem; margin-bottom:15px;">Exam Success Tip</h2>
+                <p style="font-size:0.85rem; color:#64748b;">Focus {{page.risk}} on the {{page.chapter-name}} section as it often appears in long-answer questions in Federal Board examinations.</p>
+            </div>
+        </aside>
+    </div>
+</div>
+
+<footer class="footer" id="i6lnig">
+<div class="footer-container" id="iv53fi">
+<div class="footer-column" id="ikd6lx">
+<a class="gjs-t-link footer-brand-link" href="https://notesprep.com/#" id="ik585v">
+
+<span class="footer-brand-name" id="iyo8yn">NotesPrep</span>
+</a>
+<p class="footer-text" id="inp52p">Modern, minimal notes that help you focus and retain key concepts.</p>
+<div class="footer-social" id="iuh5yj">
+<a class="gjs-t-link social-link" href="https://www.instagram.com/notesprep.com/" id="iq68k5">
+<img alt="LinkedIn" class="social-icon" id="i9amsl" src="https://api.iconify.design/lucide-instagram.svg?color=%230f172a"/>
+</a>
+<a class="gjs-t-link social-link" href="https://youtube.com/@notesprep.com/" id="iguhgs">
+<img alt="YouTube" class="social-icon" id="ihc0ld" src="https://api.iconify.design/lucide-youtube.svg?color=%230f172a"/>
+</a>
+</div>
+</div>
+<div class="footer-column" id="i3cuug">
+<h4 class="footer-heading" id="ipkdoo">Explore</h4>
+<a class="gjs-t-link footer-link" href="https://notesprep.com/#secondary" id="icy77g">Secondary Notes</a>
+<a class="gjs-t-link footer-link" href="https://notesprep.com/#higher-secondary" id="ilhc7p">Higher Secondary Notes</a>
+<a class="gjs-t-link footer-link" href="https://notesprep.com/#entry-test" id="i9tp4y">Entry Test Prep</a>
+<a class="gjs-t-link footer-link" href="https://notesprep.com/#resources" id="i64fuj">Resources &amp; PDFs</a>
+</div>
+<div class="footer-column" id="i533p4">
+<h4 class="footer-heading" id="ifdqnf">Help</h4>
+<a class="gjs-t-link footer-link" href="https://notesprep.com/#about" id="ifeu3p">About Us</a>
+<a class="gjs-t-link footer-link" href="https://notesprep.com/#contact" id="i6kovw">Contact</a>
+<a class="gjs-t-link footer-link" href="https://notesprep.com/faq/" id="i1o2zi">FAQs</a>
+<a class="gjs-t-link footer-link" href="https://notesprep.com/privacy-policy/" id="ij5q7y">Privacy Policy</a>
+</div>
+<div class="footer-column" id="ifx9c3">
+<h4 class="footer-heading" id="ibp3mz">Newsletter</h4>
+<p class="footer-text" id="iw7c21">Get updates on new notes, practice sets, and study tips.</p>
+<form action="#" class="gjs-t-button newsletter-form" id="i13t2g" method="get">
+<input class="newsletter-input" id="iageri" placeholder="Your email" required="" type="email"/>
+</form>
+</div>
+<button class="gjs-t-button newsletter-button" id="i81yxa" type="button">
+<img alt="Send Icon" class="button-icon" id="ir1egw" src="https://api.iconify.design/lucide-send.svg?color=%23ffffff"/> Subscribe </button>
+</div>
+<div class="footer-divider" id="iy5fek">
+<div class="footer-bottom" id="ikz5an">
+      <span class="footer-copyright" id="issa1h" style="font-size: 14px; color: #6b7280;">© 2025 notesprep. For educational purposes only. All rights reserved.</span>
+<div class="footer-legal-links" id="i2y36x">
+<a class="gjs-t-link legal-link" href="https://notesprep.com/terms/" id="iw4fka">Terms</a>
+<a class="gjs-t-link legal-link" href="https://notesprep.com/privacy-policy/" id="in7fsw">Privacy</a>
+<a class="gjs-t-link legal-link" href="https://notesprep.com/cookies/" id="i36amh">Cookies</a>
+</div>
+</div>
+</div>
+</footer>
+<script id="ihiexn" src="https://notesprep.com/script.js"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "1. Are these Class {{page.class}} {{page.subject}} notes based on the latest FBISE syllabus for 2026?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes, these notes are strictly based on the SLO-based curriculum for the Federal Board (FBISE) 2026 session."
+    }
+  }, {
+    "@type": "Question",
+    "name": "Do these {{page.subject}} {{page.chapter-number}} notes include solved exercise questions and diagrams?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes, they include full solutions to textbook exercises, MCQs, and important exam-oriented long questions."
+    }
+  }]
+}
+</script>
+<script>function generateBreadcrumbs() {
+    const breadcrumbNav = document.getElementById('breadcrumb');
+    if (!breadcrumbNav) return;
+
+    let path = window.location.pathname.replace('index.html', '');
+    
+    const pathSegments = path.split('/').filter(segment => {
+        const s = segment.toLowerCase();
+
+        return s !== "" && 
+               !s.includes(':') && 
+               s !== 'backup' && 
+               s !== 'notesprep'; // Skips the folder name if you're testing inside a folder
+    });
+    
+    let breadcrumbHTML = '<ol class="breadcrumb-list">';
+    breadcrumbHTML += `<li class="breadcrumb-item"><a href="/">Home</a></li>`;
+    
+    let currentPath = '';
+    pathSegments.forEach((segment, index) => {
+        currentPath += `/${segment}`;
+        const isLast = index === pathSegments.length - 1;
+        
+
+        let displayName = segment.replace(/[_-]/g, ' ')
+                                 .split(' ')
+                                 .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+                                 .join(' ');
+
+        breadcrumbHTML += `<li class="separator">/</li>`;
+
+        if (isLast) {
+            breadcrumbHTML += `<li class="breadcrumb-item active" aria-current="page">${displayName}</li>`;
+        } else {
+            breadcrumbHTML += `<li class="breadcrumb-item"><a href="${currentPath}/">${displayName}</a></li>`;
+        }
+    });
+    
+    breadcrumbHTML += '</ol>';
+    breadcrumbNav.innerHTML = breadcrumbHTML;
+}
+
+document.addEventListener('DOMContentLoaded', generateBreadcrumbs);
+</script>   
+<script data-scope="mobile-nav" id="ifz1ty">
+      (function() {
+        const toggleBtn = document.querySelector('[data-js="hamburger"]');
+        const nav = document.getElementById('i32qq');
+        if (!toggleBtn || !nav) return;
+
+        function toggleMenu() {
+          const isOpen = nav.classList.toggle('open');
+          toggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        }
+        toggleBtn.addEventListener('click', toggleMenu);
+        // Close menu when clicking outside on mobile
+        document.addEventListener('click', (e) => {
+          const withinHeader = e.target.closest('#is0gk');
+          if (!withinHeader && nav.classList.contains('open')) {
+            nav.classList.remove('open');
+            toggleBtn.setAttribute('aria-expanded', 'false');
+          }
+        });
+        // Close on Esc
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && nav.classList.contains('open')) {
+            nav.classList.remove('open');
+            toggleBtn.setAttribute('aria-expanded', 'false');
+            toggleBtn.focus();
+          }
+        });
+      })();
+    </script>
+
+
+<script data-scope="mobile-images" id="itb5y5">
+      (function() {
+        const imgs = document.querySelectorAll('img[data-mobile-src]');
+        if (!imgs.length) return;
+
+        function swapForViewport() {
+          const isMobile = window.matchMedia('(max-width: 480px)').matches;
+          imgs.forEach(img => {
+            const desktop = img.getAttribute('data-desktop-src');
+            const mobile = img.getAttribute('data-mobile-src');
+            if (!desktop || !mobile) return;
+            // Keep desktop unchanged; swap only on mobile
+            const current = img.getAttribute('src') || '';
+            if (isMobile) {
+              if (current !== mobile) img.setAttribute('src', mobile);
+              // Ensure below-the-fold images stay lazy on mobile
+              if (!img.hasAttribute('loading')) img.setAttribute('loading', 'lazy');
+            } else {
+              if (current !== desktop) img.setAttribute('src', desktop);
+              // Restore fetchpriority for hero if present
+              if (img.id === 'izhe1') {
+                img.setAttribute('fetchpriority', 'high');
+                img.removeAttribute('loading');
+              }
+            }
+          });
+        }
+        // Initialize and update on resize
+        swapForViewport();
+        let rAF;
+        window.addEventListener('resize', () => {
+          cancelAnimationFrame(rAF);
+          rAF = requestAnimationFrame(swapForViewport);
+        });
+      })();
+    </script>
+	<script>
+// Mobile Navigation Menu
+(function() {
+    const hamburger = document.querySelector('.hamburger-btn');
+    const nav = document.querySelector('.primary-navigation');
+    
+    if (!hamburger || !nav) return;
+    
+    // Create overlay if it doesn't exist
+    let overlay = document.querySelector('.menu-overlay');
+    if (!overlay) {
+        overlay = document.createElement('div');
+        overlay.className = 'menu-overlay';
+        document.body.appendChild(overlay);
+    }
+    
+    function closeMenu() {
+        nav.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+    
+    function openMenu() {
+        nav.classList.add('open');
+        hamburger.setAttribute('aria-expanded', 'true');
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+    
+    hamburger.addEventListener('click', function() {
+        if (nav.classList.contains('open')) {
+            closeMenu();
+        } else {
+            openMenu();
+        }
+    });
+    
+    overlay.addEventListener('click', closeMenu);
+    
+    // Close on escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && nav.classList.contains('open')) {
+            closeMenu();
+        }
+    });
+    
+    // Close when clicking nav links
+    nav.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', closeMenu);
+    });
+    
+    // Handle resize
+    let resizeTimer;
+    window.addEventListener('resize', function() {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(function() {
+            if (window.innerWidth > 768 && nav.classList.contains('open')) {
+                closeMenu();
+            }
+        }, 250);
+    });
+})();
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Fix all MathJax containers
+    var mjxContainers = document.querySelectorAll('mjx-container, .MathJax, .MathJax_Preview');
+    mjxContainers.forEach(function(el) {
+      el.style.maxWidth = '100%';
+      el.style.overflowX = 'auto';
+      el.style.display = 'inline-block';
+    });
+    
+    // Fix the iframe specifically
+    var iframe = document.querySelector('.main-pdf-viewer, .viewer-box iframe');
+    if (iframe) {
+      iframe.style.width = '100%';
+      iframe.style.maxWidth = '100%';
+    }
+    
+    // Fix all parent containers
+    var containers = document.querySelectorAll('.container, .grid-layout, main, .viewer-box');
+    containers.forEach(function(el) {
+      el.style.overflowX = 'hidden';
+      el.style.maxWidth = '100%';
+      el.style.boxSizing = 'border-box';
+    });
+  });
+</script>
+</body>
+</html>
