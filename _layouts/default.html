@@ -240,13 +240,13 @@
     {% comment %}
       STEP 13: Preload critical assets
     {% endcomment %}
-    <link rel="preload" href="{{ '/style.css' | relative_url }}" as="style">
+    <link rel="preload" href="{{ './style.css' | relative_url }}" as="style">
     <link rel="preload" href="https://notesprep.com/logo.svg" as="image">
     
     {% comment %}
       STEP 14: Main CSS
     {% endcomment %}
-    <link href="{{ '/style.css' | relative_url }}" rel="stylesheet">
+    <link href="{{ './style.css' | relative_url }}" rel="stylesheet">
     
     {% comment %}
       STEP 15: Favicon & App Icons
