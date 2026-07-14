@@ -120,67 +120,97 @@
       STEP 9: JSON-LD Structured Data (Enhanced Schema)
     {% endcomment %}
 	<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
-    <script type="application/ld+json">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "WebSite",
+      "@id": "https://notesprep.com/#website",
+      "url": "https://notesprep.com/",
+      "name": "NotesPrep",
+      "description": "Free study notes and resources for FBISE and entry tests in Pakistan",
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://notesprep.com/#organization",
+        "name": "NotesPrep",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://notesprep.com/logo.svg"
+        }
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://notesprep.com/search?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://notesprep.com/class9/biology/chapter-1/#webpage",
+      "url": "https://notesprep.com/class9/biology/chapter-1/",
+      "name": "Class 9 Biology Chapter 1 - Introduction to Biology Notes | NotesPrep",
+      "description": "Class 9 Biology Chapter 1 notes. Introduction to biology, branches of biology, levels of organization, and scientific methods.",
+      "isPartOf": {
+        "@id": "https://notesprep.com/#website"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://notesprep.com/name_logo.svg"
+      },
+      "breadcrumb": {
+        "@id": "https://notesprep.com/class9/biology/chapter-1/#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://notesprep.com/class9/biology/chapter-1/#breadcrumb",
+      "itemListElement": [
         {
-          "@type": "WebSite",
-          "@id": "https://notesprep.com/#website",
-          "url": "https://notesprep.com/",
-          "name": "NotesPrep",
-          "description": "Free study notes and resources for FBISE and entry tests in Pakistan",
-          "publisher": {
-            "@type": "Organization",
-            "@id": "https://notesprep.com/#organization",
-            "name": "NotesPrep",
-            "logo": {
-              "@type": "ImageObject",
-              "url": "https://notesprep.com/logo.svg"
-            }
-          },
-          "potentialAction": {
-            "@type": "SearchAction",
-            "target": {
-              "@type": "EntryPoint",
-              "urlTemplate": "https://notesprep.com/search?q={search_term_string}"
-            },
-            "query-input": "required name=search_term_string"
-          }
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://notesprep.com/"
         },
         {
-          "@type": "WebPage",
-          "@id": "{{ page.url | absolute_url }}#webpage",
-          "url": "{{ page.url | absolute_url }}",
-          "name": "{{ seo_title }}",
-          "description": "{{ seo_description }}",
-          "isPartOf": {
-            "@id": "https://notesprep.com/#website"
-          },
-          "primaryImageOfPage": {
-            "@type": "ImageObject",
-            "url": "https://notesprep.com/name_logo.svg"
-          },
-          "breadcrumb": {
-            "@id": "{{ page.url | absolute_url }}#breadcrumb"
-          }
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Class 9",
+          "item": "https://notesprep.com/class9/"
         },
         {
-          "@type": "SiteNavigationElement",
-          "@id": "https://notesprep.com/#main-nav",
-          "name": "Main Navigation",
-          "hasPart": [
-            { "@type": "WebPage", "name": "Class 9", "url": "https://notesprep.com/class9/" },
-            { "@type": "WebPage", "name": "Class 10", "url": "https://notesprep.com/class10/" },
-            { "@type": "WebPage", "name": "Blogs", "url": "https://notesprep.com/blogs/" },
-            { "@type": "WebPage", "name": "Entry Tests", "url": "https://notesprep.com/entry-tests/" },
-            { "@type": "WebPage", "name": "Resources", "url": "https://notesprep.com/resources/" },
-            { "@type": "WebPage", "name": "Contact", "url": "https://notesprep.com/contact-us/" }
-          ]
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Biology",
+          "item": "https://notesprep.com/class9/biology/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Chapter 1",
+          "item": "https://notesprep.com/class9/biology/chapter-1/"
         }
       ]
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "https://notesprep.com/#main-nav",
+      "name": "Main Navigation",
+      "hasPart": [
+        { "@type": "WebPage", "name": "Class 9", "url": "https://notesprep.com/class9/" },
+        { "@type": "WebPage", "name": "Class 10", "url": "https://notesprep.com/class10/" },
+        { "@type": "WebPage", "name": "Blogs", "url": "https://notesprep.com/blogs/" },
+        { "@type": "WebPage", "name": "Entry Tests", "url": "https://notesprep.com/entry-tests/" },
+        { "@type": "WebPage", "name": "Resources", "url": "https://notesprep.com/resources/" },
+        { "@type": "WebPage", "name": "Contact", "url": "https://notesprep.com/contact-us/" }
+      ]
     }
-    </script>
+  ]
+}
+</script>
     
     {% comment %}
       STEP 10: Google Analytics 4
