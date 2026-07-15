@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NUST Merit Calculator 2026</title>
+    <style>
+        :root {
+            --color-primary: rgba(0, 0, 0, 1);
+            --color-secondary: rgba(0, 0, 0, 1);
+            --color-accent: rgb(29 78 216 / 1);
+            --color-success: #28a745;
+            --color-warning: #ffc107;
+            --color-error: rgba(0, 0, 0, 1);
+            --blue-50: #eff6ff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-image: linear-gradient(to right, #eff6ff, rgb(239 246 255 / 0));
+            color: var(--color-primary);
+            min-height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--color-accent);
+            margin-bottom: 5px;
+            font-size: 1.6rem;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: var(--color-secondary);
+            margin-bottom: 25px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Category Tabs */
+        .tabs {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .tab {
+            padding: 10px 18px;
+            border: 2px solid #ddd;
+            background: white;
+            cursor: pointer;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            color: var(--color-secondary);
+            transition: all 0.2s;
+        }
+
+        .tab:hover {
+            border-color: var(--color-accent);
+            color: var(--color-accent);
+        }
+
+        .tab.active {
+            background: var(--color-accent);
+            color: white;
+            border-color: var(--color-accent);
+        }
+
+        .section {
+            background: white;
+            padding: 22px;
+            margin-bottom: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+        }
+
+        .section h2 {
+            margin-top: 0;
+            font-size: 1.1rem;
+            color: var(--color-primary);
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--color-accent);
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+            color: var(--color-primary);
+            font-size: 0.95rem;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            margin-bottom: 12px;
+            font-size: 1rem;
+            transition: border-color 0.2s;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: var(--color-accent);
+        }
+
+        .result-box {
+            background: #eff6ff;
+            padding: 14px;
+            margin: 15px 0;
+            border-left: 4px solid var(--color-accent);
+            border-radius: 4px;
+        }
+
+        .result-box big {
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: var(--color-accent);
+        }
+
+        .result-box small {
+            display: block;
+            margin-top: 4px;
+            color: var(--color-secondary);
+            opacity: 0.7;
+        }
+
+        h3 {
+            font-size: 0.95rem;
+            color: var(--color-primary);
+            margin: 18px 0 8px 0;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 0.9rem;
+        }
+
+        .row:last-child {
+            border-bottom: none;
+        }
+
+        .eligible {
+            color: var(--color-success);
+            font-weight: bold;
+            font-size: 0.85rem;
+        }
+
+        .not-eligible {
+            color: var(--color-error);
+            font-weight: bold;
+            font-size: 0.85rem;
+        }
+
+        .note {
+            background: #fffdf5;
+            padding: 10px 12px;
+            margin-top: 12px;
+            font-size: 0.85rem;
+            border: 1px solid var(--color-warning);
+            border-radius: 4px;
+            color: var(--color-secondary);
+        }
+
+        .summary-stats {
+            display: flex;
+            gap: 15px;
+            margin: 15px 0;
+            flex-wrap: wrap;
+        }
+
+        .stat-card {
+            flex: 1;
+            min-width: 100px;
+            background: #eff6ff;
+            padding: 10px;
+            border-radius: 6px;
+            text-align: center;
+            border: 1px solid #bfdbfe;
+        }
+
+        .stat-card .number {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: var(--color-accent);
+        }
+
+        .stat-card .label {
+            font-size: 0.75rem;
+            color: var(--color-secondary);
+            margin-top: 2px;
+        }
+
+        .badge {
+            background: var(--color-accent);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 0.7rem;
+            font-weight: bold;
+        }
+
+        hr {
+            margin: 15px 0;
+            border: none;
+            border-top: 1px solid #eee;
+        }
+
+        .category-info {
+            text-align: center;
+            color: var(--color-accent);
+            font-size: 0.9rem;
+            margin-bottom: 12px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>NUST Merit Calculator 2026</h1>
+    <p class="subtitle">Select category & enter your aggregate to check eligible programs</p>
+	<p class="subtitle">Calculate your aggregate <a href="https:/notesprep.com/resources/net-aggregate-calculator/">here</a></p>
+	<p class="subtitle">Source:Physikinematics</p>
+
+    <!-- Category Tabs -->
+    <div class="tabs">
+        <div class="tab active" onclick="switchCategory('all')">📋 All Programs</div>
+        <div class="tab" onclick="switchCategory('engineering')">⚙️ Engineering</div>
+        <div class="tab" onclick="switchCategory('computing')">💻 Computing</div>
+        <div class="tab" onclick="switchCategory('business')">📊 Business & Social Sciences</div>
+        <div class="tab" onclick="switchCategory('sciences')">🔬 Natural Sciences</div>
+        <div class="tab" onclick="switchCategory('architecture')">🏛️ Architecture & Design</div>
+    </div>
+
+    <div class="section">
+        <div style="display:flex; align-items:center; gap:8px; margin-bottom:15px;">
+            <h2 style="margin:0; border:none; padding:0;">Check Your Eligibility</h2>
+            <span class="badge">LIVE</span>
+        </div>
+        
+        <div class="category-info" id="categoryLabel">Showing: All Programs</div>
+
+        <label for="aggregate">Your Aggregate (%)</label>
+        <input type="number" id="aggregate" placeholder="Enter your aggregate (e.g. 72.5) You can calculate from our website." step="0.01" oninput="calculate()">
+
+        <div id="results" style="display:none;">
+            <div class="summary-stats">
+                <div class="stat-card">
+                    <div class="number" id="meritNumber">-</div>
+                    <div class="label">Est. Merit Number</div>
+                </div>
+                <div class="stat-card">
+                    <div class="number" id="eligibleCount">-</div>
+                    <div class="label">Programs Eligible</div>
+                </div>
+                <div class="stat-card">
+                    <div class="number" id="totalPrograms">-</div>
+                    <div class="label">Programs Shown</div>
+                </div>
+            </div>
+
+            <h3>✅ Programs You Can Apply To:</h3>
+            <div id="eligibleList"></div>
+
+            <h3>❌ Programs Out of Reach:</h3>
+            <div id="ineligibleList"></div>
+
+            <div class="note">
+                ⚠️ Based on closing merit positions. Actual merit for 2026 may vary slightly.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ============================================
+        // NUST MERIT DATA - ALL PROGRAMS
+        // ============================================
+
+        const allData = [
+            // ENGINEERING
+            { subject: "BE Software Engineering",           institute: "SEECS", netMarks: 140, aggregate: 75.18, closingMP: 846,  category: "engineering" },
+            { subject: "BE Computer Engineering",           institute: "SEECS", netMarks: 132, aggregate: 73.08, closingMP: 1226, category: "engineering" },
+            { subject: "BE Electrical Engineering",         institute: "SEECS", netMarks: 131, aggregate: 70.63, closingMP: 1821, category: "engineering" },
+            { subject: "BE Mechanical Engineering",         institute: "SMME",  netMarks: 127, aggregate: 68.80, closingMP: 2355, category: "engineering" },
+            { subject: "BE Aerospace Engineering",          institute: "CAE",   netMarks: 129, aggregate: 68.47, closingMP: 2470, category: "engineering" },
+            { subject: "BE Aerospace Engineering",          institute: "SMME",  netMarks: 124, aggregate: 68.32, closingMP: 2526, category: "engineering" },
+            { subject: "BE Avionics Engineering",           institute: "CAE",   netMarks: 122, aggregate: 67.20, closingMP: 2922, category: "engineering" },
+            { subject: "BE Computer Engineering",           institute: "CEME",  netMarks: 119, aggregate: 66.33, closingMP: 3260, category: "engineering" },
+            { subject: "BS Software Engineering",           institute: "MCS",   netMarks: 119, aggregate: 65.96, closingMP: 3409, category: "engineering" },
+            { subject: "BE Mechatronics Engineering",       institute: "CEME",  netMarks: 114, aggregate: 64.29, closingMP: 4144, category: "engineering" },
+            { subject: "BE Information Security",           institute: "MCS",   netMarks: 113, aggregate: 64.60, closingMP: 3979, category: "engineering" },
+            { subject: "BE Electrical Engineering",         institute: "CEME",  netMarks: 107, aggregate: 62.08, closingMP: 5179, category: "engineering" },
+            { subject: "BE Chemical Engineering",           institute: "SCME",  netMarks: 108, aggregate: 61.69, closingMP: 5377, category: "engineering" },
+            { subject: "BE Mechanical Engineering",         institute: "CEME",  netMarks: 105, aggregate: 61.60, closingMP: 5422, category: "engineering" },
+            { subject: "BE Civil Engineering",              institute: "NICE",  netMarks: 111, aggregate: 61.63, closingMP: 5407, category: "engineering" },
+            { subject: "BE Geoinformatics",                 institute: "IGIS",  netMarks: 103, aggregate: 59.36, closingMP: 6699, category: "engineering" },
+            { subject: "BE Mechanical Engineering",         institute: "PNEC",  netMarks: 102, aggregate: 59.05, closingMP: 6888, category: "engineering" },
+            { subject: "BE Environmental Engineering",      institute: "IESE",  netMarks: 98,  aggregate: 59.01, closingMP: 6915, category: "engineering" },
+            { subject: "BE Metallurgy & Material Engg",     institute: "SCME",  netMarks: 98,  aggregate: 58.02, closingMP: 7501, category: "engineering" },
+            { subject: "BE Electrical Engineering",         institute: "MCS",   netMarks: 106, aggregate: 58.04, closingMP: 7488, category: "engineering" },
+            { subject: "BE Electrical Engineering",         institute: "PNEC",  netMarks: 97,  aggregate: 57.19, closingMP: 8008, category: "engineering" },
+            { subject: "BE Civil Engineering",              institute: "MCE",   netMarks: 91,  aggregate: 54.79, closingMP: 9604, category: "engineering" },
+            { subject: "BE Civil Engineering",              institute: "NBC",   netMarks: 65,  aggregate: 45.18, closingMP: 15826, category: "engineering" },
+
+            // COMPUTING
+            { subject: "BS Computer Science",               institute: "SEECS", netMarks: 141, aggregate: 75.03, closingMP: 853,  category: "computing" },
+            { subject: "BS Artificial Intelligence",        institute: "SEECS", netMarks: 143, aggregate: 76.58, closingMP: 642,  category: "computing" },
+            { subject: "BS Data Science",                   institute: "SEECS", netMarks: 138, aggregate: 74.70, closingMP: 909,  category: "computing" },
+            { subject: "BS Bioinformatics",                 institute: "SINES", netMarks: 132, aggregate: 72.12, closingMP: 383,  category: "computing" },
+            { subject: "BS Computer Science",               institute: "PNEC",  netMarks: 113, aggregate: 63.88, closingMP: 4419, category: "computing" },
+            { subject: "BS Computer Science",               institute: "NBC",   netMarks: 75,  aggregate: 50.45, closingMP: 14263, category: "computing" },
+            { subject: "BS Artificial Intelligence",        institute: "NBC",   netMarks: 74,  aggregate: 50.30, closingMP: 14410, category: "computing" },
+
+            // BUSINESS & SOCIAL SCIENCES / LLB
+            { subject: "BS Accounting & Finance",           institute: "NBS",   netMarks: 133, aggregate: 69.74, closingMP: 759,  category: "business" },
+            { subject: "BBA",                               institute: "NBS",   netMarks: 135, aggregate: 69.65, closingMP: 773,  category: "business" },
+            { subject: "BS Economics",                      institute: "S3H",   netMarks: 123, aggregate: 66.63, closingMP: 1248, category: "business" },
+            { subject: "LLB",                               institute: "NLS",   netMarks: 112, aggregate: 65.07, closingMP: 264,  category: "business" },
+            { subject: "BS Psychology",                     institute: "S3H",   netMarks: 114, aggregate: 61.82, closingMP: 2267, category: "business" },
+            { subject: "BS Public Administration",          institute: "S3H",   netMarks: 109, aggregate: 60.63, closingMP: 2531, category: "business" },
+            { subject: "BS Mass Communication",             institute: "S3H",   netMarks: 98,  aggregate: 59.87, closingMP: 2692, category: "business" },
+            { subject: "BS Tourism & Hospitality Mgmt",     institute: "NBS",   netMarks: 100, aggregate: 59.39, closingMP: 2809, category: "business" },
+            { subject: "BS Liberal Arts & Humanities",      institute: "S3H",   netMarks: 101, aggregate: 56.94, closingMP: 3348, category: "business" },
+
+            // NATURAL SCIENCES
+            { subject: "BS Physics",                        institute: "SNS",   netMarks: 80,  aggregate: 49.07, closingMP: 1987, category: "sciences" },
+            { subject: "BS Mathematics",                    institute: "SNS",   netMarks: 75,  aggregate: 45.33, closingMP: 2294, category: "sciences" },
+            { subject: "BS Chemistry",                      institute: "SNS",   netMarks: 37,  aggregate: 31.74, closingMP: 2098, category: "sciences" },
+
+            // ARCHITECTURE & INDUSTRIAL DESIGN
+            { subject: "BS Architecture",                   institute: "SADA",  netMarks: 130, aggregate: 70.28, closingMP: 126,  category: "architecture" },
+            { subject: "BS Industrial Design",              institute: "SADA",  netMarks: 121, aggregate: 66.22, closingMP: 231,  category: "architecture" },
+            { subject: "BE Naval Architecture",             institute: "PNEC",  netMarks: 73,  aggregate: 47.70, closingMP: 14420, category: "architecture" }
+        ];
+
+        let currentCategory = 'all';
+        let filteredData = [...allData];
+
+        // Sort by aggregate (highest first)
+        function sortData(data) {
+            return data.sort((a, b) => b.aggregate - a.aggregate);
+        }
+
+        // Initialize
+        filteredData = sortData(filteredData);
+
+        // ============================================
+        // CATEGORY SWITCHING
+        // ============================================
+
+        function switchCategory(category) {
+            currentCategory = category;
+            
+            // Update tabs
+            document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+            const tabMap = {
+                'all': 0,
+                'engineering': 1,
+                'computing': 2,
+                'business': 3,
+                'sciences': 4,
+                'architecture': 5
+            };
+            document.querySelectorAll('.tab')[tabMap[category]].classList.add('active');
+
+            // Filter data
+            if (category === 'all') {
+                filteredData = [...allData];
+                document.getElementById('categoryLabel').textContent = 'Showing: All Programs';
+            } else {
+                filteredData = allData.filter(d => d.category === category);
+                const categoryNames = {
+                    'engineering': 'Engineering',
+                    'computing': 'Computing',
+                    'business': 'Business & Social Sciences / LLB',
+                    'sciences': 'Natural Sciences',
+                    'architecture': 'Architecture & Industrial Design'
+                };
+                document.getElementById('categoryLabel').textContent = 'Showing: ' + categoryNames[category];
+            }
+
+            filteredData = sortData(filteredData);
+            calculate();
+        }
+
+        // ============================================
+        // CALCULATION LOGIC
+        // ============================================
+
+        function predictMeritNumber(userAggregate, data) {
+            if (data.length === 0) return 0;
+
+            let lower = null;
+            let upper = null;
+
+            for (let d of data) {
+                if (d.aggregate <= userAggregate) {
+                    if (!lower || d.aggregate > lower.aggregate) lower = d;
+                }
+                if (d.aggregate >= userAggregate) {
+                    if (!upper || d.aggregate < upper.aggregate) upper = d;
+                }
+            }
+
+            if (lower && upper && lower !== upper) {
+                const ratio = (userAggregate - lower.aggregate) / (upper.aggregate - lower.aggregate);
+                return Math.round(lower.closingMP - ratio * (lower.closingMP - upper.closingMP));
+            }
+            if (lower) return lower.closingMP;
+            if (upper) return upper.closingMP * 2;
+            return Math.round(20000 - userAggregate * 200);
+        }
+
+        function calculate() {
+            const aggregate = parseFloat(document.getElementById('aggregate').value);
+            const resultsDiv = document.getElementById('results');
+
+            if (isNaN(aggregate) || filteredData.length === 0) {
+                resultsDiv.style.display = 'none';
+                return;
+            }
+
+            resultsDiv.style.display = 'block';
+
+            // Update stats
+            document.getElementById('meritNumber').textContent = '~' + predictMeritNumber(aggregate, filteredData);
+            
+            const eligible = filteredData.filter(d => d.aggregate <= aggregate);
+            const ineligible = filteredData.filter(d => d.aggregate > aggregate);
+            
+            document.getElementById('eligibleCount').textContent = eligible.length;
+            document.getElementById('totalPrograms').textContent = filteredData.length;
+
+            // Display eligible programs
+            const eligibleDiv = document.getElementById('eligibleList');
+            if (eligible.length === 0) {
+                eligibleDiv.innerHTML = '<p style="color:#999; padding:8px 0;">None - your aggregate is below all program cutoffs in this category</p>';
+            } else {
+                eligibleDiv.innerHTML = eligible.map(d => 
+                    `<div class="row">
+                        <span>${d.subject} <small style="color:#888;">(${d.institute})</small></span>
+                        <span class="eligible">Cutoff: ${d.aggregate}% | MP #${d.closingMP} ✓</span>
+                    </div>`
+                ).join('');
+            }
+
+            // Display ineligible programs
+            const ineligibleDiv = document.getElementById('ineligibleList');
+            if (ineligible.length === 0) {
+                ineligibleDiv.innerHTML = '<p style="color:#999; padding:8px 0;">None - you qualify for all programs in this category!</p>';
+            } else {
+                ineligibleDiv.innerHTML = ineligible.map(d => 
+                    `<div class="row">
+                        <span>${d.subject} <small style="color:#888;">(${d.institute})</small></span>
+                        <span class="not-eligible">Needs: ${d.aggregate}% | MP #${d.closingMP} ✗</span>
+                    </div>`
+                ).join('');
+            }
+        }
+    </script>
+
+</body>
+</html>
